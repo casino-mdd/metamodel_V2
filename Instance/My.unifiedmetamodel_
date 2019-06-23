@@ -14,8 +14,8 @@
           <property name="createdAt" type="Date"/>
           <property name="isActive" type="Boolean"/>
           <property name="profile" type="String"/>
-          <transaction xsi:type="UnifiedMetamodel_:sale" operates_on="//@domainmetamodel/@module.5/@submodule.0/@entity.0 //@domainmetamodel/@module.1/@submodule.1/@entity.0"/>
-          <transaction xsi:type="UnifiedMetamodel_:exchange" operates_on="//@domainmetamodel/@module.2/@submodule.1/@entity.0 //@domainmetamodel/@module.1/@submodule.1/@entity.0 //@domainmetamodel/@module.1/@submodule.0/@entity.0"/>
+          <transaction xsi:type="UnifiedMetamodel_:Sale" operates_on="//@domainmetamodel/@module.5/@submodule.0/@entity.0 //@domainmetamodel/@module.1/@submodule.1/@entity.0"/>
+          <transaction xsi:type="UnifiedMetamodel_:Exchange" operates_on="//@domainmetamodel/@module.2/@submodule.1/@entity.0 //@domainmetamodel/@module.1/@submodule.1/@entity.0 //@domainmetamodel/@module.1/@submodule.0/@entity.0"/>
         </entity>
       </submodule>
     </module>
