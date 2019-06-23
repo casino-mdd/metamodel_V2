@@ -10,7 +10,8 @@
       <!-- @generated unified -->
       <package
             uri="http://UnifiedMetamodel_"
-            class="UnifiedMetamodel_.UnifiedMetamodel_Package"/>
+            class="UnifiedMetamodel_.UnifiedMetamodel_Package"
+            genModel="unified.genmodel"/>
    </extension>
 
 </plugin>

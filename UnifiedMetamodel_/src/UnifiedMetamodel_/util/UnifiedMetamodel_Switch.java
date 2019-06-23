@@ -50,7 +50,6 @@ import UnifiedMetamodel_.Metamodel;
 import UnifiedMetamodel_.MethodBack;
 import UnifiedMetamodel_.ModuleFront;
 import UnifiedMetamodel_.NativeClass;
-import UnifiedMetamodel_.NewEClass78;
 import UnifiedMetamodel_.Operations;
 import UnifiedMetamodel_.Pojo;
 import UnifiedMetamodel_.Property;
@@ -643,12 +642,6 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 			case UnifiedMetamodel_Package.ABSTRACT_METHOD: {
 				AbstractMethod abstractMethod = (AbstractMethod)theEObject;
 				T result = caseAbstractMethod(abstractMethod);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case UnifiedMetamodel_Package.NEW_ECLASS78: {
-				NewEClass78 newEClass78 = (NewEClass78)theEObject;
-				T result = caseNewEClass78(newEClass78);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1815,21 +1808,6 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAbstractMethod(AbstractMethod object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>New EClass78</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>New EClass78</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNewEClass78(NewEClass78 object) {
 		return null;
 	}
 

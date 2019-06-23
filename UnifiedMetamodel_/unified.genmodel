@@ -238,7 +238,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//AbstractMethod/return"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//AbstractMethod/arguments"/>
     </genClasses>
-    <genClasses ecoreClass="unified.ecore#//NewEClass78"/>
     <genClasses ecoreClass="unified.ecore#//React"/>
   </genPackages>
 </genmodel:GenModel>

@@ -4100,35 +4100,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 
 
 	/**
-	 * The meta object id for the '{@link UnifiedMetamodel_.impl.NewEClass78Impl <em>New EClass78</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see UnifiedMetamodel_.impl.NewEClass78Impl
-	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getNewEClass78()
-	 * @generated
-	 */
-	int NEW_ECLASS78 = 77;
-
-	/**
-	 * The number of structural features of the '<em>New EClass78</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NEW_ECLASS78_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>New EClass78</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NEW_ECLASS78_OPERATION_COUNT = 0;
-
-
-	/**
 	 * The meta object id for the '{@link UnifiedMetamodel_.impl.ReactImpl <em>React</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4136,7 +4107,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getReact()
 	 * @generated
 	 */
-	int REACT = 78;
+	int REACT = 77;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6156,16 +6127,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EReference getAbstractMethod_Arguments();
 
 	/**
-	 * Returns the meta object for class '{@link UnifiedMetamodel_.NewEClass78 <em>New EClass78</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>New EClass78</em>'.
-	 * @see UnifiedMetamodel_.NewEClass78
-	 * @generated
-	 */
-	EClass getNewEClass78();
-
-	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.React <em>React</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7661,15 +7622,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 * @generated
 		 */
 		EReference ABSTRACT_METHOD__ARGUMENTS = eINSTANCE.getAbstractMethod_Arguments();
-		/**
-		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.NewEClass78Impl <em>New EClass78</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see UnifiedMetamodel_.impl.NewEClass78Impl
-		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getNewEClass78()
-		 * @generated
-		 */
-		EClass NEW_ECLASS78 = eINSTANCE.getNewEClass78();
 		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.ReactImpl <em>React</em>}' class.
 		 * <!-- begin-user-doc -->
