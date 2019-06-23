@@ -50,9 +50,11 @@ import UnifiedMetamodel_.Metamodel;
 import UnifiedMetamodel_.MethodBack;
 import UnifiedMetamodel_.ModuleFront;
 import UnifiedMetamodel_.NativeClass;
+import UnifiedMetamodel_.NewEClass78;
 import UnifiedMetamodel_.Operations;
 import UnifiedMetamodel_.Pojo;
 import UnifiedMetamodel_.Property;
+import UnifiedMetamodel_.React;
 import UnifiedMetamodel_.ReactApp;
 import UnifiedMetamodel_.Read;
 import UnifiedMetamodel_.Reducer;
@@ -449,6 +451,14 @@ public class UnifiedMetamodel_AdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseAbstractMethod(AbstractMethod object) {
 				return createAbstractMethodAdapter();
+			}
+			@Override
+			public Adapter caseNewEClass78(NewEClass78 object) {
+				return createNewEClass78Adapter();
+			}
+			@Override
+			public Adapter caseReact(React object) {
+				return createReactAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -1545,6 +1555,34 @@ public class UnifiedMetamodel_AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAbstractMethodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.NewEClass78 <em>New EClass78</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see UnifiedMetamodel_.NewEClass78
+	 * @generated
+	 */
+	public Adapter createNewEClass78Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.React <em>React</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see UnifiedMetamodel_.React
+	 * @generated
+	 */
+	public Adapter createReactAdapter() {
 		return null;
 	}
 

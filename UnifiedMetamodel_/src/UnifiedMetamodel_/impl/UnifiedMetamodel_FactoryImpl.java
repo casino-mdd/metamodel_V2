@@ -48,9 +48,11 @@ import UnifiedMetamodel_.Metamodel;
 import UnifiedMetamodel_.MethodBack;
 import UnifiedMetamodel_.ModuleFront;
 import UnifiedMetamodel_.NativeClass;
+import UnifiedMetamodel_.NewEClass78;
 import UnifiedMetamodel_.Operations;
 import UnifiedMetamodel_.Pojo;
 import UnifiedMetamodel_.Property;
+import UnifiedMetamodel_.React;
 import UnifiedMetamodel_.ReactApp;
 import UnifiedMetamodel_.Read;
 import UnifiedMetamodel_.Reducer;
@@ -207,6 +209,8 @@ public class UnifiedMetamodel_FactoryImpl extends EFactoryImpl implements Unifie
 			case UnifiedMetamodel_Package.FRONT: return createFront();
 			case UnifiedMetamodel_Package.PROPERTY: return createProperty();
 			case UnifiedMetamodel_Package.ABSTRACT_METHOD: return createAbstractMethod();
+			case UnifiedMetamodel_Package.NEW_ECLASS78: return createNewEClass78();
+			case UnifiedMetamodel_Package.REACT: return createReact();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1057,6 +1061,28 @@ public class UnifiedMetamodel_FactoryImpl extends EFactoryImpl implements Unifie
 	public AbstractMethod createAbstractMethod() {
 		AbstractMethodImpl abstractMethod = new AbstractMethodImpl();
 		return abstractMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NewEClass78 createNewEClass78() {
+		NewEClass78Impl newEClass78 = new NewEClass78Impl();
+		return newEClass78;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public React createReact() {
+		ReactImpl react = new ReactImpl();
+		return react;
 	}
 
 	/**

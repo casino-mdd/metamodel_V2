@@ -4100,6 +4100,82 @@ public interface UnifiedMetamodel_Package extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link UnifiedMetamodel_.impl.NewEClass78Impl <em>New EClass78</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see UnifiedMetamodel_.impl.NewEClass78Impl
+	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getNewEClass78()
+	 * @generated
+	 */
+	int NEW_ECLASS78 = 77;
+
+	/**
+	 * The number of structural features of the '<em>New EClass78</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEW_ECLASS78_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>New EClass78</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEW_ECLASS78_OPERATION_COUNT = 0;
+
+
+	/**
+	 * The meta object id for the '{@link UnifiedMetamodel_.impl.ReactImpl <em>React</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see UnifiedMetamodel_.impl.ReactImpl
+	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getReact()
+	 * @generated
+	 */
+	int REACT = 78;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACT__NAME = MODULE_FRONT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Is Present In</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACT__IS_PRESENT_IN = MODULE_FRONT__IS_PRESENT_IN;
+
+	/**
+	 * The number of structural features of the '<em>React</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACT_FEATURE_COUNT = MODULE_FRONT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>React</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACT_OPERATION_COUNT = MODULE_FRONT_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.Ejb <em>Ejb</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6080,6 +6156,26 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EReference getAbstractMethod_Arguments();
 
 	/**
+	 * Returns the meta object for class '{@link UnifiedMetamodel_.NewEClass78 <em>New EClass78</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>New EClass78</em>'.
+	 * @see UnifiedMetamodel_.NewEClass78
+	 * @generated
+	 */
+	EClass getNewEClass78();
+
+	/**
+	 * Returns the meta object for class '{@link UnifiedMetamodel_.React <em>React</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>React</em>'.
+	 * @see UnifiedMetamodel_.React
+	 * @generated
+	 */
+	EClass getReact();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7565,6 +7661,24 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 * @generated
 		 */
 		EReference ABSTRACT_METHOD__ARGUMENTS = eINSTANCE.getAbstractMethod_Arguments();
+		/**
+		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.NewEClass78Impl <em>New EClass78</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see UnifiedMetamodel_.impl.NewEClass78Impl
+		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getNewEClass78()
+		 * @generated
+		 */
+		EClass NEW_ECLASS78 = eINSTANCE.getNewEClass78();
+		/**
+		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.ReactImpl <em>React</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see UnifiedMetamodel_.impl.ReactImpl
+		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getReact()
+		 * @generated
+		 */
+		EClass REACT = eINSTANCE.getReact();
 
 	}
 

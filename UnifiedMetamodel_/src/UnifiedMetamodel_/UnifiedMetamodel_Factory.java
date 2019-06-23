@@ -715,6 +715,24 @@ public interface UnifiedMetamodel_Factory extends EFactory {
 	AbstractMethod createAbstractMethod();
 
 	/**
+	 * Returns a new object of class '<em>New EClass78</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>New EClass78</em>'.
+	 * @generated
+	 */
+	NewEClass78 createNewEClass78();
+
+	/**
+	 * Returns a new object of class '<em>React</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>React</em>'.
+	 * @generated
+	 */
+	React createReact();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -127,4 +127,44 @@
     <relationdom xsi:type="UnifiedMetamodel_:Composition" source="//@domainmetamodel/@module.2/@submodule.0/@entity.0" target="//@domainmetamodel/@module.2/@submodule.1/@entity.0"/>
     <relationdom xsi:type="UnifiedMetamodel_:Composition" source="//@domainmetamodel/@module.3/@submodule.0/@entity.0" target="//@domainmetamodel/@module.0/@submodule.0/@entity.0"/>
   </domainmetamodel>
+  <technologymetamodel>
+    <techfront>
+      <functionalities name="Main">
+        <components xsi:type="UnifiedMetamodel_:Visualizer" name="Main"/>
+        <components xsi:type="UnifiedMetamodel_:RouterComponent" name="MainRouter" routes="//@technologymetamodel/@techfront/@functionalities.0/@components.0"/>
+      </functionalities>
+      <functionalities name="Custom" IsOrganizedBy="//@technologymetamodel/@techfront/@directories.0/@directories.0/@directories.3">
+        <components xsi:type="UnifiedMetamodel_:Visualizer" use="//@technologymetamodel/@techfront/@modules.1 //@technologymetamodel/@techfront/@modules.4" name="UI" inWithin="//@technologymetamodel/@techfront/@directories.0/@directories.0/@directories.3"/>
+        <components xsi:type="UnifiedMetamodel_:Container" use="//@technologymetamodel/@techfront/@modules.2" name="Custom" inWithin="//@technologymetamodel/@techfront/@directories.0/@directories.0/@directories.0" dispatches="//@technologymetamodel/@techfront/@functionalities.1/@state/@action.0/@actiondispatcher.0" maps="//@technologymetamodel/@techfront/@functionalities.1/@state/@reducer.0"/>
+        <state use="//@technologymetamodel/@techfront/@modules.2">
+          <action name="Custom Action">
+            <actiondispatcher use="//@technologymetamodel/@techfront/@functionalities.1/@state/@action.0/@actioncreator.0" name="Custom"/>
+            <actioncreator name="Custom"/>
+          </action>
+          <reducer name="Custom" catches="//@technologymetamodel/@techfront/@functionalities.1/@state/@action.0/@actioncreator.0" reducerDirectory="//@technologymetamodel/@techfront/@directories.0/@directories.0/@directories.2/@directories.1"/>
+        </state>
+        <services use="//@technologymetamodel/@techfront/@modules.3" name="REST" isOrganizedIn="//@technologymetamodel/@techfront/@directories.0/@directories.0/@directories.1"/>
+      </functionalities>
+      <modules xsi:type="UnifiedMetamodel_:Router" name="router"/>
+      <modules xsi:type="UnifiedMetamodel_:Design" name="Ant"/>
+      <modules xsi:type="UnifiedMetamodel_:Redux" name="React-Redux"/>
+      <modules xsi:type="UnifiedMetamodel_:APICall" name="Axios"/>
+      <modules xsi:type="UnifiedMetamodel_:React"/>
+      <directories isRoot="true" name="rootDirectory">
+        <directories purpose="code" name="src">
+          <directories purpose="code" name="Containers"/>
+          <directories purpose="code" name="Services"/>
+          <directories purpose="code" name="Store">
+            <directories purpose="code" name="Actions"/>
+            <directories purpose="code" name="Reducers"/>
+          </directories>
+          <directories purpose="code" name="UI">
+            <directories purpose="code" name="CustomFuncionality"/>
+          </directories>
+          <directories purpose="styles" name="Styles"/>
+        </directories>
+        <directories purpose="libraries" name="modules"/>
+      </directories>
+    </techfront>
+  </technologymetamodel>
 </UnifiedMetamodel_:Metamodel>

@@ -43,9 +43,11 @@ import UnifiedMetamodel_.Metamodel;
 import UnifiedMetamodel_.MethodBack;
 import UnifiedMetamodel_.ModuleFront;
 import UnifiedMetamodel_.NativeClass;
+import UnifiedMetamodel_.NewEClass78;
 import UnifiedMetamodel_.Operations;
 import UnifiedMetamodel_.Pojo;
 import UnifiedMetamodel_.Property;
+import UnifiedMetamodel_.React;
 import UnifiedMetamodel_.ReactApp;
 import UnifiedMetamodel_.Read;
 import UnifiedMetamodel_.Reducer;
@@ -553,6 +555,20 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	private EClass abstractMethodEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass newEClass78EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass reactEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -2491,6 +2507,26 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
+	public EClass getNewEClass78() {
+		return newEClass78EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getReact() {
+		return reactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public UnifiedMetamodel_Factory getUnifiedMetamodel_Factory() {
 		return (UnifiedMetamodel_Factory)getEFactoryInstance();
 	}
@@ -2777,6 +2813,10 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		createEAttribute(abstractMethodEClass, ABSTRACT_METHOD__NAME);
 		createEReference(abstractMethodEClass, ABSTRACT_METHOD__RETURN);
 		createEReference(abstractMethodEClass, ABSTRACT_METHOD__ARGUMENTS);
+
+		newEClass78EClass = createEClass(NEW_ECLASS78);
+
+		reactEClass = createEClass(REACT);
 	}
 
 	/**
@@ -2846,6 +2886,7 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		actionsEClass.getESuperTypes().add(this.getLayerSegment());
 		backEClass.getESuperTypes().add(this.getComponent());
 		frontEClass.getESuperTypes().add(this.getComponent());
+		reactEClass.getESuperTypes().add(this.getModuleFront());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(ejbEClass, Ejb.class, "Ejb", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3111,6 +3152,10 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		initEAttribute(getAbstractMethod_Name(), ecorePackage.getEString(), "name", null, 0, 1, AbstractMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractMethod_Return(), this.getEClass(), null, "return", null, 0, 1, AbstractMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractMethod_Arguments(), this.getEClass(), null, "arguments", null, 0, -1, AbstractMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(newEClass78EClass, NewEClass78.class, "NewEClass78", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(reactEClass, React.class, "React", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

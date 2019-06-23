@@ -295,4 +295,5 @@
         eType="#//EClass"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NewEClass78"/>
+  <eClassifiers xsi:type="ecore:EClass" name="React" eSuperTypes="#//ModuleFront"/>
 </ecore:EPackage>
