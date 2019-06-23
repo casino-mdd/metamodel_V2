@@ -24,7 +24,11 @@
         <operations xsi:type="UnifiedMetamodel_:Read" operates_on="//@domainmetamodel/@module.1/@submodule.0/@entity.0"/>
         <operations xsi:type="UnifiedMetamodel_:Create" operates_on="//@domainmetamodel/@module.1/@submodule.0/@entity.0"/>
         <entity xsi:type="UnifiedMetamodel_:GeneralEntity" name="Exchange">
-          <property name="name" type="String"/>
+          <property name="idExchange" type="Num"/>
+          <property name="idClient" type="Num"/>
+          <property name="idReward" type="Num"/>
+          <property name="idEmployee" type="Num"/>
+          <property name="createdAt" type="Date"/>
         </entity>
       </submodule>
       <submodule name="Points report">

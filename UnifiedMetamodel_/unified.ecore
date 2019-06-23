@@ -294,4 +294,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="arguments" upperBound="-1"
         eType="#//EClass"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NewEClass78"/>
 </ecore:EPackage>
