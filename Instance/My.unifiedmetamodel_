@@ -152,18 +152,35 @@
       <modules xsi:type="UnifiedMetamodel_:React"/>
       <directories isRoot="true" name="rootDirectory">
         <directories purpose="code" name="src">
-          <directories purpose="code" name="Containers"/>
-          <directories purpose="code" name="Services"/>
+          <directories purpose="code" name="Containers">
+            <files xsi:type="UnifiedMetamodel_:JS" type="code" name="Custom Container"/>
+          </directories>
+          <directories purpose="code" name="Services">
+            <files xsi:type="UnifiedMetamodel_:JS" type="code" name="Custom Service"/>
+          </directories>
           <directories purpose="code" name="Store">
-            <directories purpose="code" name="Actions"/>
-            <directories purpose="code" name="Reducers"/>
+            <directories purpose="code" name="Actions">
+              <files xsi:type="UnifiedMetamodel_:JS" type="code" name="Custom Actions"/>
+            </directories>
+            <directories purpose="code" name="Reducers">
+              <files xsi:type="UnifiedMetamodel_:JS" type="code" name="Custom Reducer"/>
+            </directories>
           </directories>
           <directories purpose="code" name="UI">
-            <directories purpose="code" name="CustomFuncionality"/>
+            <directories purpose="code" name="CustomFuncionality">
+              <files xsi:type="UnifiedMetamodel_:JS" type="code" name="custom UI"/>
+            </directories>
           </directories>
-          <directories purpose="styles" name="Styles"/>
+          <directories purpose="styles" name="Styles">
+            <files xsi:type="UnifiedMetamodel_:CSS" type="code" name="Custom"/>
+          </directories>
+          <files xsi:type="UnifiedMetamodel_:MD" type="Documentation" name="Readme"/>
+          <files xsi:type="UnifiedMetamodel_:JSON" type="configuration" name="Package"/>
+          <files xsi:type="UnifiedMetamodel_:JS" type="code" name="App"/>
+          <files xsi:type="UnifiedMetamodel_:JS" type="code" name="index"/>
         </directories>
         <directories purpose="libraries" name="modules"/>
+        <files xsi:type="UnifiedMetamodel_:JSON" type="configuration" name="Package-lock"/>
       </directories>
     </techfront>
   </technologymetamodel>
