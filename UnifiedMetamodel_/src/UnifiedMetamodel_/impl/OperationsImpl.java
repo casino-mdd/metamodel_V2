@@ -22,22 +22,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link UnifiedMetamodel_.impl.OperationsImpl#getEntity <em>Entity</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.impl.OperationsImpl#getOperates_on <em>Operates on</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class OperationsImpl extends MinimalEObjectImpl.Container implements Operations {
 	/**
-	 * The cached value of the '{@link #getEntity() <em>Entity</em>}' reference.
+	 * The cached value of the '{@link #getOperates_on() <em>Operates on</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEntity()
+	 * @see #getOperates_on()
 	 * @generated
 	 * @ordered
 	 */
-	protected Entity entity;
-
+	protected Entity operates_on;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,16 +62,16 @@ public class OperationsImpl extends MinimalEObjectImpl.Container implements Oper
 	 * @generated
 	 */
 	@Override
-	public Entity getEntity() {
-		if (entity != null && entity.eIsProxy()) {
-			InternalEObject oldEntity = (InternalEObject)entity;
-			entity = (Entity)eResolveProxy(oldEntity);
-			if (entity != oldEntity) {
+	public Entity getOperates_on() {
+		if (operates_on != null && operates_on.eIsProxy()) {
+			InternalEObject oldOperates_on = (InternalEObject)operates_on;
+			operates_on = (Entity)eResolveProxy(oldOperates_on);
+			if (operates_on != oldOperates_on) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UnifiedMetamodel_Package.OPERATIONS__ENTITY, oldEntity, entity));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UnifiedMetamodel_Package.OPERATIONS__OPERATES_ON, oldOperates_on, operates_on));
 			}
 		}
-		return entity;
+		return operates_on;
 	}
 
 	/**
@@ -80,8 +79,8 @@ public class OperationsImpl extends MinimalEObjectImpl.Container implements Oper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entity basicGetEntity() {
-		return entity;
+	public Entity basicGetOperates_on() {
+		return operates_on;
 	}
 
 	/**
@@ -90,11 +89,11 @@ public class OperationsImpl extends MinimalEObjectImpl.Container implements Oper
 	 * @generated
 	 */
 	@Override
-	public void setEntity(Entity newEntity) {
-		Entity oldEntity = entity;
-		entity = newEntity;
+	public void setOperates_on(Entity newOperates_on) {
+		Entity oldOperates_on = operates_on;
+		operates_on = newOperates_on;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UnifiedMetamodel_Package.OPERATIONS__ENTITY, oldEntity, entity));
+			eNotify(new ENotificationImpl(this, Notification.SET, UnifiedMetamodel_Package.OPERATIONS__OPERATES_ON, oldOperates_on, operates_on));
 	}
 
 	/**
@@ -105,9 +104,9 @@ public class OperationsImpl extends MinimalEObjectImpl.Container implements Oper
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UnifiedMetamodel_Package.OPERATIONS__ENTITY:
-				if (resolve) return getEntity();
-				return basicGetEntity();
+			case UnifiedMetamodel_Package.OPERATIONS__OPERATES_ON:
+				if (resolve) return getOperates_on();
+				return basicGetOperates_on();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -120,8 +119,8 @@ public class OperationsImpl extends MinimalEObjectImpl.Container implements Oper
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UnifiedMetamodel_Package.OPERATIONS__ENTITY:
-				setEntity((Entity)newValue);
+			case UnifiedMetamodel_Package.OPERATIONS__OPERATES_ON:
+				setOperates_on((Entity)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -135,8 +134,8 @@ public class OperationsImpl extends MinimalEObjectImpl.Container implements Oper
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UnifiedMetamodel_Package.OPERATIONS__ENTITY:
-				setEntity((Entity)null);
+			case UnifiedMetamodel_Package.OPERATIONS__OPERATES_ON:
+				setOperates_on((Entity)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -150,8 +149,8 @@ public class OperationsImpl extends MinimalEObjectImpl.Container implements Oper
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UnifiedMetamodel_Package.OPERATIONS__ENTITY:
-				return entity != null;
+			case UnifiedMetamodel_Package.OPERATIONS__OPERATES_ON:
+				return operates_on != null;
 		}
 		return super.eIsSet(featureID);
 	}

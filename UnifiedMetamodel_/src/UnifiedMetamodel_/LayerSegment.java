@@ -26,26 +26,16 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface LayerSegment extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Allow To Use</b></em>' reference.
+	 * Returns the value of the '<em><b>Allow To Use</b></em>' reference list.
+	 * The list contents are of type {@link UnifiedMetamodel_.LayerSegment}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Allow To Use</em>' reference.
-	 * @see #setAllowToUse(LayerSegment)
+	 * @return the value of the '<em>Allow To Use</em>' reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getLayerSegment_AllowToUse()
 	 * @model
 	 * @generated
 	 */
-	LayerSegment getAllowToUse();
-
-	/**
-	 * Sets the value of the '{@link UnifiedMetamodel_.LayerSegment#getAllowToUse <em>Allow To Use</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Allow To Use</em>' reference.
-	 * @see #getAllowToUse()
-	 * @generated
-	 */
-	void setAllowToUse(LayerSegment value);
+	EList<LayerSegment> getAllowToUse();
 
 	/**
 	 * Returns the value of the '<em><b>Layersegment</b></em>' containment reference list.

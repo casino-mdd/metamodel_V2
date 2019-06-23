@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link UnifiedMetamodel_.Submodule#getName <em>Name</em>}</li>
  *   <li>{@link UnifiedMetamodel_.Submodule#getOperations <em>Operations</em>}</li>
  *   <li>{@link UnifiedMetamodel_.Submodule#getEntity <em>Entity</em>}</li>
- *   <li>{@link UnifiedMetamodel_.Submodule#getRelation <em>Relation</em>}</li>
  * </ul>
  *
  * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getSubmodule()
@@ -55,7 +54,7 @@ public interface Submodule extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operations</em>' containment reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getSubmodule_Operations()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Operations> getOperations();
@@ -67,21 +66,9 @@ public interface Submodule extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Entity</em>' containment reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getSubmodule_Entity()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Entity> getEntity();
-
-	/**
-	 * Returns the value of the '<em><b>Relation</b></em>' containment reference list.
-	 * The list contents are of type {@link UnifiedMetamodel_.RelationDom}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Relation</em>' containment reference list.
-	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getSubmodule_Relation()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<RelationDom> getRelation();
 
 } // Submodule

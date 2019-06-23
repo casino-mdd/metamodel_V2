@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -37,14 +38,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements LayerSegment {
 	/**
-	 * The cached value of the '{@link #getAllowToUse() <em>Allow To Use</em>}' reference.
+	 * The cached value of the '{@link #getAllowToUse() <em>Allow To Use</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAllowToUse()
 	 * @generated
 	 * @ordered
 	 */
-	protected LayerSegment allowToUse;
+	protected EList<LayerSegment> allowToUse;
 
 	/**
 	 * The cached value of the '{@link #getLayersegment() <em>Layersegment</em>}' containment reference list.
@@ -101,38 +102,11 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 	 * @generated
 	 */
 	@Override
-	public LayerSegment getAllowToUse() {
-		if (allowToUse != null && allowToUse.eIsProxy()) {
-			InternalEObject oldAllowToUse = (InternalEObject)allowToUse;
-			allowToUse = (LayerSegment)eResolveProxy(oldAllowToUse);
-			if (allowToUse != oldAllowToUse) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UnifiedMetamodel_Package.LAYER_SEGMENT__ALLOW_TO_USE, oldAllowToUse, allowToUse));
-			}
+	public EList<LayerSegment> getAllowToUse() {
+		if (allowToUse == null) {
+			allowToUse = new EObjectResolvingEList<LayerSegment>(LayerSegment.class, this, UnifiedMetamodel_Package.LAYER_SEGMENT__ALLOW_TO_USE);
 		}
 		return allowToUse;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public LayerSegment basicGetAllowToUse() {
-		return allowToUse;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setAllowToUse(LayerSegment newAllowToUse) {
-		LayerSegment oldAllowToUse = allowToUse;
-		allowToUse = newAllowToUse;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UnifiedMetamodel_Package.LAYER_SEGMENT__ALLOW_TO_USE, oldAllowToUse, allowToUse));
 	}
 
 	/**
@@ -194,8 +168,7 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case UnifiedMetamodel_Package.LAYER_SEGMENT__ALLOW_TO_USE:
-				if (resolve) return getAllowToUse();
-				return basicGetAllowToUse();
+				return getAllowToUse();
 			case UnifiedMetamodel_Package.LAYER_SEGMENT__LAYERSEGMENT:
 				return getLayersegment();
 			case UnifiedMetamodel_Package.LAYER_SEGMENT__NAME:
@@ -214,7 +187,8 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case UnifiedMetamodel_Package.LAYER_SEGMENT__ALLOW_TO_USE:
-				setAllowToUse((LayerSegment)newValue);
+				getAllowToUse().clear();
+				getAllowToUse().addAll((Collection<? extends LayerSegment>)newValue);
 				return;
 			case UnifiedMetamodel_Package.LAYER_SEGMENT__LAYERSEGMENT:
 				getLayersegment().clear();
@@ -236,7 +210,7 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case UnifiedMetamodel_Package.LAYER_SEGMENT__ALLOW_TO_USE:
-				setAllowToUse((LayerSegment)null);
+				getAllowToUse().clear();
 				return;
 			case UnifiedMetamodel_Package.LAYER_SEGMENT__LAYERSEGMENT:
 				getLayersegment().clear();
@@ -257,7 +231,7 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case UnifiedMetamodel_Package.LAYER_SEGMENT__ALLOW_TO_USE:
-				return allowToUse != null;
+				return allowToUse != null && !allowToUse.isEmpty();
 			case UnifiedMetamodel_Package.LAYER_SEGMENT__LAYERSEGMENT:
 				return layersegment != null && !layersegment.isEmpty();
 			case UnifiedMetamodel_Package.LAYER_SEGMENT__NAME:

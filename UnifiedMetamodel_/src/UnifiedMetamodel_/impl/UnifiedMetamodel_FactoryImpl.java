@@ -4,12 +4,15 @@ package UnifiedMetamodel_.impl;
 
 import UnifiedMetamodel_.APICall;
 import UnifiedMetamodel_.AbstractClass;
+import UnifiedMetamodel_.AbstractMethod;
 import UnifiedMetamodel_.Action;
 import UnifiedMetamodel_.ActionCreator;
 import UnifiedMetamodel_.ActionDispatcher;
-import UnifiedMetamodel_.Anotationi;
+import UnifiedMetamodel_.Actions;
+import UnifiedMetamodel_.Annotation;
 import UnifiedMetamodel_.ArquitectureMetamodel;
 import UnifiedMetamodel_.Attribute;
+import UnifiedMetamodel_.Back;
 import UnifiedMetamodel_.CSS;
 import UnifiedMetamodel_.Component;
 import UnifiedMetamodel_.ComponentFront;
@@ -21,25 +24,25 @@ import UnifiedMetamodel_.Design;
 import UnifiedMetamodel_.Directory;
 import UnifiedMetamodel_.DomainMetamodel;
 import UnifiedMetamodel_.Dto;
+import UnifiedMetamodel_.EInterface;
 import UnifiedMetamodel_.Ejb;
 import UnifiedMetamodel_.Entity;
 import UnifiedMetamodel_.Epackage;
 import UnifiedMetamodel_.Exchange;
 import UnifiedMetamodel_.Facade;
 import UnifiedMetamodel_.File;
+import UnifiedMetamodel_.Front;
 import UnifiedMetamodel_.Functionality;
 import UnifiedMetamodel_.GeneralEntity;
 import UnifiedMetamodel_.GenericClass;
-import UnifiedMetamodel_.InterfaceClass;
 import UnifiedMetamodel_.JEE_Project;
 import UnifiedMetamodel_.JS;
 import UnifiedMetamodel_.JSON;
+import UnifiedMetamodel_.JavaApp;
 import UnifiedMetamodel_.JavaScript;
-import UnifiedMetamodel_.Jee;
 import UnifiedMetamodel_.Layer;
 import UnifiedMetamodel_.LayerSegment;
 import UnifiedMetamodel_.Library;
-import UnifiedMetamodel_.Login;
 import UnifiedMetamodel_.MD;
 import UnifiedMetamodel_.Metamodel;
 import UnifiedMetamodel_.MethodBack;
@@ -47,8 +50,11 @@ import UnifiedMetamodel_.ModuleFront;
 import UnifiedMetamodel_.NativeClass;
 import UnifiedMetamodel_.Operations;
 import UnifiedMetamodel_.Pojo;
+import UnifiedMetamodel_.Property;
+import UnifiedMetamodel_.ReactApp;
 import UnifiedMetamodel_.Read;
 import UnifiedMetamodel_.Reducer;
+import UnifiedMetamodel_.Reducers;
 import UnifiedMetamodel_.Redux;
 import UnifiedMetamodel_.RelationArch;
 import UnifiedMetamodel_.RelationDom;
@@ -63,14 +69,13 @@ import UnifiedMetamodel_.State;
 import UnifiedMetamodel_.Store;
 import UnifiedMetamodel_.Submodule;
 import UnifiedMetamodel_.Subproject;
-import UnifiedMetamodel_.TechBack;
-import UnifiedMetamodel_.TechFront;
 import UnifiedMetamodel_.TechnologyMetamodel;
 import UnifiedMetamodel_.Transaction;
 import UnifiedMetamodel_.UI;
 import UnifiedMetamodel_.UIFront;
 import UnifiedMetamodel_.UnifiedMetamodel_Factory;
 import UnifiedMetamodel_.UnifiedMetamodel_Package;
+import UnifiedMetamodel_.Util;
 import UnifiedMetamodel_.Visualizer;
 import UnifiedMetamodel_.War;
 import org.eclipse.emf.ecore.EClass;
@@ -147,7 +152,6 @@ public class UnifiedMetamodel_FactoryImpl extends EFactoryImpl implements Unifie
 			case UnifiedMetamodel_Package.EXCHANGE: return createExchange();
 			case UnifiedMetamodel_Package.COMPOSITION: return createComposition();
 			case UnifiedMetamodel_Package.OPERATIONS: return createOperations();
-			case UnifiedMetamodel_Package.LOGIN: return createLogin();
 			case UnifiedMetamodel_Package.MODULE: return createModule();
 			case UnifiedMetamodel_Package.SPECIAL_ENTITY: return createSpecialEntity();
 			case UnifiedMetamodel_Package.GENERAL_ENTITY: return createGeneralEntity();
@@ -175,28 +179,34 @@ public class UnifiedMetamodel_FactoryImpl extends EFactoryImpl implements Unifie
 			case UnifiedMetamodel_Package.JS: return createJS();
 			case UnifiedMetamodel_Package.ACTION: return createAction();
 			case UnifiedMetamodel_Package.REDUX: return createRedux();
-			case UnifiedMetamodel_Package.TECH_FRONT: return createTechFront();
+			case UnifiedMetamodel_Package.REACT_APP: return createReactApp();
 			case UnifiedMetamodel_Package.FILE: return createFile();
 			case UnifiedMetamodel_Package.COMPONENT_FRONT: return createComponentFront();
 			case UnifiedMetamodel_Package.REDUCER: return createReducer();
 			case UnifiedMetamodel_Package.MODULE_FRONT: return createModuleFront();
 			case UnifiedMetamodel_Package.TECHNOLOGY_METAMODEL: return createTechnologyMetamodel();
-			case UnifiedMetamodel_Package.TECH_BACK: return createTechBack();
+			case UnifiedMetamodel_Package.JAVA_APP: return createJavaApp();
 			case UnifiedMetamodel_Package.JEE_PROJECT: return createJEE_Project();
 			case UnifiedMetamodel_Package.NATIVE_CLASS: return createNativeClass();
-			case UnifiedMetamodel_Package.INTERFACE_CLASS: return createInterfaceClass();
+			case UnifiedMetamodel_Package.EINTERFACE: return createEInterface();
 			case UnifiedMetamodel_Package.LIBRARY: return createLibrary();
-			case UnifiedMetamodel_Package.JEE: return createJee();
 			case UnifiedMetamodel_Package.ATTRIBUTE: return createAttribute();
 			case UnifiedMetamodel_Package.GENERIC_CLASS: return createGenericClass();
 			case UnifiedMetamodel_Package.METHOD_BACK: return createMethodBack();
 			case UnifiedMetamodel_Package.ABSTRACT_CLASS: return createAbstractClass();
 			case UnifiedMetamodel_Package.EPACKAGE: return createEpackage();
 			case UnifiedMetamodel_Package.ECLASS: return createEClass();
-			case UnifiedMetamodel_Package.ANOTATIONI: return createAnotationi();
+			case UnifiedMetamodel_Package.ANNOTATION: return createAnnotation();
 			case UnifiedMetamodel_Package.SUBPROJECT: return createSubproject();
 			case UnifiedMetamodel_Package.DESCRIPTOR: return createDescriptor();
 			case UnifiedMetamodel_Package.JAVA_SCRIPT: return createJavaScript();
+			case UnifiedMetamodel_Package.UTIL: return createUtil();
+			case UnifiedMetamodel_Package.REDUCERS: return createReducers();
+			case UnifiedMetamodel_Package.ACTIONS: return createActions();
+			case UnifiedMetamodel_Package.BACK: return createBack();
+			case UnifiedMetamodel_Package.FRONT: return createFront();
+			case UnifiedMetamodel_Package.PROPERTY: return createProperty();
+			case UnifiedMetamodel_Package.ABSTRACT_METHOD: return createAbstractMethod();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -442,17 +452,6 @@ public class UnifiedMetamodel_FactoryImpl extends EFactoryImpl implements Unifie
 	public Operations createOperations() {
 		OperationsImpl operations = new OperationsImpl();
 		return operations;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Login createLogin() {
-		LoginImpl login = new LoginImpl();
-		return login;
 	}
 
 	/**
@@ -758,6 +757,17 @@ public class UnifiedMetamodel_FactoryImpl extends EFactoryImpl implements Unifie
 	 * @generated
 	 */
 	@Override
+	public ReactApp createReactApp() {
+		ReactAppImpl reactApp = new ReactAppImpl();
+		return reactApp;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public File createFile() {
 		FileImpl file = new FileImpl();
 		return file;
@@ -813,20 +823,9 @@ public class UnifiedMetamodel_FactoryImpl extends EFactoryImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public TechFront createTechFront() {
-		TechFrontImpl techFront = new TechFrontImpl();
-		return techFront;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public TechBack createTechBack() {
-		TechBackImpl techBack = new TechBackImpl();
-		return techBack;
+	public JavaApp createJavaApp() {
+		JavaAppImpl javaApp = new JavaAppImpl();
+		return javaApp;
 	}
 
 	/**
@@ -857,9 +856,9 @@ public class UnifiedMetamodel_FactoryImpl extends EFactoryImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public InterfaceClass createInterfaceClass() {
-		InterfaceClassImpl interfaceClass = new InterfaceClassImpl();
-		return interfaceClass;
+	public EInterface createEInterface() {
+		EInterfaceImpl eInterface = new EInterfaceImpl();
+		return eInterface;
 	}
 
 	/**
@@ -871,17 +870,6 @@ public class UnifiedMetamodel_FactoryImpl extends EFactoryImpl implements Unifie
 	public Library createLibrary() {
 		LibraryImpl library = new LibraryImpl();
 		return library;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Jee createJee() {
-		JeeImpl jee = new JeeImpl();
-		return jee;
 	}
 
 	/**
@@ -956,9 +944,9 @@ public class UnifiedMetamodel_FactoryImpl extends EFactoryImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public Anotationi createAnotationi() {
-		AnotationiImpl anotationi = new AnotationiImpl();
-		return anotationi;
+	public Annotation createAnnotation() {
+		AnnotationImpl annotation = new AnnotationImpl();
+		return annotation;
 	}
 
 	/**
@@ -992,6 +980,83 @@ public class UnifiedMetamodel_FactoryImpl extends EFactoryImpl implements Unifie
 	public JavaScript createJavaScript() {
 		JavaScriptImpl javaScript = new JavaScriptImpl();
 		return javaScript;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Util createUtil() {
+		UtilImpl util = new UtilImpl();
+		return util;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Reducers createReducers() {
+		ReducersImpl reducers = new ReducersImpl();
+		return reducers;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Actions createActions() {
+		ActionsImpl actions = new ActionsImpl();
+		return actions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Back createBack() {
+		BackImpl back = new BackImpl();
+		return back;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Front createFront() {
+		FrontImpl front = new FrontImpl();
+		return front;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Property createProperty() {
+		PropertyImpl property = new PropertyImpl();
+		return property;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AbstractMethod createAbstractMethod() {
+		AbstractMethodImpl abstractMethod = new AbstractMethodImpl();
+		return abstractMethod;
 	}
 
 	/**

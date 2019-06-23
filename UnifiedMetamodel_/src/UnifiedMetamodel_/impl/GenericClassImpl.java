@@ -3,8 +3,8 @@
 package UnifiedMetamodel_.impl;
 
 import UnifiedMetamodel_.AbstractClass;
+import UnifiedMetamodel_.EInterface;
 import UnifiedMetamodel_.GenericClass;
-import UnifiedMetamodel_.InterfaceClass;
 import UnifiedMetamodel_.UnifiedMetamodel_Package;
 
 import java.util.Collection;
@@ -43,7 +43,7 @@ public class GenericClassImpl extends EClassImpl implements GenericClass {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<InterfaceClass> implement;
+	protected EList<EInterface> implement;
 
 	/**
 	 * The cached value of the '{@link #getExtends() <em>Extends</em>}' reference.
@@ -80,9 +80,9 @@ public class GenericClassImpl extends EClassImpl implements GenericClass {
 	 * @generated
 	 */
 	@Override
-	public EList<InterfaceClass> getImplement() {
+	public EList<EInterface> getImplement() {
 		if (implement == null) {
-			implement = new EObjectResolvingEList<InterfaceClass>(InterfaceClass.class, this, UnifiedMetamodel_Package.GENERIC_CLASS__IMPLEMENT);
+			implement = new EObjectResolvingEList<EInterface>(EInterface.class, this, UnifiedMetamodel_Package.GENERIC_CLASS__IMPLEMENT);
 		}
 		return implement;
 	}
@@ -155,7 +155,7 @@ public class GenericClassImpl extends EClassImpl implements GenericClass {
 		switch (featureID) {
 			case UnifiedMetamodel_Package.GENERIC_CLASS__IMPLEMENT:
 				getImplement().clear();
-				getImplement().addAll((Collection<? extends InterfaceClass>)newValue);
+				getImplement().addAll((Collection<? extends EInterface>)newValue);
 				return;
 			case UnifiedMetamodel_Package.GENERIC_CLASS__EXTENDS:
 				setExtends((AbstractClass)newValue);

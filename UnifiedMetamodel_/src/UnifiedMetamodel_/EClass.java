@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link UnifiedMetamodel_.EClass#getAttribute <em>Attribute</em>}</li>
  *   <li>{@link UnifiedMetamodel_.EClass#getName <em>Name</em>}</li>
  *   <li>{@link UnifiedMetamodel_.EClass#getMethod <em>Method</em>}</li>
- *   <li>{@link UnifiedMetamodel_.EClass#getAnotationi <em>Anotationi</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.EClass#getAnnotation <em>Annotation</em>}</li>
  * </ul>
  *
  * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getEClass()
@@ -73,25 +73,25 @@ public interface EClass extends EObject {
 	EList<MethodBack> getMethod();
 
 	/**
-	 * Returns the value of the '<em><b>Anotationi</b></em>' reference.
+	 * Returns the value of the '<em><b>Annotation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Anotationi</em>' reference.
-	 * @see #setAnotationi(Anotationi)
-	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getEClass_Anotationi()
+	 * @return the value of the '<em>Annotation</em>' reference.
+	 * @see #setAnnotation(Annotation)
+	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getEClass_Annotation()
 	 * @model
 	 * @generated
 	 */
-	Anotationi getAnotationi();
+	Annotation getAnnotation();
 
 	/**
-	 * Sets the value of the '{@link UnifiedMetamodel_.EClass#getAnotationi <em>Anotationi</em>}' reference.
+	 * Sets the value of the '{@link UnifiedMetamodel_.EClass#getAnnotation <em>Annotation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Anotationi</em>' reference.
-	 * @see #getAnotationi()
+	 * @param value the new value of the '<em>Annotation</em>' reference.
+	 * @see #getAnnotation()
 	 * @generated
 	 */
-	void setAnotationi(Anotationi value);
+	void setAnnotation(Annotation value);
 
 } // EClass

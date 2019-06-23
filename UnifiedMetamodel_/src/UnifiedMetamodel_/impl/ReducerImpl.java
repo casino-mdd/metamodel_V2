@@ -7,13 +7,16 @@ import UnifiedMetamodel_.Directory;
 import UnifiedMetamodel_.Reducer;
 import UnifiedMetamodel_.UnifiedMetamodel_Package;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,14 +55,14 @@ public class ReducerImpl extends MinimalEObjectImpl.Container implements Reducer
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getCatches() <em>Catches</em>}' reference.
+	 * The cached value of the '{@link #getCatches() <em>Catches</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCatches()
 	 * @generated
 	 * @ordered
 	 */
-	protected ActionCreator catches;
+	protected EList<ActionCreator> catches;
 
 	/**
 	 * The cached value of the '{@link #getReducerDirectory() <em>Reducer Directory</em>}' reference.
@@ -119,38 +122,11 @@ public class ReducerImpl extends MinimalEObjectImpl.Container implements Reducer
 	 * @generated
 	 */
 	@Override
-	public ActionCreator getCatches() {
-		if (catches != null && catches.eIsProxy()) {
-			InternalEObject oldCatches = (InternalEObject)catches;
-			catches = (ActionCreator)eResolveProxy(oldCatches);
-			if (catches != oldCatches) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UnifiedMetamodel_Package.REDUCER__CATCHES, oldCatches, catches));
-			}
+	public EList<ActionCreator> getCatches() {
+		if (catches == null) {
+			catches = new EObjectResolvingEList<ActionCreator>(ActionCreator.class, this, UnifiedMetamodel_Package.REDUCER__CATCHES);
 		}
 		return catches;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ActionCreator basicGetCatches() {
-		return catches;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setCatches(ActionCreator newCatches) {
-		ActionCreator oldCatches = catches;
-		catches = newCatches;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UnifiedMetamodel_Package.REDUCER__CATCHES, oldCatches, catches));
 	}
 
 	/**
@@ -204,8 +180,7 @@ public class ReducerImpl extends MinimalEObjectImpl.Container implements Reducer
 			case UnifiedMetamodel_Package.REDUCER__NAME:
 				return getName();
 			case UnifiedMetamodel_Package.REDUCER__CATCHES:
-				if (resolve) return getCatches();
-				return basicGetCatches();
+				return getCatches();
 			case UnifiedMetamodel_Package.REDUCER__REDUCER_DIRECTORY:
 				if (resolve) return getReducerDirectory();
 				return basicGetReducerDirectory();
@@ -218,6 +193,7 @@ public class ReducerImpl extends MinimalEObjectImpl.Container implements Reducer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -225,7 +201,8 @@ public class ReducerImpl extends MinimalEObjectImpl.Container implements Reducer
 				setName((String)newValue);
 				return;
 			case UnifiedMetamodel_Package.REDUCER__CATCHES:
-				setCatches((ActionCreator)newValue);
+				getCatches().clear();
+				getCatches().addAll((Collection<? extends ActionCreator>)newValue);
 				return;
 			case UnifiedMetamodel_Package.REDUCER__REDUCER_DIRECTORY:
 				setReducerDirectory((Directory)newValue);
@@ -246,7 +223,7 @@ public class ReducerImpl extends MinimalEObjectImpl.Container implements Reducer
 				setName(NAME_EDEFAULT);
 				return;
 			case UnifiedMetamodel_Package.REDUCER__CATCHES:
-				setCatches((ActionCreator)null);
+				getCatches().clear();
 				return;
 			case UnifiedMetamodel_Package.REDUCER__REDUCER_DIRECTORY:
 				setReducerDirectory((Directory)null);
@@ -266,7 +243,7 @@ public class ReducerImpl extends MinimalEObjectImpl.Container implements Reducer
 			case UnifiedMetamodel_Package.REDUCER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case UnifiedMetamodel_Package.REDUCER__CATCHES:
-				return catches != null;
+				return catches != null && !catches.isEmpty();
 			case UnifiedMetamodel_Package.REDUCER__REDUCER_DIRECTORY:
 				return reducerDirectory != null;
 		}

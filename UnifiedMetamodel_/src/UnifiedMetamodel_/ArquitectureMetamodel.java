@@ -30,7 +30,7 @@ public interface ArquitectureMetamodel extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Components</em>' containment reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getArquitectureMetamodel_Components()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Component> getComponents();

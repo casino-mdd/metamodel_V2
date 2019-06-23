@@ -27,12 +27,12 @@ public interface TechnologyMetamodel extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Techfront</em>' containment reference.
-	 * @see #setTechfront(TechFront)
+	 * @see #setTechfront(ReactApp)
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getTechnologyMetamodel_Techfront()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	TechFront getTechfront();
+	ReactApp getTechfront();
 
 	/**
 	 * Sets the value of the '{@link UnifiedMetamodel_.TechnologyMetamodel#getTechfront <em>Techfront</em>}' containment reference.
@@ -42,19 +42,19 @@ public interface TechnologyMetamodel extends EObject {
 	 * @see #getTechfront()
 	 * @generated
 	 */
-	void setTechfront(TechFront value);
+	void setTechfront(ReactApp value);
 
 	/**
 	 * Returns the value of the '<em><b>Techback</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Techback</em>' containment reference.
-	 * @see #setTechback(TechBack)
+	 * @see #setTechback(JavaApp)
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getTechnologyMetamodel_Techback()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	TechBack getTechback();
+	JavaApp getTechback();
 
 	/**
 	 * Sets the value of the '{@link UnifiedMetamodel_.TechnologyMetamodel#getTechback <em>Techback</em>}' containment reference.
@@ -64,6 +64,6 @@ public interface TechnologyMetamodel extends EObject {
 	 * @see #getTechback()
 	 * @generated
 	 */
-	void setTechback(TechBack value);
+	void setTechback(JavaApp value);
 
 } // TechnologyMetamodel

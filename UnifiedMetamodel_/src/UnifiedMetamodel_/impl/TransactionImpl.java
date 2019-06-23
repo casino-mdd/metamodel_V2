@@ -24,22 +24,21 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link UnifiedMetamodel_.impl.TransactionImpl#getUpdate <em>Update</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.impl.TransactionImpl#getOperates_on <em>Operates on</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class TransactionImpl extends MinimalEObjectImpl.Container implements Transaction {
 	/**
-	 * The cached value of the '{@link #getUpdate() <em>Update</em>}' reference list.
+	 * The cached value of the '{@link #getOperates_on() <em>Operates on</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUpdate()
+	 * @see #getOperates_on()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GeneralEntity> update;
-
+	protected EList<GeneralEntity> operates_on;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,11 +64,11 @@ public class TransactionImpl extends MinimalEObjectImpl.Container implements Tra
 	 * @generated
 	 */
 	@Override
-	public EList<GeneralEntity> getUpdate() {
-		if (update == null) {
-			update = new EObjectResolvingEList<GeneralEntity>(GeneralEntity.class, this, UnifiedMetamodel_Package.TRANSACTION__UPDATE);
+	public EList<GeneralEntity> getOperates_on() {
+		if (operates_on == null) {
+			operates_on = new EObjectResolvingEList<GeneralEntity>(GeneralEntity.class, this, UnifiedMetamodel_Package.TRANSACTION__OPERATES_ON);
 		}
-		return update;
+		return operates_on;
 	}
 
 	/**
@@ -80,8 +79,8 @@ public class TransactionImpl extends MinimalEObjectImpl.Container implements Tra
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UnifiedMetamodel_Package.TRANSACTION__UPDATE:
-				return getUpdate();
+			case UnifiedMetamodel_Package.TRANSACTION__OPERATES_ON:
+				return getOperates_on();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -95,9 +94,9 @@ public class TransactionImpl extends MinimalEObjectImpl.Container implements Tra
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UnifiedMetamodel_Package.TRANSACTION__UPDATE:
-				getUpdate().clear();
-				getUpdate().addAll((Collection<? extends GeneralEntity>)newValue);
+			case UnifiedMetamodel_Package.TRANSACTION__OPERATES_ON:
+				getOperates_on().clear();
+				getOperates_on().addAll((Collection<? extends GeneralEntity>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -111,8 +110,8 @@ public class TransactionImpl extends MinimalEObjectImpl.Container implements Tra
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UnifiedMetamodel_Package.TRANSACTION__UPDATE:
-				getUpdate().clear();
+			case UnifiedMetamodel_Package.TRANSACTION__OPERATES_ON:
+				getOperates_on().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -126,8 +125,8 @@ public class TransactionImpl extends MinimalEObjectImpl.Container implements Tra
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UnifiedMetamodel_Package.TRANSACTION__UPDATE:
-				return update != null && !update.isEmpty();
+			case UnifiedMetamodel_Package.TRANSACTION__OPERATES_ON:
+				return operates_on != null && !operates_on.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

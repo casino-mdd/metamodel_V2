@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link UnifiedMetamodel_.Attribute#getName <em>Name</em>}</li>
- *   <li>{@link UnifiedMetamodel_.Attribute#getAnotationi <em>Anotationi</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.Attribute#getAnnotation <em>Annotation</em>}</li>
  *   <li>{@link UnifiedMetamodel_.Attribute#getType <em>Type</em>}</li>
  * </ul>
  *
@@ -46,26 +46,26 @@ public interface Attribute extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Anotationi</b></em>' reference.
+	 * Returns the value of the '<em><b>Annotation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Anotationi</em>' reference.
-	 * @see #setAnotationi(Anotationi)
-	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getAttribute_Anotationi()
+	 * @return the value of the '<em>Annotation</em>' reference.
+	 * @see #setAnnotation(Annotation)
+	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getAttribute_Annotation()
 	 * @model
 	 * @generated
 	 */
-	Anotationi getAnotationi();
+	Annotation getAnnotation();
 
 	/**
-	 * Sets the value of the '{@link UnifiedMetamodel_.Attribute#getAnotationi <em>Anotationi</em>}' reference.
+	 * Sets the value of the '{@link UnifiedMetamodel_.Attribute#getAnnotation <em>Annotation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Anotationi</em>' reference.
-	 * @see #getAnotationi()
+	 * @param value the new value of the '<em>Annotation</em>' reference.
+	 * @see #getAnnotation()
 	 * @generated
 	 */
-	void setAnotationi(Anotationi value);
+	void setAnnotation(Annotation value);
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
@@ -74,7 +74,7 @@ public interface Attribute extends EObject {
 	 * @return the value of the '<em>Type</em>' reference.
 	 * @see #setType(EClass)
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getAttribute_Type()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	EClass getType();

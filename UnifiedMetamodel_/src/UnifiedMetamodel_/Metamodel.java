@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link UnifiedMetamodel_.Metamodel#getArquitecturemetamodel <em>Arquitecturemetamodel</em>}</li>
  *   <li>{@link UnifiedMetamodel_.Metamodel#getDomainmetamodel <em>Domainmetamodel</em>}</li>
  *   <li>{@link UnifiedMetamodel_.Metamodel#getTechnologymetamodel <em>Technologymetamodel</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.Metamodel#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getMetamodel()
@@ -89,4 +90,26 @@ public interface Metamodel extends EObject {
 	 * @generated
 	 */
 	void setTechnologymetamodel(TechnologyMetamodel value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getMetamodel_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link UnifiedMetamodel_.Metamodel#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 } // Metamodel

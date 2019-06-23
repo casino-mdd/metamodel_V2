@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
 public interface GenericClass extends EClass {
 	/**
 	 * Returns the value of the '<em><b>Implement</b></em>' reference list.
-	 * The list contents are of type {@link UnifiedMetamodel_.InterfaceClass}.
+	 * The list contents are of type {@link UnifiedMetamodel_.EInterface}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Implement</em>' reference list.
@@ -32,7 +32,7 @@ public interface GenericClass extends EClass {
 	 * @model
 	 * @generated
 	 */
-	EList<InterfaceClass> getImplement();
+	EList<EInterface> getImplement();
 
 	/**
 	 * Returns the value of the '<em><b>Extends</b></em>' reference.
@@ -41,7 +41,7 @@ public interface GenericClass extends EClass {
 	 * @return the value of the '<em>Extends</em>' reference.
 	 * @see #setExtends(AbstractClass)
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getGenericClass_Extends()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	AbstractClass getExtends();

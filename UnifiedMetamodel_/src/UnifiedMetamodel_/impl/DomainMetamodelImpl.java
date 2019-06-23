@@ -3,6 +3,7 @@
 package UnifiedMetamodel_.impl;
 
 import UnifiedMetamodel_.DomainMetamodel;
+import UnifiedMetamodel_.RelationDom;
 import UnifiedMetamodel_.UnifiedMetamodel_Package;
 
 import java.util.Collection;
@@ -28,6 +29,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link UnifiedMetamodel_.impl.DomainMetamodelImpl#getModule <em>Module</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.impl.DomainMetamodelImpl#getRelationdom <em>Relationdom</em>}</li>
  * </ul>
  *
  * @generated
@@ -42,6 +44,16 @@ public class DomainMetamodelImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected EList<UnifiedMetamodel_.Module> module;
+
+	/**
+	 * The cached value of the '{@link #getRelationdom() <em>Relationdom</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRelationdom()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<RelationDom> relationdom;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -81,10 +93,25 @@ public class DomainMetamodelImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
+	public EList<RelationDom> getRelationdom() {
+		if (relationdom == null) {
+			relationdom = new EObjectContainmentEList<RelationDom>(RelationDom.class, this, UnifiedMetamodel_Package.DOMAIN_METAMODEL__RELATIONDOM);
+		}
+		return relationdom;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case UnifiedMetamodel_Package.DOMAIN_METAMODEL__MODULE:
 				return ((InternalEList<?>)getModule()).basicRemove(otherEnd, msgs);
+			case UnifiedMetamodel_Package.DOMAIN_METAMODEL__RELATIONDOM:
+				return ((InternalEList<?>)getRelationdom()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -99,6 +126,8 @@ public class DomainMetamodelImpl extends MinimalEObjectImpl.Container implements
 		switch (featureID) {
 			case UnifiedMetamodel_Package.DOMAIN_METAMODEL__MODULE:
 				return getModule();
+			case UnifiedMetamodel_Package.DOMAIN_METAMODEL__RELATIONDOM:
+				return getRelationdom();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -116,6 +145,10 @@ public class DomainMetamodelImpl extends MinimalEObjectImpl.Container implements
 				getModule().clear();
 				getModule().addAll((Collection<? extends UnifiedMetamodel_.Module>)newValue);
 				return;
+			case UnifiedMetamodel_Package.DOMAIN_METAMODEL__RELATIONDOM:
+				getRelationdom().clear();
+				getRelationdom().addAll((Collection<? extends RelationDom>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -131,6 +164,9 @@ public class DomainMetamodelImpl extends MinimalEObjectImpl.Container implements
 			case UnifiedMetamodel_Package.DOMAIN_METAMODEL__MODULE:
 				getModule().clear();
 				return;
+			case UnifiedMetamodel_Package.DOMAIN_METAMODEL__RELATIONDOM:
+				getRelationdom().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -145,6 +181,8 @@ public class DomainMetamodelImpl extends MinimalEObjectImpl.Container implements
 		switch (featureID) {
 			case UnifiedMetamodel_Package.DOMAIN_METAMODEL__MODULE:
 				return module != null && !module.isEmpty();
+			case UnifiedMetamodel_Package.DOMAIN_METAMODEL__RELATIONDOM:
+				return relationdom != null && !relationdom.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

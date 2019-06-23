@@ -2,6 +2,7 @@
  */
 package UnifiedMetamodel_;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link UnifiedMetamodel_.MethodBack#getName <em>Name</em>}</li>
- *   <li>{@link UnifiedMetamodel_.MethodBack#getAnotationi <em>Anotationi</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.MethodBack#getAnnotation <em>Annotation</em>}</li>
  *   <li>{@link UnifiedMetamodel_.MethodBack#getReturn <em>Return</em>}</li>
  *   <li>{@link UnifiedMetamodel_.MethodBack#getArguments <em>Arguments</em>}</li>
  * </ul>
@@ -47,26 +48,26 @@ public interface MethodBack extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Anotationi</b></em>' reference.
+	 * Returns the value of the '<em><b>Annotation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Anotationi</em>' reference.
-	 * @see #setAnotationi(Anotationi)
-	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getMethodBack_Anotationi()
+	 * @return the value of the '<em>Annotation</em>' reference.
+	 * @see #setAnnotation(Annotation)
+	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getMethodBack_Annotation()
 	 * @model
 	 * @generated
 	 */
-	Anotationi getAnotationi();
+	Annotation getAnnotation();
 
 	/**
-	 * Sets the value of the '{@link UnifiedMetamodel_.MethodBack#getAnotationi <em>Anotationi</em>}' reference.
+	 * Sets the value of the '{@link UnifiedMetamodel_.MethodBack#getAnnotation <em>Annotation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Anotationi</em>' reference.
-	 * @see #getAnotationi()
+	 * @param value the new value of the '<em>Annotation</em>' reference.
+	 * @see #getAnnotation()
 	 * @generated
 	 */
-	void setAnotationi(Anotationi value);
+	void setAnnotation(Annotation value);
 
 	/**
 	 * Returns the value of the '<em><b>Return</b></em>' reference.
@@ -91,25 +92,15 @@ public interface MethodBack extends EObject {
 	void setReturn(EClass value);
 
 	/**
-	 * Returns the value of the '<em><b>Arguments</b></em>' reference.
+	 * Returns the value of the '<em><b>Arguments</b></em>' reference list.
+	 * The list contents are of type {@link UnifiedMetamodel_.EClass}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Arguments</em>' reference.
-	 * @see #setArguments(EClass)
+	 * @return the value of the '<em>Arguments</em>' reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getMethodBack_Arguments()
 	 * @model
 	 * @generated
 	 */
-	EClass getArguments();
-
-	/**
-	 * Sets the value of the '{@link UnifiedMetamodel_.MethodBack#getArguments <em>Arguments</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Arguments</em>' reference.
-	 * @see #getArguments()
-	 * @generated
-	 */
-	void setArguments(EClass value);
+	EList<EClass> getArguments();
 
 } // MethodBack

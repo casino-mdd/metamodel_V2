@@ -220,15 +220,6 @@ public interface UnifiedMetamodel_Factory extends EFactory {
 	Operations createOperations();
 
 	/**
-	 * Returns a new object of class '<em>Login</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Login</em>'.
-	 * @generated
-	 */
-	Login createLogin();
-
-	/**
 	 * Returns a new object of class '<em>Module</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -472,6 +463,15 @@ public interface UnifiedMetamodel_Factory extends EFactory {
 	Redux createRedux();
 
 	/**
+	 * Returns a new object of class '<em>React App</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>React App</em>'.
+	 * @generated
+	 */
+	ReactApp createReactApp();
+
+	/**
 	 * Returns a new object of class '<em>File</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -517,22 +517,13 @@ public interface UnifiedMetamodel_Factory extends EFactory {
 	TechnologyMetamodel createTechnologyMetamodel();
 
 	/**
-	 * Returns a new object of class '<em>Tech Front</em>'.
+	 * Returns a new object of class '<em>Java App</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tech Front</em>'.
+	 * @return a new object of class '<em>Java App</em>'.
 	 * @generated
 	 */
-	TechFront createTechFront();
-
-	/**
-	 * Returns a new object of class '<em>Tech Back</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tech Back</em>'.
-	 * @generated
-	 */
-	TechBack createTechBack();
+	JavaApp createJavaApp();
 
 	/**
 	 * Returns a new object of class '<em>JEE Project</em>'.
@@ -553,13 +544,13 @@ public interface UnifiedMetamodel_Factory extends EFactory {
 	NativeClass createNativeClass();
 
 	/**
-	 * Returns a new object of class '<em>Interface Class</em>'.
+	 * Returns a new object of class '<em>EInterface</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Interface Class</em>'.
+	 * @return a new object of class '<em>EInterface</em>'.
 	 * @generated
 	 */
-	InterfaceClass createInterfaceClass();
+	EInterface createEInterface();
 
 	/**
 	 * Returns a new object of class '<em>Library</em>'.
@@ -569,15 +560,6 @@ public interface UnifiedMetamodel_Factory extends EFactory {
 	 * @generated
 	 */
 	Library createLibrary();
-
-	/**
-	 * Returns a new object of class '<em>Jee</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Jee</em>'.
-	 * @generated
-	 */
-	Jee createJee();
 
 	/**
 	 * Returns a new object of class '<em>Attribute</em>'.
@@ -634,13 +616,13 @@ public interface UnifiedMetamodel_Factory extends EFactory {
 	EClass createEClass();
 
 	/**
-	 * Returns a new object of class '<em>Anotationi</em>'.
+	 * Returns a new object of class '<em>Annotation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Anotationi</em>'.
+	 * @return a new object of class '<em>Annotation</em>'.
 	 * @generated
 	 */
-	Anotationi createAnotationi();
+	Annotation createAnnotation();
 
 	/**
 	 * Returns a new object of class '<em>Subproject</em>'.
@@ -668,6 +650,69 @@ public interface UnifiedMetamodel_Factory extends EFactory {
 	 * @generated
 	 */
 	JavaScript createJavaScript();
+
+	/**
+	 * Returns a new object of class '<em>Util</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Util</em>'.
+	 * @generated
+	 */
+	Util createUtil();
+
+	/**
+	 * Returns a new object of class '<em>Reducers</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Reducers</em>'.
+	 * @generated
+	 */
+	Reducers createReducers();
+
+	/**
+	 * Returns a new object of class '<em>Actions</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Actions</em>'.
+	 * @generated
+	 */
+	Actions createActions();
+
+	/**
+	 * Returns a new object of class '<em>Back</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Back</em>'.
+	 * @generated
+	 */
+	Back createBack();
+
+	/**
+	 * Returns a new object of class '<em>Front</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Front</em>'.
+	 * @generated
+	 */
+	Front createFront();
+
+	/**
+	 * Returns a new object of class '<em>Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Property</em>'.
+	 * @generated
+	 */
+	Property createProperty();
+
+	/**
+	 * Returns a new object of class '<em>Abstract Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Abstract Method</em>'.
+	 * @generated
+	 */
+	AbstractMethod createAbstractMethod();
 
 	/**
 	 * Returns the package supported by this factory.

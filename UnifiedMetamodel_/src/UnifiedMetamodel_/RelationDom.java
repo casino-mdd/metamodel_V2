@@ -29,7 +29,7 @@ public interface RelationDom extends EObject {
 	 * @return the value of the '<em>Source</em>' reference.
 	 * @see #setSource(Entity)
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getRelationDom_Source()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	Entity getSource();
@@ -51,7 +51,7 @@ public interface RelationDom extends EObject {
 	 * @return the value of the '<em>Target</em>' reference.
 	 * @see #setTarget(Entity)
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getRelationDom_Target()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	Entity getTarget();

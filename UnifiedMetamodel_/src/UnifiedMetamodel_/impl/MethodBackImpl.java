@@ -2,17 +2,20 @@
  */
 package UnifiedMetamodel_.impl;
 
-import UnifiedMetamodel_.Anotationi;
+import UnifiedMetamodel_.Annotation;
 import UnifiedMetamodel_.EClass;
 import UnifiedMetamodel_.MethodBack;
 import UnifiedMetamodel_.UnifiedMetamodel_Package;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link UnifiedMetamodel_.impl.MethodBackImpl#getName <em>Name</em>}</li>
- *   <li>{@link UnifiedMetamodel_.impl.MethodBackImpl#getAnotationi <em>Anotationi</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.impl.MethodBackImpl#getAnnotation <em>Annotation</em>}</li>
  *   <li>{@link UnifiedMetamodel_.impl.MethodBackImpl#getReturn <em>Return</em>}</li>
  *   <li>{@link UnifiedMetamodel_.impl.MethodBackImpl#getArguments <em>Arguments</em>}</li>
  * </ul>
@@ -52,14 +55,14 @@ public class MethodBackImpl extends MinimalEObjectImpl.Container implements Meth
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getAnotationi() <em>Anotationi</em>}' reference.
+	 * The cached value of the '{@link #getAnnotation() <em>Annotation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnotationi()
+	 * @see #getAnnotation()
 	 * @generated
 	 * @ordered
 	 */
-	protected Anotationi anotationi;
+	protected Annotation annotation;
 
 	/**
 	 * The cached value of the '{@link #getReturn() <em>Return</em>}' reference.
@@ -72,14 +75,14 @@ public class MethodBackImpl extends MinimalEObjectImpl.Container implements Meth
 	protected EClass return_;
 
 	/**
-	 * The cached value of the '{@link #getArguments() <em>Arguments</em>}' reference.
+	 * The cached value of the '{@link #getArguments() <em>Arguments</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getArguments()
 	 * @generated
 	 * @ordered
 	 */
-	protected EClass arguments;
+	protected EList<EClass> arguments;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,16 +132,16 @@ public class MethodBackImpl extends MinimalEObjectImpl.Container implements Meth
 	 * @generated
 	 */
 	@Override
-	public Anotationi getAnotationi() {
-		if (anotationi != null && anotationi.eIsProxy()) {
-			InternalEObject oldAnotationi = (InternalEObject)anotationi;
-			anotationi = (Anotationi)eResolveProxy(oldAnotationi);
-			if (anotationi != oldAnotationi) {
+	public Annotation getAnnotation() {
+		if (annotation != null && annotation.eIsProxy()) {
+			InternalEObject oldAnnotation = (InternalEObject)annotation;
+			annotation = (Annotation)eResolveProxy(oldAnnotation);
+			if (annotation != oldAnnotation) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UnifiedMetamodel_Package.METHOD_BACK__ANOTATIONI, oldAnotationi, anotationi));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UnifiedMetamodel_Package.METHOD_BACK__ANNOTATION, oldAnnotation, annotation));
 			}
 		}
-		return anotationi;
+		return annotation;
 	}
 
 	/**
@@ -146,8 +149,8 @@ public class MethodBackImpl extends MinimalEObjectImpl.Container implements Meth
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Anotationi basicGetAnotationi() {
-		return anotationi;
+	public Annotation basicGetAnnotation() {
+		return annotation;
 	}
 
 	/**
@@ -156,11 +159,11 @@ public class MethodBackImpl extends MinimalEObjectImpl.Container implements Meth
 	 * @generated
 	 */
 	@Override
-	public void setAnotationi(Anotationi newAnotationi) {
-		Anotationi oldAnotationi = anotationi;
-		anotationi = newAnotationi;
+	public void setAnnotation(Annotation newAnnotation) {
+		Annotation oldAnnotation = annotation;
+		annotation = newAnnotation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UnifiedMetamodel_Package.METHOD_BACK__ANOTATIONI, oldAnotationi, anotationi));
+			eNotify(new ENotificationImpl(this, Notification.SET, UnifiedMetamodel_Package.METHOD_BACK__ANNOTATION, oldAnnotation, annotation));
 	}
 
 	/**
@@ -209,38 +212,11 @@ public class MethodBackImpl extends MinimalEObjectImpl.Container implements Meth
 	 * @generated
 	 */
 	@Override
-	public EClass getArguments() {
-		if (arguments != null && arguments.eIsProxy()) {
-			InternalEObject oldArguments = (InternalEObject)arguments;
-			arguments = (EClass)eResolveProxy(oldArguments);
-			if (arguments != oldArguments) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UnifiedMetamodel_Package.METHOD_BACK__ARGUMENTS, oldArguments, arguments));
-			}
+	public EList<EClass> getArguments() {
+		if (arguments == null) {
+			arguments = new EObjectResolvingEList<EClass>(EClass.class, this, UnifiedMetamodel_Package.METHOD_BACK__ARGUMENTS);
 		}
 		return arguments;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass basicGetArguments() {
-		return arguments;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setArguments(EClass newArguments) {
-		EClass oldArguments = arguments;
-		arguments = newArguments;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UnifiedMetamodel_Package.METHOD_BACK__ARGUMENTS, oldArguments, arguments));
 	}
 
 	/**
@@ -253,15 +229,14 @@ public class MethodBackImpl extends MinimalEObjectImpl.Container implements Meth
 		switch (featureID) {
 			case UnifiedMetamodel_Package.METHOD_BACK__NAME:
 				return getName();
-			case UnifiedMetamodel_Package.METHOD_BACK__ANOTATIONI:
-				if (resolve) return getAnotationi();
-				return basicGetAnotationi();
+			case UnifiedMetamodel_Package.METHOD_BACK__ANNOTATION:
+				if (resolve) return getAnnotation();
+				return basicGetAnnotation();
 			case UnifiedMetamodel_Package.METHOD_BACK__RETURN:
 				if (resolve) return getReturn();
 				return basicGetReturn();
 			case UnifiedMetamodel_Package.METHOD_BACK__ARGUMENTS:
-				if (resolve) return getArguments();
-				return basicGetArguments();
+				return getArguments();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -271,20 +246,22 @@ public class MethodBackImpl extends MinimalEObjectImpl.Container implements Meth
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case UnifiedMetamodel_Package.METHOD_BACK__NAME:
 				setName((String)newValue);
 				return;
-			case UnifiedMetamodel_Package.METHOD_BACK__ANOTATIONI:
-				setAnotationi((Anotationi)newValue);
+			case UnifiedMetamodel_Package.METHOD_BACK__ANNOTATION:
+				setAnnotation((Annotation)newValue);
 				return;
 			case UnifiedMetamodel_Package.METHOD_BACK__RETURN:
 				setReturn((EClass)newValue);
 				return;
 			case UnifiedMetamodel_Package.METHOD_BACK__ARGUMENTS:
-				setArguments((EClass)newValue);
+				getArguments().clear();
+				getArguments().addAll((Collection<? extends EClass>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -301,14 +278,14 @@ public class MethodBackImpl extends MinimalEObjectImpl.Container implements Meth
 			case UnifiedMetamodel_Package.METHOD_BACK__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case UnifiedMetamodel_Package.METHOD_BACK__ANOTATIONI:
-				setAnotationi((Anotationi)null);
+			case UnifiedMetamodel_Package.METHOD_BACK__ANNOTATION:
+				setAnnotation((Annotation)null);
 				return;
 			case UnifiedMetamodel_Package.METHOD_BACK__RETURN:
 				setReturn((EClass)null);
 				return;
 			case UnifiedMetamodel_Package.METHOD_BACK__ARGUMENTS:
-				setArguments((EClass)null);
+				getArguments().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -324,12 +301,12 @@ public class MethodBackImpl extends MinimalEObjectImpl.Container implements Meth
 		switch (featureID) {
 			case UnifiedMetamodel_Package.METHOD_BACK__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case UnifiedMetamodel_Package.METHOD_BACK__ANOTATIONI:
-				return anotationi != null;
+			case UnifiedMetamodel_Package.METHOD_BACK__ANNOTATION:
+				return annotation != null;
 			case UnifiedMetamodel_Package.METHOD_BACK__RETURN:
 				return return_ != null;
 			case UnifiedMetamodel_Package.METHOD_BACK__ARGUMENTS:
-				return arguments != null;
+				return arguments != null && !arguments.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

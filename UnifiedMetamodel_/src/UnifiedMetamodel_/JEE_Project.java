@@ -53,7 +53,7 @@ public interface JEE_Project extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Subproject</em>' containment reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getJEE_Project_Subproject()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Subproject> getSubproject();

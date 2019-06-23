@@ -4,12 +4,15 @@ package UnifiedMetamodel_.util;
 
 import UnifiedMetamodel_.APICall;
 import UnifiedMetamodel_.AbstractClass;
+import UnifiedMetamodel_.AbstractMethod;
 import UnifiedMetamodel_.Action;
 import UnifiedMetamodel_.ActionCreator;
 import UnifiedMetamodel_.ActionDispatcher;
-import UnifiedMetamodel_.Anotationi;
+import UnifiedMetamodel_.Actions;
+import UnifiedMetamodel_.Annotation;
 import UnifiedMetamodel_.ArquitectureMetamodel;
 import UnifiedMetamodel_.Attribute;
+import UnifiedMetamodel_.Back;
 import UnifiedMetamodel_.CSS;
 import UnifiedMetamodel_.Component;
 import UnifiedMetamodel_.ComponentFront;
@@ -23,25 +26,25 @@ import UnifiedMetamodel_.Directory;
 import UnifiedMetamodel_.DomainMetamodel;
 import UnifiedMetamodel_.Dto;
 import UnifiedMetamodel_.EClass;
+import UnifiedMetamodel_.EInterface;
 import UnifiedMetamodel_.Ejb;
 import UnifiedMetamodel_.Entity;
 import UnifiedMetamodel_.Epackage;
 import UnifiedMetamodel_.Exchange;
 import UnifiedMetamodel_.Facade;
 import UnifiedMetamodel_.File;
+import UnifiedMetamodel_.Front;
 import UnifiedMetamodel_.Functionality;
 import UnifiedMetamodel_.GeneralEntity;
 import UnifiedMetamodel_.GenericClass;
-import UnifiedMetamodel_.InterfaceClass;
 import UnifiedMetamodel_.JEE_Project;
 import UnifiedMetamodel_.JS;
 import UnifiedMetamodel_.JSON;
+import UnifiedMetamodel_.JavaApp;
 import UnifiedMetamodel_.JavaScript;
-import UnifiedMetamodel_.Jee;
 import UnifiedMetamodel_.Layer;
 import UnifiedMetamodel_.LayerSegment;
 import UnifiedMetamodel_.Library;
-import UnifiedMetamodel_.Login;
 import UnifiedMetamodel_.MD;
 import UnifiedMetamodel_.Metamodel;
 import UnifiedMetamodel_.MethodBack;
@@ -49,8 +52,11 @@ import UnifiedMetamodel_.ModuleFront;
 import UnifiedMetamodel_.NativeClass;
 import UnifiedMetamodel_.Operations;
 import UnifiedMetamodel_.Pojo;
+import UnifiedMetamodel_.Property;
+import UnifiedMetamodel_.ReactApp;
 import UnifiedMetamodel_.Read;
 import UnifiedMetamodel_.Reducer;
+import UnifiedMetamodel_.Reducers;
 import UnifiedMetamodel_.Redux;
 import UnifiedMetamodel_.RelationArch;
 import UnifiedMetamodel_.RelationDom;
@@ -65,13 +71,12 @@ import UnifiedMetamodel_.State;
 import UnifiedMetamodel_.Store;
 import UnifiedMetamodel_.Submodule;
 import UnifiedMetamodel_.Subproject;
-import UnifiedMetamodel_.TechBack;
-import UnifiedMetamodel_.TechFront;
 import UnifiedMetamodel_.TechnologyMetamodel;
 import UnifiedMetamodel_.Transaction;
 import UnifiedMetamodel_.UI;
 import UnifiedMetamodel_.UIFront;
 import UnifiedMetamodel_.UnifiedMetamodel_Package;
+import UnifiedMetamodel_.Util;
 import UnifiedMetamodel_.Visualizer;
 import UnifiedMetamodel_.War;
 import org.eclipse.emf.common.notify.Adapter;
@@ -226,10 +231,6 @@ public class UnifiedMetamodel_AdapterFactory extends AdapterFactoryImpl {
 				return createOperationsAdapter();
 			}
 			@Override
-			public Adapter caseLogin(Login object) {
-				return createLoginAdapter();
-			}
-			@Override
 			public Adapter caseModule(UnifiedMetamodel_.Module object) {
 				return createModuleAdapter();
 			}
@@ -338,8 +339,8 @@ public class UnifiedMetamodel_AdapterFactory extends AdapterFactoryImpl {
 				return createReduxAdapter();
 			}
 			@Override
-			public Adapter caseTechFront(TechFront object) {
-				return createTechFrontAdapter();
+			public Adapter caseReactApp(ReactApp object) {
+				return createReactAppAdapter();
 			}
 			@Override
 			public Adapter caseFile(File object) {
@@ -362,8 +363,8 @@ public class UnifiedMetamodel_AdapterFactory extends AdapterFactoryImpl {
 				return createTechnologyMetamodelAdapter();
 			}
 			@Override
-			public Adapter caseTechBack(TechBack object) {
-				return createTechBackAdapter();
+			public Adapter caseJavaApp(JavaApp object) {
+				return createJavaAppAdapter();
 			}
 			@Override
 			public Adapter caseJEE_Project(JEE_Project object) {
@@ -374,16 +375,12 @@ public class UnifiedMetamodel_AdapterFactory extends AdapterFactoryImpl {
 				return createNativeClassAdapter();
 			}
 			@Override
-			public Adapter caseInterfaceClass(InterfaceClass object) {
-				return createInterfaceClassAdapter();
+			public Adapter caseEInterface(EInterface object) {
+				return createEInterfaceAdapter();
 			}
 			@Override
 			public Adapter caseLibrary(Library object) {
 				return createLibraryAdapter();
-			}
-			@Override
-			public Adapter caseJee(Jee object) {
-				return createJeeAdapter();
 			}
 			@Override
 			public Adapter caseAttribute(Attribute object) {
@@ -410,8 +407,8 @@ public class UnifiedMetamodel_AdapterFactory extends AdapterFactoryImpl {
 				return createEClassAdapter();
 			}
 			@Override
-			public Adapter caseAnotationi(Anotationi object) {
-				return createAnotationiAdapter();
+			public Adapter caseAnnotation(Annotation object) {
+				return createAnnotationAdapter();
 			}
 			@Override
 			public Adapter caseSubproject(Subproject object) {
@@ -424,6 +421,34 @@ public class UnifiedMetamodel_AdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseJavaScript(JavaScript object) {
 				return createJavaScriptAdapter();
+			}
+			@Override
+			public Adapter caseUtil(Util object) {
+				return createUtilAdapter();
+			}
+			@Override
+			public Adapter caseReducers(Reducers object) {
+				return createReducersAdapter();
+			}
+			@Override
+			public Adapter caseActions(Actions object) {
+				return createActionsAdapter();
+			}
+			@Override
+			public Adapter caseBack(Back object) {
+				return createBackAdapter();
+			}
+			@Override
+			public Adapter caseFront(Front object) {
+				return createFrontAdapter();
+			}
+			@Override
+			public Adapter caseProperty(Property object) {
+				return createPropertyAdapter();
+			}
+			@Override
+			public Adapter caseAbstractMethod(AbstractMethod object) {
+				return createAbstractMethodAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -750,20 +775,6 @@ public class UnifiedMetamodel_AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOperationsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.Login <em>Login</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see UnifiedMetamodel_.Login
-	 * @generated
-	 */
-	public Adapter createLoginAdapter() {
 		return null;
 	}
 
@@ -1146,6 +1157,20 @@ public class UnifiedMetamodel_AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.ReactApp <em>React App</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see UnifiedMetamodel_.ReactApp
+	 * @generated
+	 */
+	public Adapter createReactAppAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.File <em>File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1216,30 +1241,16 @@ public class UnifiedMetamodel_AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.TechFront <em>Tech Front</em>}'.
+	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.JavaApp <em>Java App</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see UnifiedMetamodel_.TechFront
+	 * @see UnifiedMetamodel_.JavaApp
 	 * @generated
 	 */
-	public Adapter createTechFrontAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.TechBack <em>Tech Back</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see UnifiedMetamodel_.TechBack
-	 * @generated
-	 */
-	public Adapter createTechBackAdapter() {
+	public Adapter createJavaAppAdapter() {
 		return null;
 	}
 
@@ -1272,16 +1283,16 @@ public class UnifiedMetamodel_AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.InterfaceClass <em>Interface Class</em>}'.
+	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.EInterface <em>EInterface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see UnifiedMetamodel_.InterfaceClass
+	 * @see UnifiedMetamodel_.EInterface
 	 * @generated
 	 */
-	public Adapter createInterfaceClassAdapter() {
+	public Adapter createEInterfaceAdapter() {
 		return null;
 	}
 
@@ -1296,20 +1307,6 @@ public class UnifiedMetamodel_AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLibraryAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.Jee <em>Jee</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see UnifiedMetamodel_.Jee
-	 * @generated
-	 */
-	public Adapter createJeeAdapter() {
 		return null;
 	}
 
@@ -1398,16 +1395,16 @@ public class UnifiedMetamodel_AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.Anotationi <em>Anotationi</em>}'.
+	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.Annotation <em>Annotation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see UnifiedMetamodel_.Anotationi
+	 * @see UnifiedMetamodel_.Annotation
 	 * @generated
 	 */
-	public Adapter createAnotationiAdapter() {
+	public Adapter createAnnotationAdapter() {
 		return null;
 	}
 
@@ -1450,6 +1447,104 @@ public class UnifiedMetamodel_AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createJavaScriptAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.Util <em>Util</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see UnifiedMetamodel_.Util
+	 * @generated
+	 */
+	public Adapter createUtilAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.Reducers <em>Reducers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see UnifiedMetamodel_.Reducers
+	 * @generated
+	 */
+	public Adapter createReducersAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.Actions <em>Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see UnifiedMetamodel_.Actions
+	 * @generated
+	 */
+	public Adapter createActionsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.Back <em>Back</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see UnifiedMetamodel_.Back
+	 * @generated
+	 */
+	public Adapter createBackAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.Front <em>Front</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see UnifiedMetamodel_.Front
+	 * @generated
+	 */
+	public Adapter createFrontAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.Property <em>Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see UnifiedMetamodel_.Property
+	 * @generated
+	 */
+	public Adapter createPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.AbstractMethod <em>Abstract Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see UnifiedMetamodel_.AbstractMethod
+	 * @generated
+	 */
+	public Adapter createAbstractMethodAdapter() {
 		return null;
 	}
 

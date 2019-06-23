@@ -2,6 +2,7 @@
  */
 package UnifiedMetamodel_;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -46,26 +47,16 @@ public interface Reducer extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Catches</b></em>' reference.
+	 * Returns the value of the '<em><b>Catches</b></em>' reference list.
+	 * The list contents are of type {@link UnifiedMetamodel_.ActionCreator}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Catches</em>' reference.
-	 * @see #setCatches(ActionCreator)
+	 * @return the value of the '<em>Catches</em>' reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getReducer_Catches()
 	 * @model
 	 * @generated
 	 */
-	ActionCreator getCatches();
-
-	/**
-	 * Sets the value of the '{@link UnifiedMetamodel_.Reducer#getCatches <em>Catches</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Catches</em>' reference.
-	 * @see #getCatches()
-	 * @generated
-	 */
-	void setCatches(ActionCreator value);
+	EList<ActionCreator> getCatches();
 
 	/**
 	 * Returns the value of the '<em><b>Reducer Directory</b></em>' reference.

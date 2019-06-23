@@ -55,7 +55,7 @@ public interface Subproject extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Descriptor</em>' containment reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getSubproject_Descriptor()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Descriptor> getDescriptor();
@@ -67,7 +67,7 @@ public interface Subproject extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Package</em>' containment reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getSubproject_Package()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Epackage> getPackage();
@@ -79,7 +79,7 @@ public interface Subproject extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Library</em>' containment reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getSubproject_Library()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Library> getLibrary();

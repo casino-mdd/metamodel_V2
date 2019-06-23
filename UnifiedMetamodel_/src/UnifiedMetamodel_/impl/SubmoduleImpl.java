@@ -4,7 +4,6 @@ package UnifiedMetamodel_.impl;
 
 import UnifiedMetamodel_.Entity;
 import UnifiedMetamodel_.Operations;
-import UnifiedMetamodel_.RelationDom;
 import UnifiedMetamodel_.Submodule;
 import UnifiedMetamodel_.UnifiedMetamodel_Package;
 
@@ -35,7 +34,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link UnifiedMetamodel_.impl.SubmoduleImpl#getName <em>Name</em>}</li>
  *   <li>{@link UnifiedMetamodel_.impl.SubmoduleImpl#getOperations <em>Operations</em>}</li>
  *   <li>{@link UnifiedMetamodel_.impl.SubmoduleImpl#getEntity <em>Entity</em>}</li>
- *   <li>{@link UnifiedMetamodel_.impl.SubmoduleImpl#getRelation <em>Relation</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,16 +78,6 @@ public class SubmoduleImpl extends MinimalEObjectImpl.Container implements Submo
 	 * @ordered
 	 */
 	protected EList<Entity> entity;
-
-	/**
-	 * The cached value of the '{@link #getRelation() <em>Relation</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRelation()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<RelationDom> relation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -165,27 +153,12 @@ public class SubmoduleImpl extends MinimalEObjectImpl.Container implements Submo
 	 * @generated
 	 */
 	@Override
-	public EList<RelationDom> getRelation() {
-		if (relation == null) {
-			relation = new EObjectContainmentEList<RelationDom>(RelationDom.class, this, UnifiedMetamodel_Package.SUBMODULE__RELATION);
-		}
-		return relation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case UnifiedMetamodel_Package.SUBMODULE__OPERATIONS:
 				return ((InternalEList<?>)getOperations()).basicRemove(otherEnd, msgs);
 			case UnifiedMetamodel_Package.SUBMODULE__ENTITY:
 				return ((InternalEList<?>)getEntity()).basicRemove(otherEnd, msgs);
-			case UnifiedMetamodel_Package.SUBMODULE__RELATION:
-				return ((InternalEList<?>)getRelation()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -204,8 +177,6 @@ public class SubmoduleImpl extends MinimalEObjectImpl.Container implements Submo
 				return getOperations();
 			case UnifiedMetamodel_Package.SUBMODULE__ENTITY:
 				return getEntity();
-			case UnifiedMetamodel_Package.SUBMODULE__RELATION:
-				return getRelation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -230,10 +201,6 @@ public class SubmoduleImpl extends MinimalEObjectImpl.Container implements Submo
 				getEntity().clear();
 				getEntity().addAll((Collection<? extends Entity>)newValue);
 				return;
-			case UnifiedMetamodel_Package.SUBMODULE__RELATION:
-				getRelation().clear();
-				getRelation().addAll((Collection<? extends RelationDom>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -255,9 +222,6 @@ public class SubmoduleImpl extends MinimalEObjectImpl.Container implements Submo
 			case UnifiedMetamodel_Package.SUBMODULE__ENTITY:
 				getEntity().clear();
 				return;
-			case UnifiedMetamodel_Package.SUBMODULE__RELATION:
-				getRelation().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -276,8 +240,6 @@ public class SubmoduleImpl extends MinimalEObjectImpl.Container implements Submo
 				return operations != null && !operations.isEmpty();
 			case UnifiedMetamodel_Package.SUBMODULE__ENTITY:
 				return entity != null && !entity.isEmpty();
-			case UnifiedMetamodel_Package.SUBMODULE__RELATION:
-				return relation != null && !relation.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

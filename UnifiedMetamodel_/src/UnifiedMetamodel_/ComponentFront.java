@@ -32,7 +32,7 @@ public interface ComponentFront extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Use</em>' reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getComponentFront_Use()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	EList<ModuleFront> getUse();

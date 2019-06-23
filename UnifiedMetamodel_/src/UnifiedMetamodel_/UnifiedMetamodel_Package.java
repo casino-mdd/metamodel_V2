@@ -159,7 +159,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int EJB_OPERATION_COUNT = LAYER_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Allow To Use</b></em>' reference.
+	 * The feature id for the '<em><b>Allow To Use</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -214,7 +214,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int DTO = 2;
 
 	/**
-	 * The feature id for the '<em><b>Allow To Use</b></em>' reference.
+	 * The feature id for the '<em><b>Allow To Use</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -269,7 +269,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int STORE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Allow To Use</b></em>' reference.
+	 * The feature id for the '<em><b>Allow To Use</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -324,7 +324,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int UI = 4;
 
 	/**
-	 * The feature id for the '<em><b>Allow To Use</b></em>' reference.
+	 * The feature id for the '<em><b>Allow To Use</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -379,7 +379,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int REST_ENTITY = 6;
 
 	/**
-	 * The feature id for the '<em><b>Allow To Use</b></em>' reference.
+	 * The feature id for the '<em><b>Allow To Use</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -434,7 +434,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int FACADE = 7;
 
 	/**
-	 * The feature id for the '<em><b>Allow To Use</b></em>' reference.
+	 * The feature id for the '<em><b>Allow To Use</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -682,7 +682,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int CONTAINERS = 12;
 
 	/**
-	 * The feature id for the '<em><b>Allow To Use</b></em>' reference.
+	 * The feature id for the '<em><b>Allow To Use</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -737,7 +737,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int POJO = 13;
 
 	/**
-	 * The feature id for the '<em><b>Allow To Use</b></em>' reference.
+	 * The feature id for the '<em><b>Allow To Use</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -792,7 +792,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int SERVICES = 14;
 
 	/**
-	 * The feature id for the '<em><b>Allow To Use</b></em>' reference.
+	 * The feature id for the '<em><b>Allow To Use</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -874,13 +874,22 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int METAMODEL__TECHNOLOGYMETAMODEL = 2;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METAMODEL__NAME = 3;
+
+	/**
 	 * The number of structural features of the '<em>Metamodel</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int METAMODEL_FEATURE_COUNT = 3;
+	int METAMODEL_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Metamodel</em>' class.
@@ -903,13 +912,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int OPERATIONS = 21;
 
 	/**
-	 * The feature id for the '<em><b>Entity</b></em>' reference.
+	 * The feature id for the '<em><b>Operates on</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATIONS__ENTITY = 0;
+	int OPERATIONS__OPERATES_ON = 0;
 
 	/**
 	 * The number of structural features of the '<em>Operations</em>' class.
@@ -940,13 +949,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int READ = 16;
 
 	/**
-	 * The feature id for the '<em><b>Entity</b></em>' reference.
+	 * The feature id for the '<em><b>Operates on</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int READ__ENTITY = OPERATIONS__ENTITY;
+	int READ__OPERATES_ON = OPERATIONS__OPERATES_ON;
 
 	/**
 	 * The number of structural features of the '<em>Read</em>' class.
@@ -977,13 +986,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int CREATE = 17;
 
 	/**
-	 * The feature id for the '<em><b>Entity</b></em>' reference.
+	 * The feature id for the '<em><b>Operates on</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE__ENTITY = OPERATIONS__ENTITY;
+	int CREATE__OPERATES_ON = OPERATIONS__OPERATES_ON;
 
 	/**
 	 * The number of structural features of the '<em>Create</em>' class.
@@ -1011,16 +1020,16 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getTransaction()
 	 * @generated
 	 */
-	int TRANSACTION = 28;
+	int TRANSACTION = 27;
 
 	/**
-	 * The feature id for the '<em><b>Update</b></em>' reference list.
+	 * The feature id for the '<em><b>Operates on</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTION__UPDATE = 0;
+	int TRANSACTION__OPERATES_ON = 0;
 
 	/**
 	 * The number of structural features of the '<em>Transaction</em>' class.
@@ -1051,13 +1060,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int SALE = 18;
 
 	/**
-	 * The feature id for the '<em><b>Update</b></em>' reference list.
+	 * The feature id for the '<em><b>Operates on</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SALE__UPDATE = TRANSACTION__UPDATE;
+	int SALE__OPERATES_ON = TRANSACTION__OPERATES_ON;
 
 	/**
 	 * The number of structural features of the '<em>Sale</em>' class.
@@ -1088,13 +1097,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int EXCHANGE = 19;
 
 	/**
-	 * The feature id for the '<em><b>Update</b></em>' reference list.
+	 * The feature id for the '<em><b>Operates on</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXCHANGE__UPDATE = TRANSACTION__UPDATE;
+	int EXCHANGE__OPERATES_ON = TRANSACTION__OPERATES_ON;
 
 	/**
 	 * The number of structural features of the '<em>Exchange</em>' class.
@@ -1122,7 +1131,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getRelationDom()
 	 * @generated
 	 */
-	int RELATION_DOM = 27;
+	int RELATION_DOM = 26;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -1207,43 +1216,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int COMPOSITION_OPERATION_COUNT = RELATION_DOM_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link UnifiedMetamodel_.impl.LoginImpl <em>Login</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see UnifiedMetamodel_.impl.LoginImpl
-	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getLogin()
-	 * @generated
-	 */
-	int LOGIN = 22;
-
-	/**
-	 * The feature id for the '<em><b>Entity</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN__ENTITY = OPERATIONS__ENTITY;
-
-	/**
-	 * The number of structural features of the '<em>Login</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_FEATURE_COUNT = OPERATIONS_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Login</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_OPERATION_COUNT = OPERATIONS_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link UnifiedMetamodel_.impl.ModuleImpl <em>Module</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1251,7 +1223,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getModule()
 	 * @generated
 	 */
-	int MODULE = 23;
+	int MODULE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1297,7 +1269,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getEntity()
 	 * @generated
 	 */
-	int ENTITY = 26;
+	int ENTITY = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1309,13 +1281,22 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int ENTITY__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__PROPERTY = 1;
+
+	/**
 	 * The number of structural features of the '<em>Entity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE_COUNT = 1;
+	int ENTITY_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Entity</em>' class.
@@ -1334,7 +1315,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getSpecialEntity()
 	 * @generated
 	 */
-	int SPECIAL_ENTITY = 24;
+	int SPECIAL_ENTITY = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1346,6 +1327,15 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int SPECIAL_ENTITY__NAME = ENTITY__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIAL_ENTITY__PROPERTY = ENTITY__PROPERTY;
+
+	/**
 	 * The feature id for the '<em><b>Transaction</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1355,22 +1345,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int SPECIAL_ENTITY__TRANSACTION = ENTITY_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIAL_ENTITY__TYPE = ENTITY_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Special Entity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIAL_ENTITY_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 2;
+	int SPECIAL_ENTITY_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Special Entity</em>' class.
@@ -1389,7 +1370,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getGeneralEntity()
 	 * @generated
 	 */
-	int GENERAL_ENTITY = 25;
+	int GENERAL_ENTITY = 24;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1399,6 +1380,15 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @ordered
 	 */
 	int GENERAL_ENTITY__NAME = ENTITY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERAL_ENTITY__PROPERTY = ENTITY__PROPERTY;
 
 	/**
 	 * The number of structural features of the '<em>General Entity</em>' class.
@@ -1426,7 +1416,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getSubmodule()
 	 * @generated
 	 */
-	int SUBMODULE = 29;
+	int SUBMODULE = 28;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1456,22 +1446,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int SUBMODULE__ENTITY = 2;
 
 	/**
-	 * The feature id for the '<em><b>Relation</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBMODULE__RELATION = 3;
-
-	/**
 	 * The number of structural features of the '<em>Submodule</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBMODULE_FEATURE_COUNT = 4;
+	int SUBMODULE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Submodule</em>' class.
@@ -1490,7 +1471,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getDomainMetamodel()
 	 * @generated
 	 */
-	int DOMAIN_METAMODEL = 30;
+	int DOMAIN_METAMODEL = 29;
 
 	/**
 	 * The feature id for the '<em><b>Module</b></em>' containment reference list.
@@ -1502,13 +1483,22 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int DOMAIN_METAMODEL__MODULE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Relationdom</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_METAMODEL__RELATIONDOM = 1;
+
+	/**
 	 * The number of structural features of the '<em>Domain Metamodel</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_METAMODEL_FEATURE_COUNT = 1;
+	int DOMAIN_METAMODEL_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Domain Metamodel</em>' class.
@@ -1528,7 +1518,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getActionDispatcher()
 	 * @generated
 	 */
-	int ACTION_DISPATCHER = 31;
+	int ACTION_DISPATCHER = 30;
 
 	/**
 	 * The feature id for the '<em><b>Use</b></em>' reference.
@@ -1574,7 +1564,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getModuleFront()
 	 * @generated
 	 */
-	int MODULE_FRONT = 54;
+	int MODULE_FRONT = 53;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1620,7 +1610,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getRouter()
 	 * @generated
 	 */
-	int ROUTER = 32;
+	int ROUTER = 31;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1666,7 +1656,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getFile()
 	 * @generated
 	 */
-	int FILE = 51;
+	int FILE = 50;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1712,7 +1702,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getJSON()
 	 * @generated
 	 */
-	int JSON = 33;
+	int JSON = 32;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1758,7 +1748,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getMD()
 	 * @generated
 	 */
-	int MD = 34;
+	int MD = 33;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1804,7 +1794,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getCSS()
 	 * @generated
 	 */
-	int CSS = 35;
+	int CSS = 34;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1850,7 +1840,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getAPICall()
 	 * @generated
 	 */
-	int API_CALL = 36;
+	int API_CALL = 35;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1896,7 +1886,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getDirectory()
 	 * @generated
 	 */
-	int DIRECTORY = 37;
+	int DIRECTORY = 36;
 
 	/**
 	 * The feature id for the '<em><b>Purpose</b></em>' attribute.
@@ -1969,7 +1959,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getState()
 	 * @generated
 	 */
-	int STATE = 38;
+	int STATE = 37;
 
 	/**
 	 * The feature id for the '<em><b>Action</b></em>' containment reference list.
@@ -2024,7 +2014,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getComponentFront()
 	 * @generated
 	 */
-	int COMPONENT_FRONT = 52;
+	int COMPONENT_FRONT = 51;
 
 	/**
 	 * The feature id for the '<em><b>Use</b></em>' reference list.
@@ -2079,7 +2069,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getUIFront()
 	 * @generated
 	 */
-	int UI_FRONT = 39;
+	int UI_FRONT = 38;
 
 	/**
 	 * The feature id for the '<em><b>Use</b></em>' reference list.
@@ -2134,7 +2124,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getVisualizer()
 	 * @generated
 	 */
-	int VISUALIZER = 40;
+	int VISUALIZER = 39;
 
 	/**
 	 * The feature id for the '<em><b>Use</b></em>' reference list.
@@ -2189,7 +2179,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getDesign()
 	 * @generated
 	 */
-	int DESIGN = 41;
+	int DESIGN = 40;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2235,7 +2225,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getActionCreator()
 	 * @generated
 	 */
-	int ACTION_CREATOR = 42;
+	int ACTION_CREATOR = 41;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2272,7 +2262,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getRouterComponent()
 	 * @generated
 	 */
-	int ROUTER_COMPONENT = 43;
+	int ROUTER_COMPONENT = 42;
 
 	/**
 	 * The feature id for the '<em><b>Use</b></em>' reference list.
@@ -2336,7 +2326,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getContainer()
 	 * @generated
 	 */
-	int CONTAINER = 44;
+	int CONTAINER = 43;
 
 	/**
 	 * The feature id for the '<em><b>Use</b></em>' reference list.
@@ -2409,7 +2399,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getServicesFront()
 	 * @generated
 	 */
-	int SERVICES_FRONT = 45;
+	int SERVICES_FRONT = 44;
 
 	/**
 	 * The feature id for the '<em><b>Use</b></em>' reference list.
@@ -2464,7 +2454,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getFunctionality()
 	 * @generated
 	 */
-	int FUNCTIONALITY = 46;
+	int FUNCTIONALITY = 45;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2485,7 +2475,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int FUNCTIONALITY__COMPONENTS = 1;
 
 	/**
-	 * The feature id for the '<em><b>State</b></em>' containment reference list.
+	 * The feature id for the '<em><b>State</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2537,7 +2527,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getJS()
 	 * @generated
 	 */
-	int JS = 47;
+	int JS = 46;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2583,7 +2573,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getAction()
 	 * @generated
 	 */
-	int ACTION = 48;
+	int ACTION = 47;
 
 	/**
 	 * The feature id for the '<em><b>Actiondispatcher</b></em>' containment reference list.
@@ -2613,13 +2603,22 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int ACTION__ACTION_DIRECTORY = 2;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__NAME = 3;
+
+	/**
 	 * The number of structural features of the '<em>Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_FEATURE_COUNT = 3;
+	int ACTION_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Action</em>' class.
@@ -2638,7 +2637,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getRedux()
 	 * @generated
 	 */
-	int REDUX = 49;
+	int REDUX = 48;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2677,6 +2676,61 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int REDUX_OPERATION_COUNT = MODULE_FRONT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link UnifiedMetamodel_.impl.ReactAppImpl <em>React App</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see UnifiedMetamodel_.impl.ReactAppImpl
+	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getReactApp()
+	 * @generated
+	 */
+	int REACT_APP = 49;
+
+	/**
+	 * The feature id for the '<em><b>Functionalities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACT_APP__FUNCTIONALITIES = 0;
+
+	/**
+	 * The feature id for the '<em><b>Modules</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACT_APP__MODULES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Directories</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACT_APP__DIRECTORIES = 2;
+
+	/**
+	 * The number of structural features of the '<em>React App</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACT_APP_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>React App</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACT_APP_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link UnifiedMetamodel_.impl.ReducerImpl <em>Reducer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2684,7 +2738,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getReducer()
 	 * @generated
 	 */
-	int REDUCER = 53;
+	int REDUCER = 52;
 
 	/**
 	 * The meta object id for the '{@link UnifiedMetamodel_.impl.TechnologyMetamodelImpl <em>Technology Metamodel</em>}' class.
@@ -2694,62 +2748,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getTechnologyMetamodel()
 	 * @generated
 	 */
-	int TECHNOLOGY_METAMODEL = 55;
-
-	/**
-	 * The meta object id for the '{@link UnifiedMetamodel_.impl.TechFrontImpl <em>Tech Front</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see UnifiedMetamodel_.impl.TechFrontImpl
-	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getTechFront()
-	 * @generated
-	 */
-	int TECH_FRONT = 50;
-
-	/**
-	 * The feature id for the '<em><b>Functionalities</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TECH_FRONT__FUNCTIONALITIES = 0;
-
-	/**
-	 * The feature id for the '<em><b>Modules</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TECH_FRONT__MODULES = 1;
-
-	/**
-	 * The feature id for the '<em><b>Directories</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TECH_FRONT__DIRECTORIES = 2;
-
-	/**
-	 * The number of structural features of the '<em>Tech Front</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TECH_FRONT_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Tech Front</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TECH_FRONT_OPERATION_COUNT = 0;
+	int TECHNOLOGY_METAMODEL = 54;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2761,7 +2760,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int REDUCER__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Catches</b></em>' reference.
+	 * The feature id for the '<em><b>Catches</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2834,14 +2833,14 @@ public interface UnifiedMetamodel_Package extends EPackage {
 
 
 	/**
-	 * The meta object id for the '{@link UnifiedMetamodel_.impl.TechBackImpl <em>Tech Back</em>}' class.
+	 * The meta object id for the '{@link UnifiedMetamodel_.impl.JavaAppImpl <em>Java App</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see UnifiedMetamodel_.impl.TechBackImpl
-	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getTechBack()
+	 * @see UnifiedMetamodel_.impl.JavaAppImpl
+	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getJavaApp()
 	 * @generated
 	 */
-	int TECH_BACK = 56;
+	int JAVA_APP = 55;
 
 	/**
 	 * The feature id for the '<em><b>Jee project</b></em>' containment reference list.
@@ -2850,25 +2849,25 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TECH_BACK__JEE_PROJECT = 0;
+	int JAVA_APP__JEE_PROJECT = 0;
 
 	/**
-	 * The number of structural features of the '<em>Tech Back</em>' class.
+	 * The number of structural features of the '<em>Java App</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TECH_BACK_FEATURE_COUNT = 1;
+	int JAVA_APP_FEATURE_COUNT = 1;
 
 	/**
-	 * The number of operations of the '<em>Tech Back</em>' class.
+	 * The number of operations of the '<em>Java App</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TECH_BACK_OPERATION_COUNT = 0;
+	int JAVA_APP_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link UnifiedMetamodel_.impl.JEE_ProjectImpl <em>JEE Project</em>}' class.
@@ -2878,7 +2877,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getJEE_Project()
 	 * @generated
 	 */
-	int JEE_PROJECT = 57;
+	int JEE_PROJECT = 56;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2924,7 +2923,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getEClass()
 	 * @generated
 	 */
-	int ECLASS = 67;
+	int ECLASS = 65;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
@@ -2954,13 +2953,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int ECLASS__METHOD = 2;
 
 	/**
-	 * The feature id for the '<em><b>Anotationi</b></em>' reference.
+	 * The feature id for the '<em><b>Annotation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ECLASS__ANOTATIONI = 3;
+	int ECLASS__ANNOTATION = 3;
 
 	/**
 	 * The number of structural features of the '<em>EClass</em>' class.
@@ -2988,7 +2987,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getNativeClass()
 	 * @generated
 	 */
-	int NATIVE_CLASS = 58;
+	int NATIVE_CLASS = 57;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
@@ -3018,13 +3017,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int NATIVE_CLASS__METHOD = ECLASS__METHOD;
 
 	/**
-	 * The feature id for the '<em><b>Anotationi</b></em>' reference.
+	 * The feature id for the '<em><b>Annotation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NATIVE_CLASS__ANOTATIONI = ECLASS__ANOTATIONI;
+	int NATIVE_CLASS__ANNOTATION = ECLASS__ANNOTATION;
 
 	/**
 	 * The feature id for the '<em><b>Primitive Ref</b></em>' attribute.
@@ -3054,23 +3053,14 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int NATIVE_CLASS_OPERATION_COUNT = ECLASS_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link UnifiedMetamodel_.impl.InterfaceClassImpl <em>Interface Class</em>}' class.
+	 * The meta object id for the '{@link UnifiedMetamodel_.impl.EInterfaceImpl <em>EInterface</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see UnifiedMetamodel_.impl.InterfaceClassImpl
-	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getInterfaceClass()
+	 * @see UnifiedMetamodel_.impl.EInterfaceImpl
+	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getEInterface()
 	 * @generated
 	 */
-	int INTERFACE_CLASS = 59;
-
-	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERFACE_CLASS__ATTRIBUTE = ECLASS__ATTRIBUTE;
+	int EINTERFACE = 58;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3079,43 +3069,34 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_CLASS__NAME = ECLASS__NAME;
+	int EINTERFACE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Method</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Abstractmethod</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_CLASS__METHOD = ECLASS__METHOD;
+	int EINTERFACE__ABSTRACTMETHOD = 1;
 
 	/**
-	 * The feature id for the '<em><b>Anotationi</b></em>' reference.
+	 * The number of structural features of the '<em>EInterface</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_CLASS__ANOTATIONI = ECLASS__ANOTATIONI;
+	int EINTERFACE_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of structural features of the '<em>Interface Class</em>' class.
+	 * The number of operations of the '<em>EInterface</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_CLASS_FEATURE_COUNT = ECLASS_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Interface Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERFACE_CLASS_OPERATION_COUNT = ECLASS_OPERATION_COUNT + 0;
+	int EINTERFACE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link UnifiedMetamodel_.impl.LibraryImpl <em>Library</em>}' class.
@@ -3125,7 +3106,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getLibrary()
 	 * @generated
 	 */
-	int LIBRARY = 60;
+	int LIBRARY = 59;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3155,13 +3136,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int LIBRARY__NATIVECLASS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Anotationi</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY__ANOTATIONI = 3;
+	int LIBRARY__ANNOTATION = 3;
 
 	/**
 	 * The number of structural features of the '<em>Library</em>' class.
@@ -3182,43 +3163,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int LIBRARY_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link UnifiedMetamodel_.impl.JeeImpl <em>Jee</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see UnifiedMetamodel_.impl.JeeImpl
-	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getJee()
-	 * @generated
-	 */
-	int JEE = 61;
-
-	/**
-	 * The feature id for the '<em><b>Jee project</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JEE__JEE_PROJECT = 0;
-
-	/**
-	 * The number of structural features of the '<em>Jee</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JEE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Jee</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JEE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link UnifiedMetamodel_.impl.AttributeImpl <em>Attribute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3226,7 +3170,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getAttribute()
 	 * @generated
 	 */
-	int ATTRIBUTE = 62;
+	int ATTRIBUTE = 60;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3238,13 +3182,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int ATTRIBUTE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Anotationi</b></em>' reference.
+	 * The feature id for the '<em><b>Annotation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__ANOTATIONI = 1;
+	int ATTRIBUTE__ANNOTATION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -3281,7 +3225,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getGenericClass()
 	 * @generated
 	 */
-	int GENERIC_CLASS = 63;
+	int GENERIC_CLASS = 61;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
@@ -3311,13 +3255,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int GENERIC_CLASS__METHOD = ECLASS__METHOD;
 
 	/**
-	 * The feature id for the '<em><b>Anotationi</b></em>' reference.
+	 * The feature id for the '<em><b>Annotation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERIC_CLASS__ANOTATIONI = ECLASS__ANOTATIONI;
+	int GENERIC_CLASS__ANNOTATION = ECLASS__ANNOTATION;
 
 	/**
 	 * The feature id for the '<em><b>Implement</b></em>' reference list.
@@ -3363,7 +3307,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getMethodBack()
 	 * @generated
 	 */
-	int METHOD_BACK = 64;
+	int METHOD_BACK = 62;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3375,13 +3319,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int METHOD_BACK__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Anotationi</b></em>' reference.
+	 * The feature id for the '<em><b>Annotation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int METHOD_BACK__ANOTATIONI = 1;
+	int METHOD_BACK__ANNOTATION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' reference.
@@ -3393,7 +3337,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int METHOD_BACK__RETURN = 2;
 
 	/**
-	 * The feature id for the '<em><b>Arguments</b></em>' reference.
+	 * The feature id for the '<em><b>Arguments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3427,7 +3371,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getAbstractClass()
 	 * @generated
 	 */
-	int ABSTRACT_CLASS = 65;
+	int ABSTRACT_CLASS = 63;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
@@ -3457,13 +3401,22 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int ABSTRACT_CLASS__METHOD = ECLASS__METHOD;
 
 	/**
-	 * The feature id for the '<em><b>Anotationi</b></em>' reference.
+	 * The feature id for the '<em><b>Annotation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CLASS__ANOTATIONI = ECLASS__ANOTATIONI;
+	int ABSTRACT_CLASS__ANNOTATION = ECLASS__ANNOTATION;
+
+	/**
+	 * The feature id for the '<em><b>Abstractmethod</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CLASS__ABSTRACTMETHOD = ECLASS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Abstract Class</em>' class.
@@ -3472,7 +3425,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CLASS_FEATURE_COUNT = ECLASS_FEATURE_COUNT + 0;
+	int ABSTRACT_CLASS_FEATURE_COUNT = ECLASS_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Abstract Class</em>' class.
@@ -3491,7 +3444,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getEpackage()
 	 * @generated
 	 */
-	int EPACKAGE = 66;
+	int EPACKAGE = 64;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3530,14 +3483,14 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int EPACKAGE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link UnifiedMetamodel_.impl.AnotationiImpl <em>Anotationi</em>}' class.
+	 * The meta object id for the '{@link UnifiedMetamodel_.impl.AnnotationImpl <em>Annotation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see UnifiedMetamodel_.impl.AnotationiImpl
-	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getAnotationi()
+	 * @see UnifiedMetamodel_.impl.AnnotationImpl
+	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getAnnotation()
 	 * @generated
 	 */
-	int ANOTATIONI = 68;
+	int ANNOTATION = 66;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
@@ -3546,7 +3499,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANOTATIONI__ATTRIBUTE = ECLASS__ATTRIBUTE;
+	int ANNOTATION__ATTRIBUTE = ECLASS__ATTRIBUTE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3555,7 +3508,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANOTATIONI__NAME = ECLASS__NAME;
+	int ANNOTATION__NAME = ECLASS__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Method</b></em>' containment reference list.
@@ -3564,16 +3517,16 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANOTATIONI__METHOD = ECLASS__METHOD;
+	int ANNOTATION__METHOD = ECLASS__METHOD;
 
 	/**
-	 * The feature id for the '<em><b>Anotationi</b></em>' reference.
+	 * The feature id for the '<em><b>Annotation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANOTATIONI__ANOTATIONI = ECLASS__ANOTATIONI;
+	int ANNOTATION__ANNOTATION = ECLASS__ANNOTATION;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' attribute.
@@ -3582,7 +3535,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANOTATIONI__PROPERTIES = ECLASS_FEATURE_COUNT + 0;
+	int ANNOTATION__PROPERTIES = ECLASS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Descriptor</b></em>' reference.
@@ -3591,25 +3544,25 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANOTATIONI__DESCRIPTOR = ECLASS_FEATURE_COUNT + 1;
+	int ANNOTATION__DESCRIPTOR = ECLASS_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Anotationi</em>' class.
+	 * The number of structural features of the '<em>Annotation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANOTATIONI_FEATURE_COUNT = ECLASS_FEATURE_COUNT + 2;
+	int ANNOTATION_FEATURE_COUNT = ECLASS_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Anotationi</em>' class.
+	 * The number of operations of the '<em>Annotation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANOTATIONI_OPERATION_COUNT = ECLASS_OPERATION_COUNT + 0;
+	int ANNOTATION_OPERATION_COUNT = ECLASS_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link UnifiedMetamodel_.impl.SubprojectImpl <em>Subproject</em>}' class.
@@ -3619,7 +3572,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getSubproject()
 	 * @generated
 	 */
-	int SUBPROJECT = 69;
+	int SUBPROJECT = 67;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3683,7 +3636,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getDescriptor()
 	 * @generated
 	 */
-	int DESCRIPTOR = 70;
+	int DESCRIPTOR = 68;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3730,7 +3683,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getJavaScript()
 	 * @generated
 	 */
-	int JAVA_SCRIPT = 71;
+	int JAVA_SCRIPT = 69;
 
 	/**
 	 * The feature id for the '<em><b>Layer Segments</b></em>' containment reference list.
@@ -3770,6 +3723,383 @@ public interface UnifiedMetamodel_Package extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link UnifiedMetamodel_.impl.UtilImpl <em>Util</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see UnifiedMetamodel_.impl.UtilImpl
+	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getUtil()
+	 * @generated
+	 */
+	int UTIL = 70;
+
+	/**
+	 * The feature id for the '<em><b>Allow To Use</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UTIL__ALLOW_TO_USE = LAYER_SEGMENT__ALLOW_TO_USE;
+
+	/**
+	 * The feature id for the '<em><b>Layersegment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UTIL__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UTIL__NAME = LAYER_SEGMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Util</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UTIL_FEATURE_COUNT = LAYER_SEGMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Util</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UTIL_OPERATION_COUNT = LAYER_SEGMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link UnifiedMetamodel_.impl.ReducersImpl <em>Reducers</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see UnifiedMetamodel_.impl.ReducersImpl
+	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getReducers()
+	 * @generated
+	 */
+	int REDUCERS = 71;
+
+	/**
+	 * The feature id for the '<em><b>Allow To Use</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REDUCERS__ALLOW_TO_USE = LAYER_SEGMENT__ALLOW_TO_USE;
+
+	/**
+	 * The feature id for the '<em><b>Layersegment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REDUCERS__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REDUCERS__NAME = LAYER_SEGMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Reducers</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REDUCERS_FEATURE_COUNT = LAYER_SEGMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Reducers</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REDUCERS_OPERATION_COUNT = LAYER_SEGMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link UnifiedMetamodel_.impl.ActionsImpl <em>Actions</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see UnifiedMetamodel_.impl.ActionsImpl
+	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getActions()
+	 * @generated
+	 */
+	int ACTIONS = 72;
+
+	/**
+	 * The feature id for the '<em><b>Allow To Use</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIONS__ALLOW_TO_USE = LAYER_SEGMENT__ALLOW_TO_USE;
+
+	/**
+	 * The feature id for the '<em><b>Layersegment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIONS__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIONS__NAME = LAYER_SEGMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Actions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIONS_FEATURE_COUNT = LAYER_SEGMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Actions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIONS_OPERATION_COUNT = LAYER_SEGMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link UnifiedMetamodel_.impl.BackImpl <em>Back</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see UnifiedMetamodel_.impl.BackImpl
+	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getBack()
+	 * @generated
+	 */
+	int BACK = 73;
+
+	/**
+	 * The feature id for the '<em><b>Layers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BACK__LAYERS = COMPONENT__LAYERS;
+
+	/**
+	 * The feature id for the '<em><b>Relations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BACK__RELATIONS = COMPONENT__RELATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BACK__NAME = COMPONENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Back</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BACK_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Back</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BACK_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link UnifiedMetamodel_.impl.FrontImpl <em>Front</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see UnifiedMetamodel_.impl.FrontImpl
+	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getFront()
+	 * @generated
+	 */
+	int FRONT = 74;
+
+	/**
+	 * The feature id for the '<em><b>Layers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT__LAYERS = COMPONENT__LAYERS;
+
+	/**
+	 * The feature id for the '<em><b>Relations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT__RELATIONS = COMPONENT__RELATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT__NAME = COMPONENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Front</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Front</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link UnifiedMetamodel_.impl.PropertyImpl <em>Property</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see UnifiedMetamodel_.impl.PropertyImpl
+	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getProperty()
+	 * @generated
+	 */
+	int PROPERTY = 75;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY__TYPE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link UnifiedMetamodel_.impl.AbstractMethodImpl <em>Abstract Method</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see UnifiedMetamodel_.impl.AbstractMethodImpl
+	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getAbstractMethod()
+	 * @generated
+	 */
+	int ABSTRACT_METHOD = 76;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_METHOD__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Return</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_METHOD__RETURN = 1;
+
+	/**
+	 * The feature id for the '<em><b>Arguments</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_METHOD__ARGUMENTS = 2;
+
+	/**
+	 * The number of structural features of the '<em>Abstract Method</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_METHOD_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Abstract Method</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_METHOD_OPERATION_COUNT = 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.Ejb <em>Ejb</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3790,10 +4120,10 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EClass getLayerSegment();
 
 	/**
-	 * Returns the meta object for the reference '{@link UnifiedMetamodel_.LayerSegment#getAllowToUse <em>Allow To Use</em>}'.
+	 * Returns the meta object for the reference list '{@link UnifiedMetamodel_.LayerSegment#getAllowToUse <em>Allow To Use</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Allow To Use</em>'.
+	 * @return the meta object for the reference list '<em>Allow To Use</em>'.
 	 * @see UnifiedMetamodel_.LayerSegment#getAllowToUse()
 	 * @see #getLayerSegment()
 	 * @generated
@@ -4095,6 +4425,17 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EReference getMetamodel_Technologymetamodel();
 
 	/**
+	 * Returns the meta object for the attribute '{@link UnifiedMetamodel_.Metamodel#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see UnifiedMetamodel_.Metamodel#getName()
+	 * @see #getMetamodel()
+	 * @generated
+	 */
+	EAttribute getMetamodel_Name();
+
+	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.Read <em>Read</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4155,25 +4496,15 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EClass getOperations();
 
 	/**
-	 * Returns the meta object for the reference '{@link UnifiedMetamodel_.Operations#getEntity <em>Entity</em>}'.
+	 * Returns the meta object for the reference '{@link UnifiedMetamodel_.Operations#getOperates_on <em>Operates on</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Entity</em>'.
-	 * @see UnifiedMetamodel_.Operations#getEntity()
+	 * @return the meta object for the reference '<em>Operates on</em>'.
+	 * @see UnifiedMetamodel_.Operations#getOperates_on()
 	 * @see #getOperations()
 	 * @generated
 	 */
-	EReference getOperations_Entity();
-
-	/**
-	 * Returns the meta object for class '{@link UnifiedMetamodel_.Login <em>Login</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Login</em>'.
-	 * @see UnifiedMetamodel_.Login
-	 * @generated
-	 */
-	EClass getLogin();
+	EReference getOperations_Operates_on();
 
 	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.Module <em>Module</em>}'.
@@ -4229,17 +4560,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EReference getSpecialEntity_Transaction();
 
 	/**
-	 * Returns the meta object for the attribute '{@link UnifiedMetamodel_.SpecialEntity#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see UnifiedMetamodel_.SpecialEntity#getType()
-	 * @see #getSpecialEntity()
-	 * @generated
-	 */
-	EAttribute getSpecialEntity_Type();
-
-	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.GeneralEntity <em>General Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4269,6 +4589,17 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEntity_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.Entity#getProperty <em>Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Property</em>'.
+	 * @see UnifiedMetamodel_.Entity#getProperty()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_Property();
 
 	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.RelationDom <em>Relation Dom</em>}'.
@@ -4313,15 +4644,15 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EClass getTransaction();
 
 	/**
-	 * Returns the meta object for the reference list '{@link UnifiedMetamodel_.Transaction#getUpdate <em>Update</em>}'.
+	 * Returns the meta object for the reference list '{@link UnifiedMetamodel_.Transaction#getOperates_on <em>Operates on</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Update</em>'.
-	 * @see UnifiedMetamodel_.Transaction#getUpdate()
+	 * @return the meta object for the reference list '<em>Operates on</em>'.
+	 * @see UnifiedMetamodel_.Transaction#getOperates_on()
 	 * @see #getTransaction()
 	 * @generated
 	 */
-	EReference getTransaction_Update();
+	EReference getTransaction_Operates_on();
 
 	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.Submodule <em>Submodule</em>}'.
@@ -4367,17 +4698,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EReference getSubmodule_Entity();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.Submodule#getRelation <em>Relation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Relation</em>'.
-	 * @see UnifiedMetamodel_.Submodule#getRelation()
-	 * @see #getSubmodule()
-	 * @generated
-	 */
-	EReference getSubmodule_Relation();
-
-	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.DomainMetamodel <em>Domain Metamodel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4397,6 +4717,17 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @generated
 	 */
 	EReference getDomainMetamodel_Module();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.DomainMetamodel#getRelationdom <em>Relationdom</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Relationdom</em>'.
+	 * @see UnifiedMetamodel_.DomainMetamodel#getRelationdom()
+	 * @see #getDomainMetamodel()
+	 * @generated
+	 */
+	EReference getDomainMetamodel_Relationdom();
 
 	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.ActionDispatcher <em>Action Dispatcher</em>}'.
@@ -4768,10 +5099,10 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EReference getFunctionality_Components();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.Functionality#getState <em>State</em>}'.
+	 * Returns the meta object for the containment reference '{@link UnifiedMetamodel_.Functionality#getState <em>State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>State</em>'.
+	 * @return the meta object for the containment reference '<em>State</em>'.
 	 * @see UnifiedMetamodel_.Functionality#getState()
 	 * @see #getFunctionality()
 	 * @generated
@@ -4854,6 +5185,17 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EReference getAction_ActionDirectory();
 
 	/**
+	 * Returns the meta object for the attribute '{@link UnifiedMetamodel_.Action#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see UnifiedMetamodel_.Action#getName()
+	 * @see #getAction()
+	 * @generated
+	 */
+	EAttribute getAction_Name();
+
+	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.Redux <em>Redux</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4862,6 +5204,49 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @generated
 	 */
 	EClass getRedux();
+
+	/**
+	 * Returns the meta object for class '{@link UnifiedMetamodel_.ReactApp <em>React App</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>React App</em>'.
+	 * @see UnifiedMetamodel_.ReactApp
+	 * @generated
+	 */
+	EClass getReactApp();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.ReactApp#getFunctionalities <em>Functionalities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Functionalities</em>'.
+	 * @see UnifiedMetamodel_.ReactApp#getFunctionalities()
+	 * @see #getReactApp()
+	 * @generated
+	 */
+	EReference getReactApp_Functionalities();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.ReactApp#getModules <em>Modules</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Modules</em>'.
+	 * @see UnifiedMetamodel_.ReactApp#getModules()
+	 * @see #getReactApp()
+	 * @generated
+	 */
+	EReference getReactApp_Modules();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.ReactApp#getDirectories <em>Directories</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Directories</em>'.
+	 * @see UnifiedMetamodel_.ReactApp#getDirectories()
+	 * @see #getReactApp()
+	 * @generated
+	 */
+	EReference getReactApp_Directories();
 
 	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.File <em>File</em>}'.
@@ -4960,10 +5345,10 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EAttribute getReducer_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link UnifiedMetamodel_.Reducer#getCatches <em>Catches</em>}'.
+	 * Returns the meta object for the reference list '{@link UnifiedMetamodel_.Reducer#getCatches <em>Catches</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Catches</em>'.
+	 * @return the meta object for the reference list '<em>Catches</em>'.
 	 * @see UnifiedMetamodel_.Reducer#getCatches()
 	 * @see #getReducer()
 	 * @generated
@@ -5035,6 +5420,27 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EReference getTechnologyMetamodel_Techfront();
 
 	/**
+	 * Returns the meta object for class '{@link UnifiedMetamodel_.JavaApp <em>Java App</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Java App</em>'.
+	 * @see UnifiedMetamodel_.JavaApp
+	 * @generated
+	 */
+	EClass getJavaApp();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.JavaApp#getJee_project <em>Jee project</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Jee project</em>'.
+	 * @see UnifiedMetamodel_.JavaApp#getJee_project()
+	 * @see #getJavaApp()
+	 * @generated
+	 */
+	EReference getJavaApp_Jee_project();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link UnifiedMetamodel_.TechnologyMetamodel#getTechback <em>Techback</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5044,70 +5450,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @generated
 	 */
 	EReference getTechnologyMetamodel_Techback();
-
-	/**
-	 * Returns the meta object for class '{@link UnifiedMetamodel_.TechFront <em>Tech Front</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tech Front</em>'.
-	 * @see UnifiedMetamodel_.TechFront
-	 * @generated
-	 */
-	EClass getTechFront();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.TechFront#getFunctionalities <em>Functionalities</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Functionalities</em>'.
-	 * @see UnifiedMetamodel_.TechFront#getFunctionalities()
-	 * @see #getTechFront()
-	 * @generated
-	 */
-	EReference getTechFront_Functionalities();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.TechFront#getModules <em>Modules</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Modules</em>'.
-	 * @see UnifiedMetamodel_.TechFront#getModules()
-	 * @see #getTechFront()
-	 * @generated
-	 */
-	EReference getTechFront_Modules();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.TechFront#getDirectories <em>Directories</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Directories</em>'.
-	 * @see UnifiedMetamodel_.TechFront#getDirectories()
-	 * @see #getTechFront()
-	 * @generated
-	 */
-	EReference getTechFront_Directories();
-
-	/**
-	 * Returns the meta object for class '{@link UnifiedMetamodel_.TechBack <em>Tech Back</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tech Back</em>'.
-	 * @see UnifiedMetamodel_.TechBack
-	 * @generated
-	 */
-	EClass getTechBack();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.TechBack#getJee_project <em>Jee project</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Jee project</em>'.
-	 * @see UnifiedMetamodel_.TechBack#getJee_project()
-	 * @see #getTechBack()
-	 * @generated
-	 */
-	EReference getTechBack_Jee_project();
 
 	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.JEE_Project <em>JEE Project</em>}'.
@@ -5163,14 +5505,36 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EAttribute getNativeClass_PrimitiveRef();
 
 	/**
-	 * Returns the meta object for class '{@link UnifiedMetamodel_.InterfaceClass <em>Interface Class</em>}'.
+	 * Returns the meta object for class '{@link UnifiedMetamodel_.EInterface <em>EInterface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Interface Class</em>'.
-	 * @see UnifiedMetamodel_.InterfaceClass
+	 * @return the meta object for class '<em>EInterface</em>'.
+	 * @see UnifiedMetamodel_.EInterface
 	 * @generated
 	 */
-	EClass getInterfaceClass();
+	EClass getEInterface();
+
+	/**
+	 * Returns the meta object for the attribute '{@link UnifiedMetamodel_.EInterface#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see UnifiedMetamodel_.EInterface#getName()
+	 * @see #getEInterface()
+	 * @generated
+	 */
+	EAttribute getEInterface_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.EInterface#getAbstractmethod <em>Abstractmethod</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Abstractmethod</em>'.
+	 * @see UnifiedMetamodel_.EInterface#getAbstractmethod()
+	 * @see #getEInterface()
+	 * @generated
+	 */
+	EReference getEInterface_Abstractmethod();
 
 	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.Library <em>Library</em>}'.
@@ -5216,36 +5580,15 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EReference getLibrary_Nativeclass();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.Library#getAnotationi <em>Anotationi</em>}'.
+	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.Library#getAnnotation <em>Annotation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Anotationi</em>'.
-	 * @see UnifiedMetamodel_.Library#getAnotationi()
+	 * @return the meta object for the containment reference list '<em>Annotation</em>'.
+	 * @see UnifiedMetamodel_.Library#getAnnotation()
 	 * @see #getLibrary()
 	 * @generated
 	 */
-	EReference getLibrary_Anotationi();
-
-	/**
-	 * Returns the meta object for class '{@link UnifiedMetamodel_.Jee <em>Jee</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Jee</em>'.
-	 * @see UnifiedMetamodel_.Jee
-	 * @generated
-	 */
-	EClass getJee();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.Jee#getJee_project <em>Jee project</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Jee project</em>'.
-	 * @see UnifiedMetamodel_.Jee#getJee_project()
-	 * @see #getJee()
-	 * @generated
-	 */
-	EReference getJee_Jee_project();
+	EReference getLibrary_Annotation();
 
 	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.Attribute <em>Attribute</em>}'.
@@ -5269,15 +5612,15 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EAttribute getAttribute_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link UnifiedMetamodel_.Attribute#getAnotationi <em>Anotationi</em>}'.
+	 * Returns the meta object for the reference '{@link UnifiedMetamodel_.Attribute#getAnnotation <em>Annotation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Anotationi</em>'.
-	 * @see UnifiedMetamodel_.Attribute#getAnotationi()
+	 * @return the meta object for the reference '<em>Annotation</em>'.
+	 * @see UnifiedMetamodel_.Attribute#getAnnotation()
 	 * @see #getAttribute()
 	 * @generated
 	 */
-	EReference getAttribute_Anotationi();
+	EReference getAttribute_Annotation();
 
 	/**
 	 * Returns the meta object for the reference '{@link UnifiedMetamodel_.Attribute#getType <em>Type</em>}'.
@@ -5344,15 +5687,15 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EAttribute getMethodBack_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link UnifiedMetamodel_.MethodBack#getAnotationi <em>Anotationi</em>}'.
+	 * Returns the meta object for the reference '{@link UnifiedMetamodel_.MethodBack#getAnnotation <em>Annotation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Anotationi</em>'.
-	 * @see UnifiedMetamodel_.MethodBack#getAnotationi()
+	 * @return the meta object for the reference '<em>Annotation</em>'.
+	 * @see UnifiedMetamodel_.MethodBack#getAnnotation()
 	 * @see #getMethodBack()
 	 * @generated
 	 */
-	EReference getMethodBack_Anotationi();
+	EReference getMethodBack_Annotation();
 
 	/**
 	 * Returns the meta object for the reference '{@link UnifiedMetamodel_.MethodBack#getReturn <em>Return</em>}'.
@@ -5366,10 +5709,10 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EReference getMethodBack_Return();
 
 	/**
-	 * Returns the meta object for the reference '{@link UnifiedMetamodel_.MethodBack#getArguments <em>Arguments</em>}'.
+	 * Returns the meta object for the reference list '{@link UnifiedMetamodel_.MethodBack#getArguments <em>Arguments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Arguments</em>'.
+	 * @return the meta object for the reference list '<em>Arguments</em>'.
 	 * @see UnifiedMetamodel_.MethodBack#getArguments()
 	 * @see #getMethodBack()
 	 * @generated
@@ -5385,6 +5728,17 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @generated
 	 */
 	EClass getAbstractClass();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.AbstractClass#getAbstractmethod <em>Abstractmethod</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Abstractmethod</em>'.
+	 * @see UnifiedMetamodel_.AbstractClass#getAbstractmethod()
+	 * @see #getAbstractClass()
+	 * @generated
+	 */
+	EReference getAbstractClass_Abstractmethod();
 
 	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.Epackage <em>Epackage</em>}'.
@@ -5462,47 +5816,47 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EReference getEClass_Method();
 
 	/**
-	 * Returns the meta object for the reference '{@link UnifiedMetamodel_.EClass#getAnotationi <em>Anotationi</em>}'.
+	 * Returns the meta object for the reference '{@link UnifiedMetamodel_.EClass#getAnnotation <em>Annotation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Anotationi</em>'.
-	 * @see UnifiedMetamodel_.EClass#getAnotationi()
+	 * @return the meta object for the reference '<em>Annotation</em>'.
+	 * @see UnifiedMetamodel_.EClass#getAnnotation()
 	 * @see #getEClass()
 	 * @generated
 	 */
-	EReference getEClass_Anotationi();
+	EReference getEClass_Annotation();
 
 	/**
-	 * Returns the meta object for class '{@link UnifiedMetamodel_.Anotationi <em>Anotationi</em>}'.
+	 * Returns the meta object for class '{@link UnifiedMetamodel_.Annotation <em>Annotation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Anotationi</em>'.
-	 * @see UnifiedMetamodel_.Anotationi
+	 * @return the meta object for class '<em>Annotation</em>'.
+	 * @see UnifiedMetamodel_.Annotation
 	 * @generated
 	 */
-	EClass getAnotationi();
+	EClass getAnnotation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link UnifiedMetamodel_.Anotationi#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the attribute '{@link UnifiedMetamodel_.Annotation#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Properties</em>'.
-	 * @see UnifiedMetamodel_.Anotationi#getProperties()
-	 * @see #getAnotationi()
+	 * @see UnifiedMetamodel_.Annotation#getProperties()
+	 * @see #getAnnotation()
 	 * @generated
 	 */
-	EAttribute getAnotationi_Properties();
+	EAttribute getAnnotation_Properties();
 
 	/**
-	 * Returns the meta object for the reference '{@link UnifiedMetamodel_.Anotationi#getDescriptor <em>Descriptor</em>}'.
+	 * Returns the meta object for the reference '{@link UnifiedMetamodel_.Annotation#getDescriptor <em>Descriptor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Descriptor</em>'.
-	 * @see UnifiedMetamodel_.Anotationi#getDescriptor()
-	 * @see #getAnotationi()
+	 * @see UnifiedMetamodel_.Annotation#getDescriptor()
+	 * @see #getAnnotation()
 	 * @generated
 	 */
-	EReference getAnotationi_Descriptor();
+	EReference getAnnotation_Descriptor();
 
 	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.Subproject <em>Subproject</em>}'.
@@ -5601,6 +5955,131 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EClass getJavaScript();
 
 	/**
+	 * Returns the meta object for class '{@link UnifiedMetamodel_.Util <em>Util</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Util</em>'.
+	 * @see UnifiedMetamodel_.Util
+	 * @generated
+	 */
+	EClass getUtil();
+
+	/**
+	 * Returns the meta object for class '{@link UnifiedMetamodel_.Reducers <em>Reducers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Reducers</em>'.
+	 * @see UnifiedMetamodel_.Reducers
+	 * @generated
+	 */
+	EClass getReducers();
+
+	/**
+	 * Returns the meta object for class '{@link UnifiedMetamodel_.Actions <em>Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Actions</em>'.
+	 * @see UnifiedMetamodel_.Actions
+	 * @generated
+	 */
+	EClass getActions();
+
+	/**
+	 * Returns the meta object for class '{@link UnifiedMetamodel_.Back <em>Back</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Back</em>'.
+	 * @see UnifiedMetamodel_.Back
+	 * @generated
+	 */
+	EClass getBack();
+
+	/**
+	 * Returns the meta object for class '{@link UnifiedMetamodel_.Front <em>Front</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Front</em>'.
+	 * @see UnifiedMetamodel_.Front
+	 * @generated
+	 */
+	EClass getFront();
+
+	/**
+	 * Returns the meta object for class '{@link UnifiedMetamodel_.Property <em>Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Property</em>'.
+	 * @see UnifiedMetamodel_.Property
+	 * @generated
+	 */
+	EClass getProperty();
+
+	/**
+	 * Returns the meta object for the attribute '{@link UnifiedMetamodel_.Property#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see UnifiedMetamodel_.Property#getName()
+	 * @see #getProperty()
+	 * @generated
+	 */
+	EAttribute getProperty_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link UnifiedMetamodel_.Property#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see UnifiedMetamodel_.Property#getType()
+	 * @see #getProperty()
+	 * @generated
+	 */
+	EAttribute getProperty_Type();
+
+	/**
+	 * Returns the meta object for class '{@link UnifiedMetamodel_.AbstractMethod <em>Abstract Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Abstract Method</em>'.
+	 * @see UnifiedMetamodel_.AbstractMethod
+	 * @generated
+	 */
+	EClass getAbstractMethod();
+
+	/**
+	 * Returns the meta object for the attribute '{@link UnifiedMetamodel_.AbstractMethod#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see UnifiedMetamodel_.AbstractMethod#getName()
+	 * @see #getAbstractMethod()
+	 * @generated
+	 */
+	EAttribute getAbstractMethod_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link UnifiedMetamodel_.AbstractMethod#getReturn <em>Return</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Return</em>'.
+	 * @see UnifiedMetamodel_.AbstractMethod#getReturn()
+	 * @see #getAbstractMethod()
+	 * @generated
+	 */
+	EReference getAbstractMethod_Return();
+
+	/**
+	 * Returns the meta object for the reference list '{@link UnifiedMetamodel_.AbstractMethod#getArguments <em>Arguments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Arguments</em>'.
+	 * @see UnifiedMetamodel_.AbstractMethod#getArguments()
+	 * @see #getAbstractMethod()
+	 * @generated
+	 */
+	EReference getAbstractMethod_Arguments();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5642,7 +6121,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EClass LAYER_SEGMENT = eINSTANCE.getLayerSegment();
 		/**
-		 * The meta object literal for the '<em><b>Allow To Use</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Allow To Use</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5873,6 +6352,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EReference METAMODEL__TECHNOLOGYMETAMODEL = eINSTANCE.getMetamodel_Technologymetamodel();
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute METAMODEL__NAME = eINSTANCE.getMetamodel_Name();
+		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.ReadImpl <em>Read</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5927,21 +6413,12 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EClass OPERATIONS = eINSTANCE.getOperations();
 		/**
-		 * The meta object literal for the '<em><b>Entity</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Operates on</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OPERATIONS__ENTITY = eINSTANCE.getOperations_Entity();
-		/**
-		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.LoginImpl <em>Login</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see UnifiedMetamodel_.impl.LoginImpl
-		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getLogin()
-		 * @generated
-		 */
-		EClass LOGIN = eINSTANCE.getLogin();
+		EReference OPERATIONS__OPERATES_ON = eINSTANCE.getOperations_Operates_on();
 		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.ModuleImpl <em>Module</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -5982,13 +6459,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EReference SPECIAL_ENTITY__TRANSACTION = eINSTANCE.getSpecialEntity_Transaction();
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SPECIAL_ENTITY__TYPE = eINSTANCE.getSpecialEntity_Type();
-		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.GeneralEntityImpl <em>General Entity</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6013,6 +6483,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 * @generated
 		 */
 		EAttribute ENTITY__NAME = eINSTANCE.getEntity_Name();
+		/**
+		 * The meta object literal for the '<em><b>Property</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENTITY__PROPERTY = eINSTANCE.getEntity_Property();
 		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.RelationDomImpl <em>Relation Dom</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -6046,12 +6523,12 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EClass TRANSACTION = eINSTANCE.getTransaction();
 		/**
-		 * The meta object literal for the '<em><b>Update</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Operates on</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TRANSACTION__UPDATE = eINSTANCE.getTransaction_Update();
+		EReference TRANSACTION__OPERATES_ON = eINSTANCE.getTransaction_Operates_on();
 		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.SubmoduleImpl <em>Submodule</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -6083,13 +6560,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EReference SUBMODULE__ENTITY = eINSTANCE.getSubmodule_Entity();
 		/**
-		 * The meta object literal for the '<em><b>Relation</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SUBMODULE__RELATION = eINSTANCE.getSubmodule_Relation();
-		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.DomainMetamodelImpl <em>Domain Metamodel</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6105,6 +6575,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 * @generated
 		 */
 		EReference DOMAIN_METAMODEL__MODULE = eINSTANCE.getDomainMetamodel_Module();
+		/**
+		 * The meta object literal for the '<em><b>Relationdom</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN_METAMODEL__RELATIONDOM = eINSTANCE.getDomainMetamodel_Relationdom();
 		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.ActionDispatcherImpl <em>Action Dispatcher</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -6383,7 +6860,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EReference FUNCTIONALITY__COMPONENTS = eINSTANCE.getFunctionality_Components();
 		/**
-		 * The meta object literal for the '<em><b>State</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>State</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6443,6 +6920,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EReference ACTION__ACTION_DIRECTORY = eINSTANCE.getAction_ActionDirectory();
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTION__NAME = eINSTANCE.getAction_Name();
+		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.ReduxImpl <em>Redux</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6451,6 +6935,36 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 * @generated
 		 */
 		EClass REDUX = eINSTANCE.getRedux();
+		/**
+		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.ReactAppImpl <em>React App</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see UnifiedMetamodel_.impl.ReactAppImpl
+		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getReactApp()
+		 * @generated
+		 */
+		EClass REACT_APP = eINSTANCE.getReactApp();
+		/**
+		 * The meta object literal for the '<em><b>Functionalities</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REACT_APP__FUNCTIONALITIES = eINSTANCE.getReactApp_Functionalities();
+		/**
+		 * The meta object literal for the '<em><b>Modules</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REACT_APP__MODULES = eINSTANCE.getReactApp_Modules();
+		/**
+		 * The meta object literal for the '<em><b>Directories</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REACT_APP__DIRECTORIES = eINSTANCE.getReactApp_Directories();
 		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.FileImpl <em>File</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -6521,7 +7035,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EAttribute REDUCER__NAME = eINSTANCE.getReducer_Name();
 		/**
-		 * The meta object literal for the '<em><b>Catches</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Catches</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6574,58 +7088,28 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EReference TECHNOLOGY_METAMODEL__TECHFRONT = eINSTANCE.getTechnologyMetamodel_Techfront();
 		/**
-		 * The meta object literal for the '<em><b>Techback</b></em>' containment reference feature.
+		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.JavaAppImpl <em>Java App</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see UnifiedMetamodel_.impl.JavaAppImpl
+		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getJavaApp()
 		 * @generated
 		 */
-		EReference TECHNOLOGY_METAMODEL__TECHBACK = eINSTANCE.getTechnologyMetamodel_Techback();
-		/**
-		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.TechFrontImpl <em>Tech Front</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see UnifiedMetamodel_.impl.TechFrontImpl
-		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getTechFront()
-		 * @generated
-		 */
-		EClass TECH_FRONT = eINSTANCE.getTechFront();
-		/**
-		 * The meta object literal for the '<em><b>Functionalities</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TECH_FRONT__FUNCTIONALITIES = eINSTANCE.getTechFront_Functionalities();
-		/**
-		 * The meta object literal for the '<em><b>Modules</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TECH_FRONT__MODULES = eINSTANCE.getTechFront_Modules();
-		/**
-		 * The meta object literal for the '<em><b>Directories</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TECH_FRONT__DIRECTORIES = eINSTANCE.getTechFront_Directories();
-		/**
-		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.TechBackImpl <em>Tech Back</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see UnifiedMetamodel_.impl.TechBackImpl
-		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getTechBack()
-		 * @generated
-		 */
-		EClass TECH_BACK = eINSTANCE.getTechBack();
+		EClass JAVA_APP = eINSTANCE.getJavaApp();
 		/**
 		 * The meta object literal for the '<em><b>Jee project</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TECH_BACK__JEE_PROJECT = eINSTANCE.getTechBack_Jee_project();
+		EReference JAVA_APP__JEE_PROJECT = eINSTANCE.getJavaApp_Jee_project();
+		/**
+		 * The meta object literal for the '<em><b>Techback</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TECHNOLOGY_METAMODEL__TECHBACK = eINSTANCE.getTechnologyMetamodel_Techback();
 		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.JEE_ProjectImpl <em>JEE Project</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -6666,14 +7150,28 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EAttribute NATIVE_CLASS__PRIMITIVE_REF = eINSTANCE.getNativeClass_PrimitiveRef();
 		/**
-		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.InterfaceClassImpl <em>Interface Class</em>}' class.
+		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.EInterfaceImpl <em>EInterface</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see UnifiedMetamodel_.impl.InterfaceClassImpl
-		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getInterfaceClass()
+		 * @see UnifiedMetamodel_.impl.EInterfaceImpl
+		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getEInterface()
 		 * @generated
 		 */
-		EClass INTERFACE_CLASS = eINSTANCE.getInterfaceClass();
+		EClass EINTERFACE = eINSTANCE.getEInterface();
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EINTERFACE__NAME = eINSTANCE.getEInterface_Name();
+		/**
+		 * The meta object literal for the '<em><b>Abstractmethod</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EINTERFACE__ABSTRACTMETHOD = eINSTANCE.getEInterface_Abstractmethod();
 		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.LibraryImpl <em>Library</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -6705,28 +7203,12 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EReference LIBRARY__NATIVECLASS = eINSTANCE.getLibrary_Nativeclass();
 		/**
-		 * The meta object literal for the '<em><b>Anotationi</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Annotation</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LIBRARY__ANOTATIONI = eINSTANCE.getLibrary_Anotationi();
-		/**
-		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.JeeImpl <em>Jee</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see UnifiedMetamodel_.impl.JeeImpl
-		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getJee()
-		 * @generated
-		 */
-		EClass JEE = eINSTANCE.getJee();
-		/**
-		 * The meta object literal for the '<em><b>Jee project</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference JEE__JEE_PROJECT = eINSTANCE.getJee_Jee_project();
+		EReference LIBRARY__ANNOTATION = eINSTANCE.getLibrary_Annotation();
 		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.AttributeImpl <em>Attribute</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -6744,12 +7226,12 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EAttribute ATTRIBUTE__NAME = eINSTANCE.getAttribute_Name();
 		/**
-		 * The meta object literal for the '<em><b>Anotationi</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Annotation</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ATTRIBUTE__ANOTATIONI = eINSTANCE.getAttribute_Anotationi();
+		EReference ATTRIBUTE__ANNOTATION = eINSTANCE.getAttribute_Annotation();
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
@@ -6797,12 +7279,12 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EAttribute METHOD_BACK__NAME = eINSTANCE.getMethodBack_Name();
 		/**
-		 * The meta object literal for the '<em><b>Anotationi</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Annotation</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference METHOD_BACK__ANOTATIONI = eINSTANCE.getMethodBack_Anotationi();
+		EReference METHOD_BACK__ANNOTATION = eINSTANCE.getMethodBack_Annotation();
 		/**
 		 * The meta object literal for the '<em><b>Return</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
@@ -6811,7 +7293,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EReference METHOD_BACK__RETURN = eINSTANCE.getMethodBack_Return();
 		/**
-		 * The meta object literal for the '<em><b>Arguments</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Arguments</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6826,6 +7308,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 * @generated
 		 */
 		EClass ABSTRACT_CLASS = eINSTANCE.getAbstractClass();
+		/**
+		 * The meta object literal for the '<em><b>Abstractmethod</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_CLASS__ABSTRACTMETHOD = eINSTANCE.getAbstractClass_Abstractmethod();
 		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.EpackageImpl <em>Epackage</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -6880,35 +7369,35 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EReference ECLASS__METHOD = eINSTANCE.getEClass_Method();
 		/**
-		 * The meta object literal for the '<em><b>Anotationi</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Annotation</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ECLASS__ANOTATIONI = eINSTANCE.getEClass_Anotationi();
+		EReference ECLASS__ANNOTATION = eINSTANCE.getEClass_Annotation();
 		/**
-		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.AnotationiImpl <em>Anotationi</em>}' class.
+		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.AnnotationImpl <em>Annotation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see UnifiedMetamodel_.impl.AnotationiImpl
-		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getAnotationi()
+		 * @see UnifiedMetamodel_.impl.AnnotationImpl
+		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getAnnotation()
 		 * @generated
 		 */
-		EClass ANOTATIONI = eINSTANCE.getAnotationi();
+		EClass ANNOTATION = eINSTANCE.getAnnotation();
 		/**
 		 * The meta object literal for the '<em><b>Properties</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ANOTATIONI__PROPERTIES = eINSTANCE.getAnotationi_Properties();
+		EAttribute ANNOTATION__PROPERTIES = eINSTANCE.getAnnotation_Properties();
 		/**
 		 * The meta object literal for the '<em><b>Descriptor</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ANOTATIONI__DESCRIPTOR = eINSTANCE.getAnotationi_Descriptor();
+		EReference ANNOTATION__DESCRIPTOR = eINSTANCE.getAnnotation_Descriptor();
 		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.SubprojectImpl <em>Subproject</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -6978,6 +7467,104 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 * @generated
 		 */
 		EClass JAVA_SCRIPT = eINSTANCE.getJavaScript();
+		/**
+		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.UtilImpl <em>Util</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see UnifiedMetamodel_.impl.UtilImpl
+		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getUtil()
+		 * @generated
+		 */
+		EClass UTIL = eINSTANCE.getUtil();
+		/**
+		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.ReducersImpl <em>Reducers</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see UnifiedMetamodel_.impl.ReducersImpl
+		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getReducers()
+		 * @generated
+		 */
+		EClass REDUCERS = eINSTANCE.getReducers();
+		/**
+		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.ActionsImpl <em>Actions</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see UnifiedMetamodel_.impl.ActionsImpl
+		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getActions()
+		 * @generated
+		 */
+		EClass ACTIONS = eINSTANCE.getActions();
+		/**
+		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.BackImpl <em>Back</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see UnifiedMetamodel_.impl.BackImpl
+		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getBack()
+		 * @generated
+		 */
+		EClass BACK = eINSTANCE.getBack();
+		/**
+		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.FrontImpl <em>Front</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see UnifiedMetamodel_.impl.FrontImpl
+		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getFront()
+		 * @generated
+		 */
+		EClass FRONT = eINSTANCE.getFront();
+		/**
+		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.PropertyImpl <em>Property</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see UnifiedMetamodel_.impl.PropertyImpl
+		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getProperty()
+		 * @generated
+		 */
+		EClass PROPERTY = eINSTANCE.getProperty();
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROPERTY__NAME = eINSTANCE.getProperty_Name();
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROPERTY__TYPE = eINSTANCE.getProperty_Type();
+		/**
+		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.AbstractMethodImpl <em>Abstract Method</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see UnifiedMetamodel_.impl.AbstractMethodImpl
+		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getAbstractMethod()
+		 * @generated
+		 */
+		EClass ABSTRACT_METHOD = eINSTANCE.getAbstractMethod();
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_METHOD__NAME = eINSTANCE.getAbstractMethod_Name();
+		/**
+		 * The meta object literal for the '<em><b>Return</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_METHOD__RETURN = eINSTANCE.getAbstractMethod_Return();
+		/**
+		 * The meta object literal for the '<em><b>Arguments</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_METHOD__ARGUMENTS = eINSTANCE.getAbstractMethod_Arguments();
 
 	}
 

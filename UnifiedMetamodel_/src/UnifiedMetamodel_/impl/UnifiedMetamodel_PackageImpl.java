@@ -4,12 +4,15 @@ package UnifiedMetamodel_.impl;
 
 import UnifiedMetamodel_.APICall;
 import UnifiedMetamodel_.AbstractClass;
+import UnifiedMetamodel_.AbstractMethod;
 import UnifiedMetamodel_.Action;
 import UnifiedMetamodel_.ActionCreator;
 import UnifiedMetamodel_.ActionDispatcher;
-import UnifiedMetamodel_.Anotationi;
+import UnifiedMetamodel_.Actions;
+import UnifiedMetamodel_.Annotation;
 import UnifiedMetamodel_.ArquitectureMetamodel;
 import UnifiedMetamodel_.Attribute;
+import UnifiedMetamodel_.Back;
 import UnifiedMetamodel_.Component;
 import UnifiedMetamodel_.ComponentFront;
 import UnifiedMetamodel_.Composition;
@@ -19,31 +22,34 @@ import UnifiedMetamodel_.Design;
 import UnifiedMetamodel_.Directory;
 import UnifiedMetamodel_.DomainMetamodel;
 import UnifiedMetamodel_.Dto;
+import UnifiedMetamodel_.EInterface;
 import UnifiedMetamodel_.Ejb;
 import UnifiedMetamodel_.Entity;
 import UnifiedMetamodel_.Epackage;
 import UnifiedMetamodel_.Exchange;
 import UnifiedMetamodel_.Facade;
 import UnifiedMetamodel_.File;
+import UnifiedMetamodel_.Front;
 import UnifiedMetamodel_.Functionality;
 import UnifiedMetamodel_.GeneralEntity;
 import UnifiedMetamodel_.GenericClass;
-import UnifiedMetamodel_.InterfaceClass;
 import UnifiedMetamodel_.JEE_Project;
+import UnifiedMetamodel_.JavaApp;
 import UnifiedMetamodel_.JavaScript;
-import UnifiedMetamodel_.Jee;
 import UnifiedMetamodel_.Layer;
 import UnifiedMetamodel_.LayerSegment;
 import UnifiedMetamodel_.Library;
-import UnifiedMetamodel_.Login;
 import UnifiedMetamodel_.Metamodel;
 import UnifiedMetamodel_.MethodBack;
 import UnifiedMetamodel_.ModuleFront;
 import UnifiedMetamodel_.NativeClass;
 import UnifiedMetamodel_.Operations;
 import UnifiedMetamodel_.Pojo;
+import UnifiedMetamodel_.Property;
+import UnifiedMetamodel_.ReactApp;
 import UnifiedMetamodel_.Read;
 import UnifiedMetamodel_.Reducer;
+import UnifiedMetamodel_.Reducers;
 import UnifiedMetamodel_.Redux;
 import UnifiedMetamodel_.RelationArch;
 import UnifiedMetamodel_.RelationDom;
@@ -58,14 +64,13 @@ import UnifiedMetamodel_.State;
 import UnifiedMetamodel_.Store;
 import UnifiedMetamodel_.Submodule;
 import UnifiedMetamodel_.Subproject;
-import UnifiedMetamodel_.TechBack;
-import UnifiedMetamodel_.TechFront;
 import UnifiedMetamodel_.TechnologyMetamodel;
 import UnifiedMetamodel_.Transaction;
 import UnifiedMetamodel_.UIFront;
 import UnifiedMetamodel_.UnifiedMetamodel_Factory;
 import UnifiedMetamodel_.UnifiedMetamodel_Package;
 
+import UnifiedMetamodel_.Util;
 import UnifiedMetamodel_.Visualizer;
 import UnifiedMetamodel_.War;
 import org.eclipse.emf.ecore.EAttribute;
@@ -215,12 +220,6 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	private EClass operationsEClass = null;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass loginEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -389,6 +388,12 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass reactAppEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass fileEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
@@ -419,14 +424,7 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass techFrontEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass techBackEClass = null;
+	private EClass javaAppEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -444,19 +442,13 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass interfaceClassEClass = null;
+	private EClass eInterfaceEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass libraryEClass = null;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass jeeEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -498,7 +490,7 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass anotationiEClass = null;
+	private EClass annotationEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -518,6 +510,49 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	private EClass javaScriptEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass utilEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass reducersEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass actionsEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass backEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass frontEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass propertyEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abstractMethodEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -896,6 +931,16 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
+	public EAttribute getMetamodel_Name() {
+		return (EAttribute)metamodelEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getRead() {
 		return readEClass;
 	}
@@ -956,18 +1001,8 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public EReference getOperations_Entity() {
+	public EReference getOperations_Operates_on() {
 		return (EReference)operationsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getLogin() {
-		return loginEClass;
 	}
 
 	/**
@@ -1026,16 +1061,6 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSpecialEntity_Type() {
-		return (EAttribute)specialEntityEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getGeneralEntity() {
 		return generalEntityEClass;
 	}
@@ -1058,6 +1083,16 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	@Override
 	public EAttribute getEntity_Name() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getEntity_Property() {
+		return (EReference)entityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1106,7 +1141,7 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public EReference getTransaction_Update() {
+	public EReference getTransaction_Operates_on() {
 		return (EReference)transactionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1156,16 +1191,6 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public EReference getSubmodule_Relation() {
-		return (EReference)submoduleEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getDomainMetamodel() {
 		return domainMetamodelEClass;
 	}
@@ -1178,6 +1203,16 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	@Override
 	public EReference getDomainMetamodel_Module() {
 		return (EReference)domainMetamodelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDomainMetamodel_Relationdom() {
+		return (EReference)domainMetamodelEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1616,8 +1651,58 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
+	public EAttribute getAction_Name() {
+		return (EAttribute)actionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getRedux() {
 		return reduxEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getReactApp() {
+		return reactAppEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getReactApp_Functionalities() {
+		return (EReference)reactAppEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getReactApp_Modules() {
+		return (EReference)reactAppEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getReactApp_Directories() {
+		return (EReference)reactAppEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1786,68 +1871,28 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
+	public EClass getJavaApp() {
+		return javaAppEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getJavaApp_Jee_project() {
+		return (EReference)javaAppEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EReference getTechnologyMetamodel_Techback() {
 		return (EReference)technologyMetamodelEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getTechFront() {
-		return techFrontEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTechFront_Functionalities() {
-		return (EReference)techFrontEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTechFront_Modules() {
-		return (EReference)techFrontEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTechFront_Directories() {
-		return (EReference)techFrontEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getTechBack() {
-		return techBackEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTechBack_Jee_project() {
-		return (EReference)techBackEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1906,8 +1951,28 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public EClass getInterfaceClass() {
-		return interfaceClassEClass;
+	public EClass getEInterface() {
+		return eInterfaceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEInterface_Name() {
+		return (EAttribute)eInterfaceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getEInterface_Abstractmethod() {
+		return (EReference)eInterfaceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1956,28 +2021,8 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public EReference getLibrary_Anotationi() {
+	public EReference getLibrary_Annotation() {
 		return (EReference)libraryEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getJee() {
-		return jeeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getJee_Jee_project() {
-		return (EReference)jeeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2006,7 +2051,7 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public EReference getAttribute_Anotationi() {
+	public EReference getAttribute_Annotation() {
 		return (EReference)attributeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2076,7 +2121,7 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public EReference getMethodBack_Anotationi() {
+	public EReference getMethodBack_Annotation() {
 		return (EReference)methodBackEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2108,6 +2153,16 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	@Override
 	public EClass getAbstractClass() {
 		return abstractClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAbstractClass_Abstractmethod() {
+		return (EReference)abstractClassEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2186,7 +2241,7 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public EReference getEClass_Anotationi() {
+	public EReference getEClass_Annotation() {
 		return (EReference)eClassEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -2196,8 +2251,8 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public EClass getAnotationi() {
-		return anotationiEClass;
+	public EClass getAnnotation() {
+		return annotationEClass;
 	}
 
 	/**
@@ -2206,8 +2261,8 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAnotationi_Properties() {
-		return (EAttribute)anotationiEClass.getEStructuralFeatures().get(0);
+	public EAttribute getAnnotation_Properties() {
+		return (EAttribute)annotationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2216,8 +2271,8 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public EReference getAnotationi_Descriptor() {
-		return (EReference)anotationiEClass.getEStructuralFeatures().get(1);
+	public EReference getAnnotation_Descriptor() {
+		return (EReference)annotationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2316,6 +2371,126 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
+	public EClass getUtil() {
+		return utilEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getReducers() {
+		return reducersEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getActions() {
+		return actionsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getBack() {
+		return backEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFront() {
+		return frontEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getProperty() {
+		return propertyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getProperty_Name() {
+		return (EAttribute)propertyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getProperty_Type() {
+		return (EAttribute)propertyEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAbstractMethod() {
+		return abstractMethodEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAbstractMethod_Name() {
+		return (EAttribute)abstractMethodEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAbstractMethod_Return() {
+		return (EReference)abstractMethodEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAbstractMethod_Arguments() {
+		return (EReference)abstractMethodEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public UnifiedMetamodel_Factory getUnifiedMetamodel_Factory() {
 		return (UnifiedMetamodel_Factory)getEFactoryInstance();
 	}
@@ -2385,6 +2560,7 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		createEReference(metamodelEClass, METAMODEL__ARQUITECTUREMETAMODEL);
 		createEReference(metamodelEClass, METAMODEL__DOMAINMETAMODEL);
 		createEReference(metamodelEClass, METAMODEL__TECHNOLOGYMETAMODEL);
+		createEAttribute(metamodelEClass, METAMODEL__NAME);
 
 		readEClass = createEClass(READ);
 
@@ -2397,9 +2573,7 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		compositionEClass = createEClass(COMPOSITION);
 
 		operationsEClass = createEClass(OPERATIONS);
-		createEReference(operationsEClass, OPERATIONS__ENTITY);
-
-		loginEClass = createEClass(LOGIN);
+		createEReference(operationsEClass, OPERATIONS__OPERATES_ON);
 
 		moduleEClass = createEClass(MODULE);
 		createEAttribute(moduleEClass, MODULE__NAME);
@@ -2407,28 +2581,28 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 
 		specialEntityEClass = createEClass(SPECIAL_ENTITY);
 		createEReference(specialEntityEClass, SPECIAL_ENTITY__TRANSACTION);
-		createEAttribute(specialEntityEClass, SPECIAL_ENTITY__TYPE);
 
 		generalEntityEClass = createEClass(GENERAL_ENTITY);
 
 		entityEClass = createEClass(ENTITY);
 		createEAttribute(entityEClass, ENTITY__NAME);
+		createEReference(entityEClass, ENTITY__PROPERTY);
 
 		relationDomEClass = createEClass(RELATION_DOM);
 		createEReference(relationDomEClass, RELATION_DOM__SOURCE);
 		createEReference(relationDomEClass, RELATION_DOM__TARGET);
 
 		transactionEClass = createEClass(TRANSACTION);
-		createEReference(transactionEClass, TRANSACTION__UPDATE);
+		createEReference(transactionEClass, TRANSACTION__OPERATES_ON);
 
 		submoduleEClass = createEClass(SUBMODULE);
 		createEAttribute(submoduleEClass, SUBMODULE__NAME);
 		createEReference(submoduleEClass, SUBMODULE__OPERATIONS);
 		createEReference(submoduleEClass, SUBMODULE__ENTITY);
-		createEReference(submoduleEClass, SUBMODULE__RELATION);
 
 		domainMetamodelEClass = createEClass(DOMAIN_METAMODEL);
 		createEReference(domainMetamodelEClass, DOMAIN_METAMODEL__MODULE);
+		createEReference(domainMetamodelEClass, DOMAIN_METAMODEL__RELATIONDOM);
 
 		actionDispatcherEClass = createEClass(ACTION_DISPATCHER);
 		createEReference(actionDispatcherEClass, ACTION_DISPATCHER__USE);
@@ -2490,13 +2664,14 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		createEReference(actionEClass, ACTION__ACTIONDISPATCHER);
 		createEReference(actionEClass, ACTION__ACTIONCREATOR);
 		createEReference(actionEClass, ACTION__ACTION_DIRECTORY);
+		createEAttribute(actionEClass, ACTION__NAME);
 
 		reduxEClass = createEClass(REDUX);
 
-		techFrontEClass = createEClass(TECH_FRONT);
-		createEReference(techFrontEClass, TECH_FRONT__FUNCTIONALITIES);
-		createEReference(techFrontEClass, TECH_FRONT__MODULES);
-		createEReference(techFrontEClass, TECH_FRONT__DIRECTORIES);
+		reactAppEClass = createEClass(REACT_APP);
+		createEReference(reactAppEClass, REACT_APP__FUNCTIONALITIES);
+		createEReference(reactAppEClass, REACT_APP__MODULES);
+		createEReference(reactAppEClass, REACT_APP__DIRECTORIES);
 
 		fileEClass = createEClass(FILE);
 		createEAttribute(fileEClass, FILE__TYPE);
@@ -2520,8 +2695,8 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		createEReference(technologyMetamodelEClass, TECHNOLOGY_METAMODEL__TECHBACK);
 		createEReference(technologyMetamodelEClass, TECHNOLOGY_METAMODEL__TECHFRONT);
 
-		techBackEClass = createEClass(TECH_BACK);
-		createEReference(techBackEClass, TECH_BACK__JEE_PROJECT);
+		javaAppEClass = createEClass(JAVA_APP);
+		createEReference(javaAppEClass, JAVA_APP__JEE_PROJECT);
 
 		jeE_ProjectEClass = createEClass(JEE_PROJECT);
 		createEAttribute(jeE_ProjectEClass, JEE_PROJECT__NAME);
@@ -2530,20 +2705,19 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		nativeClassEClass = createEClass(NATIVE_CLASS);
 		createEAttribute(nativeClassEClass, NATIVE_CLASS__PRIMITIVE_REF);
 
-		interfaceClassEClass = createEClass(INTERFACE_CLASS);
+		eInterfaceEClass = createEClass(EINTERFACE);
+		createEAttribute(eInterfaceEClass, EINTERFACE__NAME);
+		createEReference(eInterfaceEClass, EINTERFACE__ABSTRACTMETHOD);
 
 		libraryEClass = createEClass(LIBRARY);
 		createEAttribute(libraryEClass, LIBRARY__NAME);
 		createEAttribute(libraryEClass, LIBRARY__IS_NATIVE);
 		createEReference(libraryEClass, LIBRARY__NATIVECLASS);
-		createEReference(libraryEClass, LIBRARY__ANOTATIONI);
-
-		jeeEClass = createEClass(JEE);
-		createEReference(jeeEClass, JEE__JEE_PROJECT);
+		createEReference(libraryEClass, LIBRARY__ANNOTATION);
 
 		attributeEClass = createEClass(ATTRIBUTE);
 		createEAttribute(attributeEClass, ATTRIBUTE__NAME);
-		createEReference(attributeEClass, ATTRIBUTE__ANOTATIONI);
+		createEReference(attributeEClass, ATTRIBUTE__ANNOTATION);
 		createEReference(attributeEClass, ATTRIBUTE__TYPE);
 
 		genericClassEClass = createEClass(GENERIC_CLASS);
@@ -2552,11 +2726,12 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 
 		methodBackEClass = createEClass(METHOD_BACK);
 		createEAttribute(methodBackEClass, METHOD_BACK__NAME);
-		createEReference(methodBackEClass, METHOD_BACK__ANOTATIONI);
+		createEReference(methodBackEClass, METHOD_BACK__ANNOTATION);
 		createEReference(methodBackEClass, METHOD_BACK__RETURN);
 		createEReference(methodBackEClass, METHOD_BACK__ARGUMENTS);
 
 		abstractClassEClass = createEClass(ABSTRACT_CLASS);
+		createEReference(abstractClassEClass, ABSTRACT_CLASS__ABSTRACTMETHOD);
 
 		epackageEClass = createEClass(EPACKAGE);
 		createEAttribute(epackageEClass, EPACKAGE__NAME);
@@ -2566,11 +2741,11 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		createEReference(eClassEClass, ECLASS__ATTRIBUTE);
 		createEAttribute(eClassEClass, ECLASS__NAME);
 		createEReference(eClassEClass, ECLASS__METHOD);
-		createEReference(eClassEClass, ECLASS__ANOTATIONI);
+		createEReference(eClassEClass, ECLASS__ANNOTATION);
 
-		anotationiEClass = createEClass(ANOTATIONI);
-		createEAttribute(anotationiEClass, ANOTATIONI__PROPERTIES);
-		createEReference(anotationiEClass, ANOTATIONI__DESCRIPTOR);
+		annotationEClass = createEClass(ANNOTATION);
+		createEAttribute(annotationEClass, ANNOTATION__PROPERTIES);
+		createEReference(annotationEClass, ANNOTATION__DESCRIPTOR);
 
 		subprojectEClass = createEClass(SUBPROJECT);
 		createEAttribute(subprojectEClass, SUBPROJECT__NAME);
@@ -2583,6 +2758,25 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		createEAttribute(descriptorEClass, DESCRIPTOR__PATH);
 
 		javaScriptEClass = createEClass(JAVA_SCRIPT);
+
+		utilEClass = createEClass(UTIL);
+
+		reducersEClass = createEClass(REDUCERS);
+
+		actionsEClass = createEClass(ACTIONS);
+
+		backEClass = createEClass(BACK);
+
+		frontEClass = createEClass(FRONT);
+
+		propertyEClass = createEClass(PROPERTY);
+		createEAttribute(propertyEClass, PROPERTY__NAME);
+		createEAttribute(propertyEClass, PROPERTY__TYPE);
+
+		abstractMethodEClass = createEClass(ABSTRACT_METHOD);
+		createEAttribute(abstractMethodEClass, ABSTRACT_METHOD__NAME);
+		createEReference(abstractMethodEClass, ABSTRACT_METHOD__RETURN);
+		createEReference(abstractMethodEClass, ABSTRACT_METHOD__ARGUMENTS);
 	}
 
 	/**
@@ -2628,7 +2822,6 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		saleEClass.getESuperTypes().add(this.getTransaction());
 		exchangeEClass.getESuperTypes().add(this.getTransaction());
 		compositionEClass.getESuperTypes().add(this.getRelationDom());
-		loginEClass.getESuperTypes().add(this.getOperations());
 		specialEntityEClass.getESuperTypes().add(this.getEntity());
 		generalEntityEClass.getESuperTypes().add(this.getEntity());
 		routerEClass.getESuperTypes().add(this.getModuleFront());
@@ -2644,17 +2837,21 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		jsEClass.getESuperTypes().add(this.getFile());
 		reduxEClass.getESuperTypes().add(this.getModuleFront());
 		nativeClassEClass.getESuperTypes().add(this.getEClass());
-		interfaceClassEClass.getESuperTypes().add(this.getEClass());
 		genericClassEClass.getESuperTypes().add(this.getEClass());
 		abstractClassEClass.getESuperTypes().add(this.getEClass());
-		anotationiEClass.getESuperTypes().add(this.getEClass());
+		annotationEClass.getESuperTypes().add(this.getEClass());
 		javaScriptEClass.getESuperTypes().add(this.getLayer());
+		utilEClass.getESuperTypes().add(this.getLayerSegment());
+		reducersEClass.getESuperTypes().add(this.getLayerSegment());
+		actionsEClass.getESuperTypes().add(this.getLayerSegment());
+		backEClass.getESuperTypes().add(this.getComponent());
+		frontEClass.getESuperTypes().add(this.getComponent());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(ejbEClass, Ejb.class, "Ejb", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(layerSegmentEClass, LayerSegment.class, "LayerSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLayerSegment_AllowToUse(), this.getLayerSegment(), null, "allowToUse", null, 0, 1, LayerSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLayerSegment_AllowToUse(), this.getLayerSegment(), null, "allowToUse", null, 0, -1, LayerSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLayerSegment_Layersegment(), this.getLayerSegment(), null, "layersegment", null, 0, -1, LayerSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLayerSegment_Name(), ecorePackage.getEString(), "name", null, 0, 1, LayerSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2675,8 +2872,8 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		initEClass(warEClass, War.class, "War", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getComponent_Layers(), this.getLayer(), null, "layers", null, 0, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComponent_Relations(), this.getRelationArch(), null, "relations", null, 0, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponent_Layers(), this.getLayer(), null, "layers", null, 1, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponent_Relations(), this.getRelationArch(), null, "relations", null, 1, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComponent_Name(), ecorePackage.getEString(), "name", null, 0, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(relationArchEClass, RelationArch.class, "RelationArch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2685,7 +2882,7 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		initEAttribute(getRelationArch_Name(), ecorePackage.getEString(), "name", null, 0, 1, RelationArch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(arquitectureMetamodelEClass, ArquitectureMetamodel.class, "ArquitectureMetamodel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getArquitectureMetamodel_Components(), this.getComponent(), null, "components", null, 0, -1, ArquitectureMetamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArquitectureMetamodel_Components(), this.getComponent(), null, "components", null, 1, -1, ArquitectureMetamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(containersEClass, Containers.class, "Containers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2697,6 +2894,7 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		initEReference(getMetamodel_Arquitecturemetamodel(), this.getArquitectureMetamodel(), null, "arquitecturemetamodel", null, 1, 1, Metamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMetamodel_Domainmetamodel(), this.getDomainMetamodel(), null, "domainmetamodel", null, 1, 1, Metamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMetamodel_Technologymetamodel(), this.getTechnologyMetamodel(), null, "technologymetamodel", null, 1, 1, Metamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMetamodel_Name(), ecorePackage.getEString(), "name", null, 0, 1, Metamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(readEClass, Read.class, "Read", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2709,38 +2907,36 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		initEClass(compositionEClass, Composition.class, "Composition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(operationsEClass, Operations.class, "Operations", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOperations_Entity(), this.getEntity(), null, "entity", null, 0, 1, Operations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(loginEClass, Login.class, "Login", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOperations_Operates_on(), this.getEntity(), null, "operates_on", null, 1, 1, Operations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(moduleEClass, UnifiedMetamodel_.Module.class, "Module", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getModule_Name(), ecorePackage.getEString(), "name", null, 0, 1, UnifiedMetamodel_.Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getModule_Submodule(), this.getSubmodule(), null, "submodule", null, 0, -1, UnifiedMetamodel_.Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModule_Submodule(), this.getSubmodule(), null, "submodule", null, 1, -1, UnifiedMetamodel_.Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(specialEntityEClass, SpecialEntity.class, "SpecialEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSpecialEntity_Transaction(), this.getTransaction(), null, "transaction", null, 0, -1, SpecialEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSpecialEntity_Type(), ecorePackage.getEString(), "type", null, 0, 1, SpecialEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpecialEntity_Transaction(), this.getTransaction(), null, "transaction", null, 1, -1, SpecialEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(generalEntityEClass, GeneralEntity.class, "GeneralEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEntity_Name(), ecorePackage.getEString(), "name", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Property(), this.getProperty(), null, "property", null, 1, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(relationDomEClass, RelationDom.class, "RelationDom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRelationDom_Source(), this.getEntity(), null, "source", null, 0, 1, RelationDom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRelationDom_Target(), this.getEntity(), null, "target", null, 0, 1, RelationDom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelationDom_Source(), this.getEntity(), null, "source", null, 1, 1, RelationDom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelationDom_Target(), this.getEntity(), null, "target", null, 1, 1, RelationDom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(transactionEClass, Transaction.class, "Transaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTransaction_Update(), this.getGeneralEntity(), null, "update", null, 0, -1, Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransaction_Operates_on(), this.getGeneralEntity(), null, "operates_on", null, 1, -1, Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(submoduleEClass, Submodule.class, "Submodule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSubmodule_Name(), ecorePackage.getEString(), "name", null, 0, 1, Submodule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSubmodule_Operations(), this.getOperations(), null, "operations", null, 0, -1, Submodule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSubmodule_Entity(), this.getEntity(), null, "entity", null, 0, -1, Submodule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSubmodule_Relation(), this.getRelationDom(), null, "relation", null, 0, -1, Submodule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSubmodule_Operations(), this.getOperations(), null, "operations", null, 1, -1, Submodule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSubmodule_Entity(), this.getEntity(), null, "entity", null, 1, -1, Submodule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(domainMetamodelEClass, DomainMetamodel.class, "DomainMetamodel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDomainMetamodel_Module(), this.getModule(), null, "module", null, 0, -1, DomainMetamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomainMetamodel_Module(), this.getModule(), null, "module", null, 1, -1, DomainMetamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomainMetamodel_Relationdom(), this.getRelationDom(), null, "relationdom", null, 1, -1, DomainMetamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(actionDispatcherEClass, ActionDispatcher.class, "ActionDispatcher", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getActionDispatcher_Use(), this.getActionCreator(), null, "use", null, 0, 1, ActionDispatcher.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2764,8 +2960,8 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		initEAttribute(getDirectory_Name(), ecorePackage.getEString(), "name", null, 0, 1, Directory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getState_Action(), this.getAction(), null, "action", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getState_Reducer(), this.getReducer(), null, "reducer", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getState_Action(), this.getAction(), null, "action", null, 1, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getState_Reducer(), this.getReducer(), null, "reducer", null, 1, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getState_Use(), this.getModuleFront(), null, "use", null, 1, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(uiFrontEClass, UIFront.class, "UIFront", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2791,9 +2987,9 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 
 		initEClass(functionalityEClass, Functionality.class, "Functionality", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFunctionality_Name(), ecorePackage.getEString(), "name", null, 0, 1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunctionality_Components(), this.getComponentFront(), null, "components", null, 0, -1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunctionality_State(), this.getState(), null, "state", null, 0, -1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunctionality_Services(), this.getServicesFront(), null, "services", null, 0, -1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionality_Components(), this.getComponentFront(), null, "components", null, 1, -1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionality_State(), this.getState(), null, "state", null, 1, 1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionality_Services(), this.getServicesFront(), null, "services", null, 1, -1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionality_IsOrganizedBy(), this.getDirectory(), null, "IsOrganizedBy", null, 1, 1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(jsEClass, UnifiedMetamodel_.JS.class, "JS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2801,27 +2997,28 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAction_Actiondispatcher(), this.getActionDispatcher(), null, "actiondispatcher", null, 0, -1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAction_Actioncreator(), this.getActionCreator(), null, "actioncreator", null, 0, -1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAction_ActionDirectory(), this.getDirectory(), null, "actionDirectory", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAction_ActionDirectory(), this.getDirectory(), null, "actionDirectory", null, 1, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAction_Name(), ecorePackage.getEString(), "name", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(reduxEClass, Redux.class, "Redux", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(techFrontEClass, TechFront.class, "TechFront", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTechFront_Functionalities(), this.getFunctionality(), null, "functionalities", null, 1, -1, TechFront.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTechFront_Modules(), this.getModuleFront(), null, "modules", null, 1, -1, TechFront.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTechFront_Directories(), this.getDirectory(), null, "directories", null, 1, -1, TechFront.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(reactAppEClass, ReactApp.class, "ReactApp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getReactApp_Functionalities(), this.getFunctionality(), null, "functionalities", null, 1, -1, ReactApp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getReactApp_Modules(), this.getModuleFront(), null, "modules", null, 1, -1, ReactApp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getReactApp_Directories(), this.getDirectory(), null, "directories", null, 1, -1, ReactApp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fileEClass, File.class, "File", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFile_Type(), ecorePackage.getEString(), "type", null, 0, 1, File.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFile_Name(), ecorePackage.getEString(), "name", null, 0, 1, File.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(componentFrontEClass, ComponentFront.class, "ComponentFront", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getComponentFront_Use(), this.getModuleFront(), null, "use", null, 0, -1, ComponentFront.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponentFront_Use(), this.getModuleFront(), null, "use", null, 1, -1, ComponentFront.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComponentFront_Name(), ecorePackage.getEString(), "name", null, 0, 1, ComponentFront.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponentFront_InWithin(), this.getDirectory(), null, "inWithin", null, 1, 1, ComponentFront.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(reducerEClass, Reducer.class, "Reducer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getReducer_Name(), ecorePackage.getEString(), "name", null, 0, 1, Reducer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getReducer_Catches(), this.getActionCreator(), null, "catches", null, 0, 1, Reducer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getReducer_Catches(), this.getActionCreator(), null, "catches", null, 0, -1, Reducer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getReducer_ReducerDirectory(), this.getDirectory(), null, "reducerDirectory", null, 0, 1, Reducer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(moduleFrontEClass, ModuleFront.class, "ModuleFront", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2829,72 +3026,91 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		initEReference(getModuleFront_IsPresentIn(), this.getDirectory(), null, "isPresentIn", null, 1, 1, ModuleFront.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(technologyMetamodelEClass, TechnologyMetamodel.class, "TechnologyMetamodel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTechnologyMetamodel_Techback(), this.getTechBack(), null, "techback", null, 1, 1, TechnologyMetamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTechnologyMetamodel_Techfront(), this.getTechFront(), null, "techfront", null, 1, 1, TechnologyMetamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTechnologyMetamodel_Techback(), this.getJavaApp(), null, "techback", null, 1, 1, TechnologyMetamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTechnologyMetamodel_Techfront(), this.getReactApp(), null, "techfront", null, 1, 1, TechnologyMetamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(techBackEClass, TechBack.class, "TechBack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTechBack_Jee_project(), this.getJEE_Project(), null, "jee_project", null, 0, -1, TechBack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(javaAppEClass, JavaApp.class, "JavaApp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getJavaApp_Jee_project(), this.getJEE_Project(), null, "jee_project", null, 1, -1, JavaApp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(jeE_ProjectEClass, JEE_Project.class, "JEE_Project", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getJEE_Project_Name(), ecorePackage.getEString(), "name", null, 0, 1, JEE_Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getJEE_Project_Subproject(), this.getSubproject(), null, "subproject", null, 0, -1, JEE_Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getJEE_Project_Subproject(), this.getSubproject(), null, "subproject", null, 1, -1, JEE_Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nativeClassEClass, NativeClass.class, "NativeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNativeClass_PrimitiveRef(), ecorePackage.getEString(), "primitiveRef", null, 0, 1, NativeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(interfaceClassEClass, InterfaceClass.class, "InterfaceClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(eInterfaceEClass, EInterface.class, "EInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEInterface_Name(), ecorePackage.getEString(), "name", null, 0, 1, EInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEInterface_Abstractmethod(), this.getAbstractMethod(), null, "abstractmethod", null, 0, -1, EInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(libraryEClass, Library.class, "Library", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLibrary_Name(), ecorePackage.getEString(), "name", null, 0, 1, Library.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLibrary_IsNative(), ecorePackage.getEBoolean(), "isNative", null, 0, 1, Library.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibrary_Nativeclass(), this.getNativeClass(), null, "nativeclass", null, 0, -1, Library.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLibrary_Anotationi(), this.getAnotationi(), null, "anotationi", null, 0, -1, Library.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(jeeEClass, Jee.class, "Jee", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getJee_Jee_project(), this.getJEE_Project(), null, "jee_project", null, 0, -1, Jee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLibrary_Annotation(), this.getAnnotation(), null, "annotation", null, 0, -1, Library.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttribute_Anotationi(), this.getAnotationi(), null, "anotationi", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttribute_Type(), this.getEClass(), null, "type", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttribute_Annotation(), this.getAnnotation(), null, "annotation", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttribute_Type(), this.getEClass(), null, "type", null, 1, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(genericClassEClass, GenericClass.class, "GenericClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGenericClass_Implement(), this.getInterfaceClass(), null, "implement", null, 0, -1, GenericClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGenericClass_Extends(), this.getAbstractClass(), null, "extends", null, 1, 1, GenericClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGenericClass_Implement(), this.getEInterface(), null, "implement", null, 0, -1, GenericClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGenericClass_Extends(), this.getAbstractClass(), null, "extends", null, 0, 1, GenericClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(methodBackEClass, MethodBack.class, "MethodBack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMethodBack_Name(), ecorePackage.getEString(), "name", null, 0, 1, MethodBack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMethodBack_Anotationi(), this.getAnotationi(), null, "anotationi", null, 0, 1, MethodBack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethodBack_Annotation(), this.getAnnotation(), null, "annotation", null, 0, 1, MethodBack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMethodBack_Return(), this.getEClass(), null, "return", null, 0, 1, MethodBack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMethodBack_Arguments(), this.getEClass(), null, "arguments", null, 0, 1, MethodBack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethodBack_Arguments(), this.getEClass(), null, "arguments", null, 0, -1, MethodBack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractClassEClass, AbstractClass.class, "AbstractClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAbstractClass_Abstractmethod(), this.getAbstractMethod(), null, "abstractmethod", null, 0, -1, AbstractClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(epackageEClass, Epackage.class, "Epackage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEpackage_Name(), ecorePackage.getEString(), "name", null, 0, 1, Epackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEpackage_Class(), this.getEClass(), null, "class", null, 0, -1, Epackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEpackage_Class(), this.getEClass(), null, "class", null, 1, -1, Epackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eClassEClass, UnifiedMetamodel_.EClass.class, "EClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEClass_Attribute(), this.getAttribute(), null, "attribute", null, 0, -1, UnifiedMetamodel_.EClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEClass_Name(), ecorePackage.getEString(), "name", null, 0, 1, UnifiedMetamodel_.EClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEClass_Method(), this.getMethodBack(), null, "method", null, 0, -1, UnifiedMetamodel_.EClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEClass_Anotationi(), this.getAnotationi(), null, "anotationi", null, 0, 1, UnifiedMetamodel_.EClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEClass_Annotation(), this.getAnnotation(), null, "annotation", null, 0, 1, UnifiedMetamodel_.EClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(anotationiEClass, Anotationi.class, "Anotationi", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAnotationi_Properties(), ecorePackage.getEString(), "properties", null, 0, 1, Anotationi.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAnotationi_Descriptor(), this.getDescriptor(), null, "descriptor", null, 0, 1, Anotationi.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(annotationEClass, Annotation.class, "Annotation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAnnotation_Properties(), ecorePackage.getEString(), "properties", null, 0, 1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAnnotation_Descriptor(), this.getDescriptor(), null, "descriptor", null, 0, 1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(subprojectEClass, Subproject.class, "Subproject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSubproject_Name(), ecorePackage.getEString(), "name", null, 0, 1, Subproject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSubproject_Descriptor(), this.getDescriptor(), null, "descriptor", null, 0, -1, Subproject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSubproject_Package(), this.getEpackage(), null, "package", null, 0, -1, Subproject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSubproject_Library(), this.getLibrary(), null, "library", null, 0, -1, Subproject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSubproject_Descriptor(), this.getDescriptor(), null, "descriptor", null, 1, -1, Subproject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSubproject_Package(), this.getEpackage(), null, "package", null, 1, -1, Subproject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSubproject_Library(), this.getLibrary(), null, "library", null, 1, -1, Subproject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(descriptorEClass, UnifiedMetamodel_.Descriptor.class, "Descriptor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDescriptor_Name(), ecorePackage.getEString(), "name", null, 0, 1, UnifiedMetamodel_.Descriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDescriptor_Path(), ecorePackage.getEString(), "path", null, 0, 1, UnifiedMetamodel_.Descriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(javaScriptEClass, JavaScript.class, "JavaScript", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(utilEClass, Util.class, "Util", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(reducersEClass, Reducers.class, "Reducers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(actionsEClass, Actions.class, "Actions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(backEClass, Back.class, "Back", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(frontEClass, Front.class, "Front", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(propertyEClass, Property.class, "Property", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getProperty_Name(), ecorePackage.getEString(), "name", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProperty_Type(), ecorePackage.getEString(), "type", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(abstractMethodEClass, AbstractMethod.class, "AbstractMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAbstractMethod_Name(), ecorePackage.getEString(), "name", null, 0, 1, AbstractMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractMethod_Return(), this.getEClass(), null, "return", null, 0, 1, AbstractMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractMethod_Arguments(), this.getEClass(), null, "arguments", null, 0, -1, AbstractMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

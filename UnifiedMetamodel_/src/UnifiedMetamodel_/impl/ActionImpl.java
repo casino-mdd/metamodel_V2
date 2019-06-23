@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link UnifiedMetamodel_.impl.ActionImpl#getActiondispatcher <em>Actiondispatcher</em>}</li>
  *   <li>{@link UnifiedMetamodel_.impl.ActionImpl#getActioncreator <em>Actioncreator</em>}</li>
  *   <li>{@link UnifiedMetamodel_.impl.ActionImpl#getActionDirectory <em>Action Directory</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.impl.ActionImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,6 +70,26 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 * @ordered
 	 */
 	protected Directory actionDirectory;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -161,6 +182,29 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 * @generated
 	 */
 	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UnifiedMetamodel_Package.ACTION__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case UnifiedMetamodel_Package.ACTION__ACTIONDISPATCHER:
@@ -186,6 +230,8 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 			case UnifiedMetamodel_Package.ACTION__ACTION_DIRECTORY:
 				if (resolve) return getActionDirectory();
 				return basicGetActionDirectory();
+			case UnifiedMetamodel_Package.ACTION__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -210,6 +256,9 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 			case UnifiedMetamodel_Package.ACTION__ACTION_DIRECTORY:
 				setActionDirectory((Directory)newValue);
 				return;
+			case UnifiedMetamodel_Package.ACTION__NAME:
+				setName((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -231,6 +280,9 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 			case UnifiedMetamodel_Package.ACTION__ACTION_DIRECTORY:
 				setActionDirectory((Directory)null);
 				return;
+			case UnifiedMetamodel_Package.ACTION__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -249,8 +301,26 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 				return actioncreator != null && !actioncreator.isEmpty();
 			case UnifiedMetamodel_Package.ACTION__ACTION_DIRECTORY:
 				return actionDirectory != null;
+			case UnifiedMetamodel_Package.ACTION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ActionImpl

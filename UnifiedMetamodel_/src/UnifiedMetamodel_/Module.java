@@ -53,7 +53,7 @@ public interface Module extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Submodule</em>' containment reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getModule_Submodule()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Submodule> getSubmodule();

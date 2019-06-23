@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link UnifiedMetamodel_.Transaction#getUpdate <em>Update</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.Transaction#getOperates_on <em>Operates on</em>}</li>
  * </ul>
  *
  * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getTransaction()
@@ -24,15 +24,15 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Transaction extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Update</b></em>' reference list.
+	 * Returns the value of the '<em><b>Operates on</b></em>' reference list.
 	 * The list contents are of type {@link UnifiedMetamodel_.GeneralEntity}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Update</em>' reference list.
-	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getTransaction_Update()
-	 * @model
+	 * @return the value of the '<em>Operates on</em>' reference list.
+	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getTransaction_Operates_on()
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<GeneralEntity> getUpdate();
+	EList<GeneralEntity> getOperates_on();
 
 } // Transaction

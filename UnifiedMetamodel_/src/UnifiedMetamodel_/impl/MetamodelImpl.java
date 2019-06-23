@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link UnifiedMetamodel_.impl.MetamodelImpl#getArquitecturemetamodel <em>Arquitecturemetamodel</em>}</li>
  *   <li>{@link UnifiedMetamodel_.impl.MetamodelImpl#getDomainmetamodel <em>Domainmetamodel</em>}</li>
  *   <li>{@link UnifiedMetamodel_.impl.MetamodelImpl#getTechnologymetamodel <em>Technologymetamodel</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.impl.MetamodelImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,6 +61,25 @@ public class MetamodelImpl extends MinimalEObjectImpl.Container implements Metam
 	 * @ordered
 	 */
 	protected TechnologyMetamodel technologymetamodel;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -221,6 +241,29 @@ public class MetamodelImpl extends MinimalEObjectImpl.Container implements Metam
 	 * @generated
 	 */
 	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UnifiedMetamodel_Package.METAMODEL__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case UnifiedMetamodel_Package.METAMODEL__ARQUITECTUREMETAMODEL:
@@ -247,6 +290,8 @@ public class MetamodelImpl extends MinimalEObjectImpl.Container implements Metam
 				return getDomainmetamodel();
 			case UnifiedMetamodel_Package.METAMODEL__TECHNOLOGYMETAMODEL:
 				return getTechnologymetamodel();
+			case UnifiedMetamodel_Package.METAMODEL__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -267,6 +312,9 @@ public class MetamodelImpl extends MinimalEObjectImpl.Container implements Metam
 				return;
 			case UnifiedMetamodel_Package.METAMODEL__TECHNOLOGYMETAMODEL:
 				setTechnologymetamodel((TechnologyMetamodel)newValue);
+				return;
+			case UnifiedMetamodel_Package.METAMODEL__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -289,6 +337,9 @@ public class MetamodelImpl extends MinimalEObjectImpl.Container implements Metam
 			case UnifiedMetamodel_Package.METAMODEL__TECHNOLOGYMETAMODEL:
 				setTechnologymetamodel((TechnologyMetamodel)null);
 				return;
+			case UnifiedMetamodel_Package.METAMODEL__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -307,8 +358,26 @@ public class MetamodelImpl extends MinimalEObjectImpl.Container implements Metam
 				return domainmetamodel != null;
 			case UnifiedMetamodel_Package.METAMODEL__TECHNOLOGYMETAMODEL:
 				return technologymetamodel != null;
+			case UnifiedMetamodel_Package.METAMODEL__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //MetamodelImpl

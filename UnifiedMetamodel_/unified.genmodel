@@ -46,8 +46,8 @@
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//Read"/>
     <genClasses ecoreClass="unified.ecore#//Create"/>
-    <genClasses ecoreClass="unified.ecore#//sale"/>
-    <genClasses ecoreClass="unified.ecore#//exchange"/>
+    <genClasses ecoreClass="unified.ecore#//Sale"/>
+    <genClasses ecoreClass="unified.ecore#//Exchange"/>
     <genClasses ecoreClass="unified.ecore#//Composition"/>
     <genClasses ecoreClass="unified.ecore#//Operations">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Operations/operates_on"/>

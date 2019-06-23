@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link UnifiedMetamodel_.Action#getActiondispatcher <em>Actiondispatcher</em>}</li>
  *   <li>{@link UnifiedMetamodel_.Action#getActioncreator <em>Actioncreator</em>}</li>
  *   <li>{@link UnifiedMetamodel_.Action#getActionDirectory <em>Action Directory</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.Action#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getAction()
@@ -56,7 +57,7 @@ public interface Action extends EObject {
 	 * @return the value of the '<em>Action Directory</em>' reference.
 	 * @see #setActionDirectory(Directory)
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getAction_ActionDirectory()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	Directory getActionDirectory();
@@ -70,5 +71,27 @@ public interface Action extends EObject {
 	 * @generated
 	 */
 	void setActionDirectory(Directory value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getAction_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link UnifiedMetamodel_.Action#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // Action

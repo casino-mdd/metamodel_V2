@@ -2,7 +2,7 @@
  */
 package UnifiedMetamodel_.impl;
 
-import UnifiedMetamodel_.Anotationi;
+import UnifiedMetamodel_.Annotation;
 import UnifiedMetamodel_.Attribute;
 import UnifiedMetamodel_.EClass;
 import UnifiedMetamodel_.MethodBack;
@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link UnifiedMetamodel_.impl.EClassImpl#getAttribute <em>Attribute</em>}</li>
  *   <li>{@link UnifiedMetamodel_.impl.EClassImpl#getName <em>Name</em>}</li>
  *   <li>{@link UnifiedMetamodel_.impl.EClassImpl#getMethod <em>Method</em>}</li>
- *   <li>{@link UnifiedMetamodel_.impl.EClassImpl#getAnotationi <em>Anotationi</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.impl.EClassImpl#getAnnotation <em>Annotation</em>}</li>
  * </ul>
  *
  * @generated
@@ -81,14 +81,14 @@ public class EClassImpl extends MinimalEObjectImpl.Container implements EClass {
 	protected EList<MethodBack> method;
 
 	/**
-	 * The cached value of the '{@link #getAnotationi() <em>Anotationi</em>}' reference.
+	 * The cached value of the '{@link #getAnnotation() <em>Annotation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnotationi()
+	 * @see #getAnnotation()
 	 * @generated
 	 * @ordered
 	 */
-	protected Anotationi anotationi;
+	protected Annotation annotation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -164,16 +164,16 @@ public class EClassImpl extends MinimalEObjectImpl.Container implements EClass {
 	 * @generated
 	 */
 	@Override
-	public Anotationi getAnotationi() {
-		if (anotationi != null && anotationi.eIsProxy()) {
-			InternalEObject oldAnotationi = (InternalEObject)anotationi;
-			anotationi = (Anotationi)eResolveProxy(oldAnotationi);
-			if (anotationi != oldAnotationi) {
+	public Annotation getAnnotation() {
+		if (annotation != null && annotation.eIsProxy()) {
+			InternalEObject oldAnnotation = (InternalEObject)annotation;
+			annotation = (Annotation)eResolveProxy(oldAnnotation);
+			if (annotation != oldAnnotation) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UnifiedMetamodel_Package.ECLASS__ANOTATIONI, oldAnotationi, anotationi));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UnifiedMetamodel_Package.ECLASS__ANNOTATION, oldAnnotation, annotation));
 			}
 		}
-		return anotationi;
+		return annotation;
 	}
 
 	/**
@@ -181,8 +181,8 @@ public class EClassImpl extends MinimalEObjectImpl.Container implements EClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Anotationi basicGetAnotationi() {
-		return anotationi;
+	public Annotation basicGetAnnotation() {
+		return annotation;
 	}
 
 	/**
@@ -191,11 +191,11 @@ public class EClassImpl extends MinimalEObjectImpl.Container implements EClass {
 	 * @generated
 	 */
 	@Override
-	public void setAnotationi(Anotationi newAnotationi) {
-		Anotationi oldAnotationi = anotationi;
-		anotationi = newAnotationi;
+	public void setAnnotation(Annotation newAnnotation) {
+		Annotation oldAnnotation = annotation;
+		annotation = newAnnotation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UnifiedMetamodel_Package.ECLASS__ANOTATIONI, oldAnotationi, anotationi));
+			eNotify(new ENotificationImpl(this, Notification.SET, UnifiedMetamodel_Package.ECLASS__ANNOTATION, oldAnnotation, annotation));
 	}
 
 	/**
@@ -228,9 +228,9 @@ public class EClassImpl extends MinimalEObjectImpl.Container implements EClass {
 				return getName();
 			case UnifiedMetamodel_Package.ECLASS__METHOD:
 				return getMethod();
-			case UnifiedMetamodel_Package.ECLASS__ANOTATIONI:
-				if (resolve) return getAnotationi();
-				return basicGetAnotationi();
+			case UnifiedMetamodel_Package.ECLASS__ANNOTATION:
+				if (resolve) return getAnnotation();
+				return basicGetAnnotation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -255,8 +255,8 @@ public class EClassImpl extends MinimalEObjectImpl.Container implements EClass {
 				getMethod().clear();
 				getMethod().addAll((Collection<? extends MethodBack>)newValue);
 				return;
-			case UnifiedMetamodel_Package.ECLASS__ANOTATIONI:
-				setAnotationi((Anotationi)newValue);
+			case UnifiedMetamodel_Package.ECLASS__ANNOTATION:
+				setAnnotation((Annotation)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -279,8 +279,8 @@ public class EClassImpl extends MinimalEObjectImpl.Container implements EClass {
 			case UnifiedMetamodel_Package.ECLASS__METHOD:
 				getMethod().clear();
 				return;
-			case UnifiedMetamodel_Package.ECLASS__ANOTATIONI:
-				setAnotationi((Anotationi)null);
+			case UnifiedMetamodel_Package.ECLASS__ANNOTATION:
+				setAnnotation((Annotation)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -300,8 +300,8 @@ public class EClassImpl extends MinimalEObjectImpl.Container implements EClass {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case UnifiedMetamodel_Package.ECLASS__METHOD:
 				return method != null && !method.isEmpty();
-			case UnifiedMetamodel_Package.ECLASS__ANOTATIONI:
-				return anotationi != null;
+			case UnifiedMetamodel_Package.ECLASS__ANNOTATION:
+				return annotation != null;
 		}
 		return super.eIsSet(featureID);
 	}

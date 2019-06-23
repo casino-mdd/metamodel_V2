@@ -2,8 +2,8 @@
  */
 package UnifiedMetamodel_.impl;
 
-import UnifiedMetamodel_.TechBack;
-import UnifiedMetamodel_.TechFront;
+import UnifiedMetamodel_.JavaApp;
+import UnifiedMetamodel_.ReactApp;
 import UnifiedMetamodel_.TechnologyMetamodel;
 import UnifiedMetamodel_.UnifiedMetamodel_Package;
 
@@ -39,7 +39,7 @@ public class TechnologyMetamodelImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 * @ordered
 	 */
-	protected TechBack techback;
+	protected JavaApp techback;
 
 	/**
 	 * The cached value of the '{@link #getTechfront() <em>Techfront</em>}' containment reference.
@@ -49,7 +49,7 @@ public class TechnologyMetamodelImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 * @ordered
 	 */
-	protected TechFront techfront;
+	protected ReactApp techfront;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -76,7 +76,7 @@ public class TechnologyMetamodelImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public TechFront getTechfront() {
+	public ReactApp getTechfront() {
 		return techfront;
 	}
 
@@ -85,8 +85,8 @@ public class TechnologyMetamodelImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTechfront(TechFront newTechfront, NotificationChain msgs) {
-		TechFront oldTechfront = techfront;
+	public NotificationChain basicSetTechfront(ReactApp newTechfront, NotificationChain msgs) {
+		ReactApp oldTechfront = techfront;
 		techfront = newTechfront;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UnifiedMetamodel_Package.TECHNOLOGY_METAMODEL__TECHFRONT, oldTechfront, newTechfront);
@@ -101,7 +101,7 @@ public class TechnologyMetamodelImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public void setTechfront(TechFront newTechfront) {
+	public void setTechfront(ReactApp newTechfront) {
 		if (newTechfront != techfront) {
 			NotificationChain msgs = null;
 			if (techfront != null)
@@ -121,7 +121,7 @@ public class TechnologyMetamodelImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public TechBack getTechback() {
+	public JavaApp getTechback() {
 		return techback;
 	}
 
@@ -130,8 +130,8 @@ public class TechnologyMetamodelImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTechback(TechBack newTechback, NotificationChain msgs) {
-		TechBack oldTechback = techback;
+	public NotificationChain basicSetTechback(JavaApp newTechback, NotificationChain msgs) {
+		JavaApp oldTechback = techback;
 		techback = newTechback;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UnifiedMetamodel_Package.TECHNOLOGY_METAMODEL__TECHBACK, oldTechback, newTechback);
@@ -146,7 +146,7 @@ public class TechnologyMetamodelImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public void setTechback(TechBack newTechback) {
+	public void setTechback(JavaApp newTechback) {
 		if (newTechback != techback) {
 			NotificationChain msgs = null;
 			if (techback != null)
@@ -201,10 +201,10 @@ public class TechnologyMetamodelImpl extends MinimalEObjectImpl.Container implem
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case UnifiedMetamodel_Package.TECHNOLOGY_METAMODEL__TECHBACK:
-				setTechback((TechBack)newValue);
+				setTechback((JavaApp)newValue);
 				return;
 			case UnifiedMetamodel_Package.TECHNOLOGY_METAMODEL__TECHFRONT:
-				setTechfront((TechFront)newValue);
+				setTechfront((ReactApp)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -219,10 +219,10 @@ public class TechnologyMetamodelImpl extends MinimalEObjectImpl.Container implem
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case UnifiedMetamodel_Package.TECHNOLOGY_METAMODEL__TECHBACK:
-				setTechback((TechBack)null);
+				setTechback((JavaApp)null);
 				return;
 			case UnifiedMetamodel_Package.TECHNOLOGY_METAMODEL__TECHFRONT:
-				setTechfront((TechFront)null);
+				setTechfront((ReactApp)null);
 				return;
 		}
 		super.eUnset(featureID);

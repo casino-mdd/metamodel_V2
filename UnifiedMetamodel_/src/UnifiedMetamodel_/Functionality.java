@@ -56,22 +56,32 @@ public interface Functionality extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Components</em>' containment reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getFunctionality_Components()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<ComponentFront> getComponents();
 
 	/**
-	 * Returns the value of the '<em><b>State</b></em>' containment reference list.
-	 * The list contents are of type {@link UnifiedMetamodel_.State}.
+	 * Returns the value of the '<em><b>State</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>State</em>' containment reference list.
+	 * @return the value of the '<em>State</em>' containment reference.
+	 * @see #setState(State)
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getFunctionality_State()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<State> getState();
+	State getState();
+
+	/**
+	 * Sets the value of the '{@link UnifiedMetamodel_.Functionality#getState <em>State</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>State</em>' containment reference.
+	 * @see #getState()
+	 * @generated
+	 */
+	void setState(State value);
 
 	/**
 	 * Returns the value of the '<em><b>Services</b></em>' containment reference list.
@@ -80,7 +90,7 @@ public interface Functionality extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Services</em>' containment reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getFunctionality_Services()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<ServicesFront> getServices();

@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link UnifiedMetamodel_.DomainMetamodel#getModule <em>Module</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.DomainMetamodel#getRelationdom <em>Relationdom</em>}</li>
  * </ul>
  *
  * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getDomainMetamodel()
@@ -30,9 +31,21 @@ public interface DomainMetamodel extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Module</em>' containment reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getDomainMetamodel_Module()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<UnifiedMetamodel_.Module> getModule();
+
+	/**
+	 * Returns the value of the '<em><b>Relationdom</b></em>' containment reference list.
+	 * The list contents are of type {@link UnifiedMetamodel_.RelationDom}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Relationdom</em>' containment reference list.
+	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getDomainMetamodel_Relationdom()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<RelationDom> getRelationdom();
 
 } // DomainMetamodel

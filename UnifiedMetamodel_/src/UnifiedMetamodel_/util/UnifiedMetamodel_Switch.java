@@ -4,12 +4,15 @@ package UnifiedMetamodel_.util;
 
 import UnifiedMetamodel_.APICall;
 import UnifiedMetamodel_.AbstractClass;
+import UnifiedMetamodel_.AbstractMethod;
 import UnifiedMetamodel_.Action;
 import UnifiedMetamodel_.ActionCreator;
 import UnifiedMetamodel_.ActionDispatcher;
-import UnifiedMetamodel_.Anotationi;
+import UnifiedMetamodel_.Actions;
+import UnifiedMetamodel_.Annotation;
 import UnifiedMetamodel_.ArquitectureMetamodel;
 import UnifiedMetamodel_.Attribute;
+import UnifiedMetamodel_.Back;
 import UnifiedMetamodel_.CSS;
 import UnifiedMetamodel_.Component;
 import UnifiedMetamodel_.ComponentFront;
@@ -23,25 +26,25 @@ import UnifiedMetamodel_.Directory;
 import UnifiedMetamodel_.DomainMetamodel;
 import UnifiedMetamodel_.Dto;
 import UnifiedMetamodel_.EClass;
+import UnifiedMetamodel_.EInterface;
 import UnifiedMetamodel_.Ejb;
 import UnifiedMetamodel_.Entity;
 import UnifiedMetamodel_.Epackage;
 import UnifiedMetamodel_.Exchange;
 import UnifiedMetamodel_.Facade;
 import UnifiedMetamodel_.File;
+import UnifiedMetamodel_.Front;
 import UnifiedMetamodel_.Functionality;
 import UnifiedMetamodel_.GeneralEntity;
 import UnifiedMetamodel_.GenericClass;
-import UnifiedMetamodel_.InterfaceClass;
 import UnifiedMetamodel_.JEE_Project;
 import UnifiedMetamodel_.JS;
 import UnifiedMetamodel_.JSON;
+import UnifiedMetamodel_.JavaApp;
 import UnifiedMetamodel_.JavaScript;
-import UnifiedMetamodel_.Jee;
 import UnifiedMetamodel_.Layer;
 import UnifiedMetamodel_.LayerSegment;
 import UnifiedMetamodel_.Library;
-import UnifiedMetamodel_.Login;
 import UnifiedMetamodel_.MD;
 import UnifiedMetamodel_.Metamodel;
 import UnifiedMetamodel_.MethodBack;
@@ -49,8 +52,11 @@ import UnifiedMetamodel_.ModuleFront;
 import UnifiedMetamodel_.NativeClass;
 import UnifiedMetamodel_.Operations;
 import UnifiedMetamodel_.Pojo;
+import UnifiedMetamodel_.Property;
+import UnifiedMetamodel_.ReactApp;
 import UnifiedMetamodel_.Read;
 import UnifiedMetamodel_.Reducer;
+import UnifiedMetamodel_.Reducers;
 import UnifiedMetamodel_.Redux;
 import UnifiedMetamodel_.RelationArch;
 import UnifiedMetamodel_.RelationDom;
@@ -65,13 +71,12 @@ import UnifiedMetamodel_.State;
 import UnifiedMetamodel_.Store;
 import UnifiedMetamodel_.Submodule;
 import UnifiedMetamodel_.Subproject;
-import UnifiedMetamodel_.TechBack;
-import UnifiedMetamodel_.TechFront;
 import UnifiedMetamodel_.TechnologyMetamodel;
 import UnifiedMetamodel_.Transaction;
 import UnifiedMetamodel_.UI;
 import UnifiedMetamodel_.UIFront;
 import UnifiedMetamodel_.UnifiedMetamodel_Package;
+import UnifiedMetamodel_.Util;
 import UnifiedMetamodel_.Visualizer;
 import UnifiedMetamodel_.War;
 import org.eclipse.emf.ecore.EObject;
@@ -283,13 +288,6 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UnifiedMetamodel_Package.LOGIN: {
-				Login login = (Login)theEObject;
-				T result = caseLogin(login);
-				if (result == null) result = caseOperations(login);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case UnifiedMetamodel_Package.MODULE: {
 				UnifiedMetamodel_.Module module = (UnifiedMetamodel_.Module)theEObject;
 				T result = caseModule(module);
@@ -468,9 +466,9 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UnifiedMetamodel_Package.TECH_FRONT: {
-				TechFront techFront = (TechFront)theEObject;
-				T result = caseTechFront(techFront);
+			case UnifiedMetamodel_Package.REACT_APP: {
+				ReactApp reactApp = (ReactApp)theEObject;
+				T result = caseReactApp(reactApp);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -504,9 +502,9 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UnifiedMetamodel_Package.TECH_BACK: {
-				TechBack techBack = (TechBack)theEObject;
-				T result = caseTechBack(techBack);
+			case UnifiedMetamodel_Package.JAVA_APP: {
+				JavaApp javaApp = (JavaApp)theEObject;
+				T result = caseJavaApp(javaApp);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -523,22 +521,15 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UnifiedMetamodel_Package.INTERFACE_CLASS: {
-				InterfaceClass interfaceClass = (InterfaceClass)theEObject;
-				T result = caseInterfaceClass(interfaceClass);
-				if (result == null) result = caseEClass(interfaceClass);
+			case UnifiedMetamodel_Package.EINTERFACE: {
+				EInterface eInterface = (EInterface)theEObject;
+				T result = caseEInterface(eInterface);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case UnifiedMetamodel_Package.LIBRARY: {
 				Library library = (Library)theEObject;
 				T result = caseLibrary(library);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case UnifiedMetamodel_Package.JEE: {
-				Jee jee = (Jee)theEObject;
-				T result = caseJee(jee);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -580,10 +571,10 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UnifiedMetamodel_Package.ANOTATIONI: {
-				Anotationi anotationi = (Anotationi)theEObject;
-				T result = caseAnotationi(anotationi);
-				if (result == null) result = caseEClass(anotationi);
+			case UnifiedMetamodel_Package.ANNOTATION: {
+				Annotation annotation = (Annotation)theEObject;
+				T result = caseAnnotation(annotation);
+				if (result == null) result = caseEClass(annotation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -603,6 +594,53 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 				JavaScript javaScript = (JavaScript)theEObject;
 				T result = caseJavaScript(javaScript);
 				if (result == null) result = caseLayer(javaScript);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UnifiedMetamodel_Package.UTIL: {
+				Util util = (Util)theEObject;
+				T result = caseUtil(util);
+				if (result == null) result = caseLayerSegment(util);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UnifiedMetamodel_Package.REDUCERS: {
+				Reducers reducers = (Reducers)theEObject;
+				T result = caseReducers(reducers);
+				if (result == null) result = caseLayerSegment(reducers);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UnifiedMetamodel_Package.ACTIONS: {
+				Actions actions = (Actions)theEObject;
+				T result = caseActions(actions);
+				if (result == null) result = caseLayerSegment(actions);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UnifiedMetamodel_Package.BACK: {
+				Back back = (Back)theEObject;
+				T result = caseBack(back);
+				if (result == null) result = caseComponent(back);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UnifiedMetamodel_Package.FRONT: {
+				Front front = (Front)theEObject;
+				T result = caseFront(front);
+				if (result == null) result = caseComponent(front);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UnifiedMetamodel_Package.PROPERTY: {
+				Property property = (Property)theEObject;
+				T result = caseProperty(property);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UnifiedMetamodel_Package.ABSTRACT_METHOD: {
+				AbstractMethod abstractMethod = (AbstractMethod)theEObject;
+				T result = caseAbstractMethod(abstractMethod);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -937,21 +975,6 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOperations(Operations object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Login</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Login</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLogin(Login object) {
 		return null;
 	}
 
@@ -1361,6 +1384,21 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>React App</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>React App</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReactApp(ReactApp object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>File</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1436,32 +1474,17 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tech Front</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Java App</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tech Front</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Java App</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTechFront(TechFront object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tech Back</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tech Back</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTechBack(TechBack object) {
+	public T caseJavaApp(JavaApp object) {
 		return null;
 	}
 
@@ -1496,17 +1519,17 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Interface Class</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>EInterface</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Interface Class</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>EInterface</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInterfaceClass(InterfaceClass object) {
+	public T caseEInterface(EInterface object) {
 		return null;
 	}
 
@@ -1522,21 +1545,6 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLibrary(Library object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Jee</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Jee</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseJee(Jee object) {
 		return null;
 	}
 
@@ -1631,17 +1639,17 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Anotationi</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Annotation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Anotationi</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Annotation</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAnotationi(Anotationi object) {
+	public T caseAnnotation(Annotation object) {
 		return null;
 	}
 
@@ -1687,6 +1695,111 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseJavaScript(JavaScript object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Util</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Util</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUtil(Util object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Reducers</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Reducers</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReducers(Reducers object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Actions</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Actions</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActions(Actions object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Back</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Back</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBack(Back object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Front</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Front</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFront(Front object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProperty(Property object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Method</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractMethod(AbstractMethod object) {
 		return null;
 	}
 

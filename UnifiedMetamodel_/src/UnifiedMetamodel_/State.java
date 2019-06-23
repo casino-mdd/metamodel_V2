@@ -32,7 +32,7 @@ public interface State extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Action</em>' containment reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getState_Action()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Action> getAction();
@@ -44,7 +44,7 @@ public interface State extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Reducer</em>' containment reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getState_Reducer()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Reducer> getReducer();

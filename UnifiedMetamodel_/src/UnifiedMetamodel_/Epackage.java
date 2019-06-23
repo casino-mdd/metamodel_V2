@@ -53,7 +53,7 @@ public interface Epackage extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Class</em>' containment reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getEpackage_Class()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<EClass> getClass_();

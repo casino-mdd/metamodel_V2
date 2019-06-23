@@ -52,8 +52,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Read" eSuperTypes="#//Operations"/>
   <eClassifiers xsi:type="ecore:EClass" name="Create" eSuperTypes="#//Operations"/>
-  <eClassifiers xsi:type="ecore:EClass" name="sale" eSuperTypes="#//Transaction"/>
-  <eClassifiers xsi:type="ecore:EClass" name="exchange" eSuperTypes="#//Transaction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sale" eSuperTypes="#//Transaction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Exchange" eSuperTypes="#//Transaction"/>
   <eClassifiers xsi:type="ecore:EClass" name="Composition" eSuperTypes="#//RelationDom"/>
   <eClassifiers xsi:type="ecore:EClass" name="Operations">
     <eStructuralFeatures xsi:type="ecore:EReference" name="operates_on" lowerBound="1"

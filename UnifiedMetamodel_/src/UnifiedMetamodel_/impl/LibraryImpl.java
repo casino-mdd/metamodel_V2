@@ -2,7 +2,7 @@
  */
 package UnifiedMetamodel_.impl;
 
-import UnifiedMetamodel_.Anotationi;
+import UnifiedMetamodel_.Annotation;
 import UnifiedMetamodel_.Library;
 import UnifiedMetamodel_.NativeClass;
 import UnifiedMetamodel_.UnifiedMetamodel_Package;
@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link UnifiedMetamodel_.impl.LibraryImpl#getName <em>Name</em>}</li>
  *   <li>{@link UnifiedMetamodel_.impl.LibraryImpl#isIsNative <em>Is Native</em>}</li>
  *   <li>{@link UnifiedMetamodel_.impl.LibraryImpl#getNativeclass <em>Nativeclass</em>}</li>
- *   <li>{@link UnifiedMetamodel_.impl.LibraryImpl#getAnotationi <em>Anotationi</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.impl.LibraryImpl#getAnnotation <em>Annotation</em>}</li>
  * </ul>
  *
  * @generated
@@ -91,14 +91,14 @@ public class LibraryImpl extends MinimalEObjectImpl.Container implements Library
 	protected EList<NativeClass> nativeclass;
 
 	/**
-	 * The cached value of the '{@link #getAnotationi() <em>Anotationi</em>}' containment reference list.
+	 * The cached value of the '{@link #getAnnotation() <em>Annotation</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnotationi()
+	 * @see #getAnnotation()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Anotationi> anotationi;
+	protected EList<Annotation> annotation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -184,11 +184,11 @@ public class LibraryImpl extends MinimalEObjectImpl.Container implements Library
 	 * @generated
 	 */
 	@Override
-	public EList<Anotationi> getAnotationi() {
-		if (anotationi == null) {
-			anotationi = new EObjectContainmentEList<Anotationi>(Anotationi.class, this, UnifiedMetamodel_Package.LIBRARY__ANOTATIONI);
+	public EList<Annotation> getAnnotation() {
+		if (annotation == null) {
+			annotation = new EObjectContainmentEList<Annotation>(Annotation.class, this, UnifiedMetamodel_Package.LIBRARY__ANNOTATION);
 		}
-		return anotationi;
+		return annotation;
 	}
 
 	/**
@@ -201,8 +201,8 @@ public class LibraryImpl extends MinimalEObjectImpl.Container implements Library
 		switch (featureID) {
 			case UnifiedMetamodel_Package.LIBRARY__NATIVECLASS:
 				return ((InternalEList<?>)getNativeclass()).basicRemove(otherEnd, msgs);
-			case UnifiedMetamodel_Package.LIBRARY__ANOTATIONI:
-				return ((InternalEList<?>)getAnotationi()).basicRemove(otherEnd, msgs);
+			case UnifiedMetamodel_Package.LIBRARY__ANNOTATION:
+				return ((InternalEList<?>)getAnnotation()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -221,8 +221,8 @@ public class LibraryImpl extends MinimalEObjectImpl.Container implements Library
 				return isIsNative();
 			case UnifiedMetamodel_Package.LIBRARY__NATIVECLASS:
 				return getNativeclass();
-			case UnifiedMetamodel_Package.LIBRARY__ANOTATIONI:
-				return getAnotationi();
+			case UnifiedMetamodel_Package.LIBRARY__ANNOTATION:
+				return getAnnotation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -246,9 +246,9 @@ public class LibraryImpl extends MinimalEObjectImpl.Container implements Library
 				getNativeclass().clear();
 				getNativeclass().addAll((Collection<? extends NativeClass>)newValue);
 				return;
-			case UnifiedMetamodel_Package.LIBRARY__ANOTATIONI:
-				getAnotationi().clear();
-				getAnotationi().addAll((Collection<? extends Anotationi>)newValue);
+			case UnifiedMetamodel_Package.LIBRARY__ANNOTATION:
+				getAnnotation().clear();
+				getAnnotation().addAll((Collection<? extends Annotation>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -271,8 +271,8 @@ public class LibraryImpl extends MinimalEObjectImpl.Container implements Library
 			case UnifiedMetamodel_Package.LIBRARY__NATIVECLASS:
 				getNativeclass().clear();
 				return;
-			case UnifiedMetamodel_Package.LIBRARY__ANOTATIONI:
-				getAnotationi().clear();
+			case UnifiedMetamodel_Package.LIBRARY__ANNOTATION:
+				getAnnotation().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -292,8 +292,8 @@ public class LibraryImpl extends MinimalEObjectImpl.Container implements Library
 				return isNative != IS_NATIVE_EDEFAULT;
 			case UnifiedMetamodel_Package.LIBRARY__NATIVECLASS:
 				return nativeclass != null && !nativeclass.isEmpty();
-			case UnifiedMetamodel_Package.LIBRARY__ANOTATIONI:
-				return anotationi != null && !anotationi.isEmpty();
+			case UnifiedMetamodel_Package.LIBRARY__ANNOTATION:
+				return annotation != null && !annotation.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -32,7 +32,7 @@ public interface Component extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Layers</em>' containment reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getComponent_Layers()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Layer> getLayers();
@@ -44,7 +44,7 @@ public interface Component extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Relations</em>' containment reference list.
 	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getComponent_Relations()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<RelationArch> getRelations();

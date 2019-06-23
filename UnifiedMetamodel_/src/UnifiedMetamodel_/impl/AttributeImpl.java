@@ -2,7 +2,7 @@
  */
 package UnifiedMetamodel_.impl;
 
-import UnifiedMetamodel_.Anotationi;
+import UnifiedMetamodel_.Annotation;
 import UnifiedMetamodel_.Attribute;
 import UnifiedMetamodel_.EClass;
 import UnifiedMetamodel_.UnifiedMetamodel_Package;
@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link UnifiedMetamodel_.impl.AttributeImpl#getName <em>Name</em>}</li>
- *   <li>{@link UnifiedMetamodel_.impl.AttributeImpl#getAnotationi <em>Anotationi</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.impl.AttributeImpl#getAnnotation <em>Annotation</em>}</li>
  *   <li>{@link UnifiedMetamodel_.impl.AttributeImpl#getType <em>Type</em>}</li>
  * </ul>
  *
@@ -51,14 +51,14 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getAnotationi() <em>Anotationi</em>}' reference.
+	 * The cached value of the '{@link #getAnnotation() <em>Annotation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnotationi()
+	 * @see #getAnnotation()
 	 * @generated
 	 * @ordered
 	 */
-	protected Anotationi anotationi;
+	protected Annotation annotation;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
@@ -118,16 +118,16 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	 * @generated
 	 */
 	@Override
-	public Anotationi getAnotationi() {
-		if (anotationi != null && anotationi.eIsProxy()) {
-			InternalEObject oldAnotationi = (InternalEObject)anotationi;
-			anotationi = (Anotationi)eResolveProxy(oldAnotationi);
-			if (anotationi != oldAnotationi) {
+	public Annotation getAnnotation() {
+		if (annotation != null && annotation.eIsProxy()) {
+			InternalEObject oldAnnotation = (InternalEObject)annotation;
+			annotation = (Annotation)eResolveProxy(oldAnnotation);
+			if (annotation != oldAnnotation) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UnifiedMetamodel_Package.ATTRIBUTE__ANOTATIONI, oldAnotationi, anotationi));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UnifiedMetamodel_Package.ATTRIBUTE__ANNOTATION, oldAnnotation, annotation));
 			}
 		}
-		return anotationi;
+		return annotation;
 	}
 
 	/**
@@ -135,8 +135,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Anotationi basicGetAnotationi() {
-		return anotationi;
+	public Annotation basicGetAnnotation() {
+		return annotation;
 	}
 
 	/**
@@ -145,11 +145,11 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	 * @generated
 	 */
 	@Override
-	public void setAnotationi(Anotationi newAnotationi) {
-		Anotationi oldAnotationi = anotationi;
-		anotationi = newAnotationi;
+	public void setAnnotation(Annotation newAnnotation) {
+		Annotation oldAnnotation = annotation;
+		annotation = newAnnotation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UnifiedMetamodel_Package.ATTRIBUTE__ANOTATIONI, oldAnotationi, anotationi));
+			eNotify(new ENotificationImpl(this, Notification.SET, UnifiedMetamodel_Package.ATTRIBUTE__ANNOTATION, oldAnnotation, annotation));
 	}
 
 	/**
@@ -202,9 +202,9 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 		switch (featureID) {
 			case UnifiedMetamodel_Package.ATTRIBUTE__NAME:
 				return getName();
-			case UnifiedMetamodel_Package.ATTRIBUTE__ANOTATIONI:
-				if (resolve) return getAnotationi();
-				return basicGetAnotationi();
+			case UnifiedMetamodel_Package.ATTRIBUTE__ANNOTATION:
+				if (resolve) return getAnnotation();
+				return basicGetAnnotation();
 			case UnifiedMetamodel_Package.ATTRIBUTE__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
@@ -223,8 +223,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 			case UnifiedMetamodel_Package.ATTRIBUTE__NAME:
 				setName((String)newValue);
 				return;
-			case UnifiedMetamodel_Package.ATTRIBUTE__ANOTATIONI:
-				setAnotationi((Anotationi)newValue);
+			case UnifiedMetamodel_Package.ATTRIBUTE__ANNOTATION:
+				setAnnotation((Annotation)newValue);
 				return;
 			case UnifiedMetamodel_Package.ATTRIBUTE__TYPE:
 				setType((EClass)newValue);
@@ -244,8 +244,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 			case UnifiedMetamodel_Package.ATTRIBUTE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case UnifiedMetamodel_Package.ATTRIBUTE__ANOTATIONI:
-				setAnotationi((Anotationi)null);
+			case UnifiedMetamodel_Package.ATTRIBUTE__ANNOTATION:
+				setAnnotation((Annotation)null);
 				return;
 			case UnifiedMetamodel_Package.ATTRIBUTE__TYPE:
 				setType((EClass)null);
@@ -264,8 +264,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 		switch (featureID) {
 			case UnifiedMetamodel_Package.ATTRIBUTE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case UnifiedMetamodel_Package.ATTRIBUTE__ANOTATIONI:
-				return anotationi != null;
+			case UnifiedMetamodel_Package.ATTRIBUTE__ANNOTATION:
+				return annotation != null;
 			case UnifiedMetamodel_Package.ATTRIBUTE__TYPE:
 				return type != null;
 		}

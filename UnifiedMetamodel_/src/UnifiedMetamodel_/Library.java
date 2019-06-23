@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link UnifiedMetamodel_.Library#getName <em>Name</em>}</li>
  *   <li>{@link UnifiedMetamodel_.Library#isIsNative <em>Is Native</em>}</li>
  *   <li>{@link UnifiedMetamodel_.Library#getNativeclass <em>Nativeclass</em>}</li>
- *   <li>{@link UnifiedMetamodel_.Library#getAnotationi <em>Anotationi</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.Library#getAnnotation <em>Annotation</em>}</li>
  * </ul>
  *
  * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getLibrary()
@@ -83,15 +83,15 @@ public interface Library extends EObject {
 	EList<NativeClass> getNativeclass();
 
 	/**
-	 * Returns the value of the '<em><b>Anotationi</b></em>' containment reference list.
-	 * The list contents are of type {@link UnifiedMetamodel_.Anotationi}.
+	 * Returns the value of the '<em><b>Annotation</b></em>' containment reference list.
+	 * The list contents are of type {@link UnifiedMetamodel_.Annotation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Anotationi</em>' containment reference list.
-	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getLibrary_Anotationi()
+	 * @return the value of the '<em>Annotation</em>' containment reference list.
+	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getLibrary_Annotation()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Anotationi> getAnotationi();
+	EList<Annotation> getAnnotation();
 
 } // Library
