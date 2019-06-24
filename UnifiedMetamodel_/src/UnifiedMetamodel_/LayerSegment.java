@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link UnifiedMetamodel_.LayerSegment#getAllowToUse <em>Allow To Use</em>}</li>
- *   <li>{@link UnifiedMetamodel_.LayerSegment#getLayersegment <em>Layersegment</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.LayerSegment#getSublayersegment <em>Sublayersegment</em>}</li>
  * </ul>
  *
  * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getLayerSegment()
@@ -37,15 +37,15 @@ public interface LayerSegment extends EObject {
 	EList<LayerSegment> getAllowToUse();
 
 	/**
-	 * Returns the value of the '<em><b>Layersegment</b></em>' containment reference list.
-	 * The list contents are of type {@link UnifiedMetamodel_.LayerSegment}.
+	 * Returns the value of the '<em><b>Sublayersegment</b></em>' containment reference list.
+	 * The list contents are of type {@link UnifiedMetamodel_.SubLayerSegment}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Layersegment</em>' containment reference list.
-	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getLayerSegment_Layersegment()
+	 * @return the value of the '<em>Sublayersegment</em>' containment reference list.
+	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getLayerSegment_Sublayersegment()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<LayerSegment> getLayersegment();
+	EList<SubLayerSegment> getSublayersegment();
 
 } // LayerSegment

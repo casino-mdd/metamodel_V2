@@ -2,25 +2,27 @@
  */
 package UnifiedMetamodel_.impl;
 
-import UnifiedMetamodel_.Actions;
+import UnifiedMetamodel_.SubLayerSegment;
 import UnifiedMetamodel_.UnifiedMetamodel_Package;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Actions</b></em>'.
+ * An implementation of the model object '<em><b>Sub Layer Segment</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class ActionsImpl extends SubLayerSegmentImpl implements Actions {
+public class SubLayerSegmentImpl extends MinimalEObjectImpl.Container implements SubLayerSegment {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ActionsImpl() {
+	protected SubLayerSegmentImpl() {
 		super();
 	}
 
@@ -31,7 +33,7 @@ public class ActionsImpl extends SubLayerSegmentImpl implements Actions {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UnifiedMetamodel_Package.Literals.ACTIONS;
+		return UnifiedMetamodel_Package.Literals.SUB_LAYER_SEGMENT;
 	}
 
-} //ActionsImpl
+} //SubLayerSegmentImpl

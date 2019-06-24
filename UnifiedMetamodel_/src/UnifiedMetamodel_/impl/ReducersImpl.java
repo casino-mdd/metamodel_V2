@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ReducersImpl extends LayerSegmentImpl implements Reducers {
+public class ReducersImpl extends SubLayerSegmentImpl implements Reducers {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

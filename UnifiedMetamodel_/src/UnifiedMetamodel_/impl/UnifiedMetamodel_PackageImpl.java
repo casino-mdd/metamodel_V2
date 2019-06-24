@@ -63,6 +63,7 @@ import UnifiedMetamodel_.ServicesFront;
 import UnifiedMetamodel_.SpecialEntity;
 import UnifiedMetamodel_.State;
 import UnifiedMetamodel_.Store;
+import UnifiedMetamodel_.SubLayerSegment;
 import UnifiedMetamodel_.Submodule;
 import UnifiedMetamodel_.Subproject;
 import UnifiedMetamodel_.TechnologyMetamodel;
@@ -563,6 +564,13 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	private EClass reactEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass subLayerSegmentEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -659,7 +667,7 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public EReference getLayerSegment_Layersegment() {
+	public EReference getLayerSegment_Sublayersegment() {
 		return (EReference)layerSegmentEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2499,6 +2507,16 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
+	public EClass getSubLayerSegment() {
+		return subLayerSegmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public UnifiedMetamodel_Factory getUnifiedMetamodel_Factory() {
 		return (UnifiedMetamodel_Factory)getEFactoryInstance();
 	}
@@ -2526,7 +2544,7 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 
 		layerSegmentEClass = createEClass(LAYER_SEGMENT);
 		createEReference(layerSegmentEClass, LAYER_SEGMENT__ALLOW_TO_USE);
-		createEReference(layerSegmentEClass, LAYER_SEGMENT__LAYERSEGMENT);
+		createEReference(layerSegmentEClass, LAYER_SEGMENT__SUBLAYERSEGMENT);
 
 		dtoEClass = createEClass(DTO);
 
@@ -2786,6 +2804,8 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		createEReference(abstractMethodEClass, ABSTRACT_METHOD__ARGUMENTS);
 
 		reactEClass = createEClass(REACT);
+
+		subLayerSegmentEClass = createEClass(SUB_LAYER_SEGMENT);
 	}
 
 	/**
@@ -2851,8 +2871,8 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		annotationEClass.getESuperTypes().add(this.getEClass());
 		javaScriptEClass.getESuperTypes().add(this.getLayer());
 		utilEClass.getESuperTypes().add(this.getLayerSegment());
-		reducersEClass.getESuperTypes().add(this.getLayerSegment());
-		actionsEClass.getESuperTypes().add(this.getLayerSegment());
+		reducersEClass.getESuperTypes().add(this.getSubLayerSegment());
+		actionsEClass.getESuperTypes().add(this.getSubLayerSegment());
 		backEClass.getESuperTypes().add(this.getComponent());
 		frontEClass.getESuperTypes().add(this.getComponent());
 		reactEClass.getESuperTypes().add(this.getModuleFront());
@@ -2862,7 +2882,7 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 
 		initEClass(layerSegmentEClass, LayerSegment.class, "LayerSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLayerSegment_AllowToUse(), this.getLayerSegment(), null, "allowToUse", null, 0, -1, LayerSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLayerSegment_Layersegment(), this.getLayerSegment(), null, "layersegment", null, 0, -1, LayerSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLayerSegment_Sublayersegment(), this.getSubLayerSegment(), null, "sublayersegment", null, 0, -1, LayerSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dtoEClass, Dto.class, "Dto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3122,6 +3142,8 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		initEReference(getAbstractMethod_Arguments(), this.getEClass(), null, "arguments", null, 0, -1, AbstractMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(reactEClass, React.class, "React", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(subLayerSegmentEClass, SubLayerSegment.class, "SubLayerSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

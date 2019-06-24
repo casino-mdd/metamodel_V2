@@ -724,6 +724,15 @@ public interface UnifiedMetamodel_Factory extends EFactory {
 	React createReact();
 
 	/**
+	 * Returns a new object of class '<em>Sub Layer Segment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sub Layer Segment</em>'.
+	 * @generated
+	 */
+	SubLayerSegment createSubLayerSegment();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -13,5 +13,5 @@ package UnifiedMetamodel_;
  * @model
  * @generated
  */
-public interface Reducers extends LayerSegment {
+public interface Reducers extends SubLayerSegment {
 } // Reducers

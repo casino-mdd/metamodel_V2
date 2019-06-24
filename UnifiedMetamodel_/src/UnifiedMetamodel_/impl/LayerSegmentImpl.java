@@ -3,6 +3,7 @@
 package UnifiedMetamodel_.impl;
 
 import UnifiedMetamodel_.LayerSegment;
+import UnifiedMetamodel_.SubLayerSegment;
 import UnifiedMetamodel_.UnifiedMetamodel_Package;
 
 import java.util.Collection;
@@ -27,7 +28,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link UnifiedMetamodel_.impl.LayerSegmentImpl#getAllowToUse <em>Allow To Use</em>}</li>
- *   <li>{@link UnifiedMetamodel_.impl.LayerSegmentImpl#getLayersegment <em>Layersegment</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.impl.LayerSegmentImpl#getSublayersegment <em>Sublayersegment</em>}</li>
  * </ul>
  *
  * @generated
@@ -44,14 +45,14 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 	protected EList<LayerSegment> allowToUse;
 
 	/**
-	 * The cached value of the '{@link #getLayersegment() <em>Layersegment</em>}' containment reference list.
+	 * The cached value of the '{@link #getSublayersegment() <em>Sublayersegment</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLayersegment()
+	 * @see #getSublayersegment()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<LayerSegment> layersegment;
+	protected EList<SubLayerSegment> sublayersegment;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,11 +92,11 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 	 * @generated
 	 */
 	@Override
-	public EList<LayerSegment> getLayersegment() {
-		if (layersegment == null) {
-			layersegment = new EObjectContainmentEList<LayerSegment>(LayerSegment.class, this, UnifiedMetamodel_Package.LAYER_SEGMENT__LAYERSEGMENT);
+	public EList<SubLayerSegment> getSublayersegment() {
+		if (sublayersegment == null) {
+			sublayersegment = new EObjectContainmentEList<SubLayerSegment>(SubLayerSegment.class, this, UnifiedMetamodel_Package.LAYER_SEGMENT__SUBLAYERSEGMENT);
 		}
-		return layersegment;
+		return sublayersegment;
 	}
 
 	/**
@@ -106,8 +107,8 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case UnifiedMetamodel_Package.LAYER_SEGMENT__LAYERSEGMENT:
-				return ((InternalEList<?>)getLayersegment()).basicRemove(otherEnd, msgs);
+			case UnifiedMetamodel_Package.LAYER_SEGMENT__SUBLAYERSEGMENT:
+				return ((InternalEList<?>)getSublayersegment()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -122,8 +123,8 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 		switch (featureID) {
 			case UnifiedMetamodel_Package.LAYER_SEGMENT__ALLOW_TO_USE:
 				return getAllowToUse();
-			case UnifiedMetamodel_Package.LAYER_SEGMENT__LAYERSEGMENT:
-				return getLayersegment();
+			case UnifiedMetamodel_Package.LAYER_SEGMENT__SUBLAYERSEGMENT:
+				return getSublayersegment();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -141,9 +142,9 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 				getAllowToUse().clear();
 				getAllowToUse().addAll((Collection<? extends LayerSegment>)newValue);
 				return;
-			case UnifiedMetamodel_Package.LAYER_SEGMENT__LAYERSEGMENT:
-				getLayersegment().clear();
-				getLayersegment().addAll((Collection<? extends LayerSegment>)newValue);
+			case UnifiedMetamodel_Package.LAYER_SEGMENT__SUBLAYERSEGMENT:
+				getSublayersegment().clear();
+				getSublayersegment().addAll((Collection<? extends SubLayerSegment>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -160,8 +161,8 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 			case UnifiedMetamodel_Package.LAYER_SEGMENT__ALLOW_TO_USE:
 				getAllowToUse().clear();
 				return;
-			case UnifiedMetamodel_Package.LAYER_SEGMENT__LAYERSEGMENT:
-				getLayersegment().clear();
+			case UnifiedMetamodel_Package.LAYER_SEGMENT__SUBLAYERSEGMENT:
+				getSublayersegment().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -177,8 +178,8 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 		switch (featureID) {
 			case UnifiedMetamodel_Package.LAYER_SEGMENT__ALLOW_TO_USE:
 				return allowToUse != null && !allowToUse.isEmpty();
-			case UnifiedMetamodel_Package.LAYER_SEGMENT__LAYERSEGMENT:
-				return layersegment != null && !layersegment.isEmpty();
+			case UnifiedMetamodel_Package.LAYER_SEGMENT__SUBLAYERSEGMENT:
+				return sublayersegment != null && !sublayersegment.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

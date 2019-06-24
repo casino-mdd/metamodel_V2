@@ -70,6 +70,7 @@ import UnifiedMetamodel_.ServicesFront;
 import UnifiedMetamodel_.SpecialEntity;
 import UnifiedMetamodel_.State;
 import UnifiedMetamodel_.Store;
+import UnifiedMetamodel_.SubLayerSegment;
 import UnifiedMetamodel_.Submodule;
 import UnifiedMetamodel_.Subproject;
 import UnifiedMetamodel_.TechnologyMetamodel;
@@ -608,14 +609,14 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 			case UnifiedMetamodel_Package.REDUCERS: {
 				Reducers reducers = (Reducers)theEObject;
 				T result = caseReducers(reducers);
-				if (result == null) result = caseLayerSegment(reducers);
+				if (result == null) result = caseSubLayerSegment(reducers);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case UnifiedMetamodel_Package.ACTIONS: {
 				Actions actions = (Actions)theEObject;
 				T result = caseActions(actions);
-				if (result == null) result = caseLayerSegment(actions);
+				if (result == null) result = caseSubLayerSegment(actions);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -649,6 +650,12 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 				React react = (React)theEObject;
 				T result = caseReact(react);
 				if (result == null) result = caseModuleFront(react);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UnifiedMetamodel_Package.SUB_LAYER_SEGMENT: {
+				SubLayerSegment subLayerSegment = (SubLayerSegment)theEObject;
+				T result = caseSubLayerSegment(subLayerSegment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1823,6 +1830,21 @@ public class UnifiedMetamodel_Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseReact(React object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sub Layer Segment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sub Layer Segment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSubLayerSegment(SubLayerSegment object) {
 		return null;
 	}
 

@@ -9,7 +9,7 @@
     <genClasses ecoreClass="unified.ecore#//Ejb"/>
     <genClasses ecoreClass="unified.ecore#//LayerSegment">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//LayerSegment/allowToUse"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//LayerSegment/layersegment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//LayerSegment/sublayersegment"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//Dto"/>
     <genClasses ecoreClass="unified.ecore#//Store"/>
@@ -238,5 +238,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//AbstractMethod/arguments"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//React"/>
+    <genClasses ecoreClass="unified.ecore#//SubLayerSegment"/>
   </genPackages>
 </genmodel:GenModel>

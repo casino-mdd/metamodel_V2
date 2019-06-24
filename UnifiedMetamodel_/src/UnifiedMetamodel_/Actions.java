@@ -13,5 +13,5 @@ package UnifiedMetamodel_;
  * @model
  * @generated
  */
-public interface Actions extends LayerSegment {
+public interface Actions extends SubLayerSegment {
 } // Actions

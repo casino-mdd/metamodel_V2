@@ -68,6 +68,7 @@ import UnifiedMetamodel_.ServicesFront;
 import UnifiedMetamodel_.SpecialEntity;
 import UnifiedMetamodel_.State;
 import UnifiedMetamodel_.Store;
+import UnifiedMetamodel_.SubLayerSegment;
 import UnifiedMetamodel_.Submodule;
 import UnifiedMetamodel_.Subproject;
 import UnifiedMetamodel_.TechnologyMetamodel;
@@ -209,6 +210,7 @@ public class UnifiedMetamodel_FactoryImpl extends EFactoryImpl implements Unifie
 			case UnifiedMetamodel_Package.PROPERTY: return createProperty();
 			case UnifiedMetamodel_Package.ABSTRACT_METHOD: return createAbstractMethod();
 			case UnifiedMetamodel_Package.REACT: return createReact();
+			case UnifiedMetamodel_Package.SUB_LAYER_SEGMENT: return createSubLayerSegment();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1070,6 +1072,17 @@ public class UnifiedMetamodel_FactoryImpl extends EFactoryImpl implements Unifie
 	public React createReact() {
 		ReactImpl react = new ReactImpl();
 		return react;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SubLayerSegment createSubLayerSegment() {
+		SubLayerSegmentImpl subLayerSegment = new SubLayerSegmentImpl();
+		return subLayerSegment;
 	}
 
 	/**

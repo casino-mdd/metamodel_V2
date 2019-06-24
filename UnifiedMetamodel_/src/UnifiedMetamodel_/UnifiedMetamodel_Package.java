@@ -168,13 +168,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int LAYER_SEGMENT__ALLOW_TO_USE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Layersegment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Sublayersegment</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_SEGMENT__LAYERSEGMENT = 1;
+	int LAYER_SEGMENT__SUBLAYERSEGMENT = 1;
 
 	/**
 	 * The number of structural features of the '<em>Layer Segment</em>' class.
@@ -214,13 +214,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int DTO__ALLOW_TO_USE = LAYER_SEGMENT__ALLOW_TO_USE;
 
 	/**
-	 * The feature id for the '<em><b>Layersegment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Sublayersegment</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DTO__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
+	int DTO__SUBLAYERSEGMENT = LAYER_SEGMENT__SUBLAYERSEGMENT;
 
 	/**
 	 * The number of structural features of the '<em>Dto</em>' class.
@@ -260,13 +260,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int STORE__ALLOW_TO_USE = LAYER_SEGMENT__ALLOW_TO_USE;
 
 	/**
-	 * The feature id for the '<em><b>Layersegment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Sublayersegment</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STORE__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
+	int STORE__SUBLAYERSEGMENT = LAYER_SEGMENT__SUBLAYERSEGMENT;
 
 	/**
 	 * The number of structural features of the '<em>Store</em>' class.
@@ -306,13 +306,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int UI__ALLOW_TO_USE = LAYER_SEGMENT__ALLOW_TO_USE;
 
 	/**
-	 * The feature id for the '<em><b>Layersegment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Sublayersegment</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UI__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
+	int UI__SUBLAYERSEGMENT = LAYER_SEGMENT__SUBLAYERSEGMENT;
 
 	/**
 	 * The number of structural features of the '<em>UI</em>' class.
@@ -352,13 +352,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int REST_ENTITY__ALLOW_TO_USE = LAYER_SEGMENT__ALLOW_TO_USE;
 
 	/**
-	 * The feature id for the '<em><b>Layersegment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Sublayersegment</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REST_ENTITY__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
+	int REST_ENTITY__SUBLAYERSEGMENT = LAYER_SEGMENT__SUBLAYERSEGMENT;
 
 	/**
 	 * The number of structural features of the '<em>Rest Entity</em>' class.
@@ -398,13 +398,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int FACADE__ALLOW_TO_USE = LAYER_SEGMENT__ALLOW_TO_USE;
 
 	/**
-	 * The feature id for the '<em><b>Layersegment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Sublayersegment</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FACADE__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
+	int FACADE__SUBLAYERSEGMENT = LAYER_SEGMENT__SUBLAYERSEGMENT;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -637,13 +637,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int CONTAINERS__ALLOW_TO_USE = LAYER_SEGMENT__ALLOW_TO_USE;
 
 	/**
-	 * The feature id for the '<em><b>Layersegment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Sublayersegment</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINERS__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
+	int CONTAINERS__SUBLAYERSEGMENT = LAYER_SEGMENT__SUBLAYERSEGMENT;
 
 	/**
 	 * The number of structural features of the '<em>Containers</em>' class.
@@ -683,13 +683,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int POJO__ALLOW_TO_USE = LAYER_SEGMENT__ALLOW_TO_USE;
 
 	/**
-	 * The feature id for the '<em><b>Layersegment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Sublayersegment</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POJO__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
+	int POJO__SUBLAYERSEGMENT = LAYER_SEGMENT__SUBLAYERSEGMENT;
 
 	/**
 	 * The number of structural features of the '<em>Pojo</em>' class.
@@ -729,13 +729,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int SERVICES__ALLOW_TO_USE = LAYER_SEGMENT__ALLOW_TO_USE;
 
 	/**
-	 * The feature id for the '<em><b>Layersegment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Sublayersegment</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICES__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
+	int SERVICES__SUBLAYERSEGMENT = LAYER_SEGMENT__SUBLAYERSEGMENT;
 
 	/**
 	 * The number of structural features of the '<em>Services</em>' class.
@@ -3661,13 +3661,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int UTIL__ALLOW_TO_USE = LAYER_SEGMENT__ALLOW_TO_USE;
 
 	/**
-	 * The feature id for the '<em><b>Layersegment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Sublayersegment</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UTIL__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
+	int UTIL__SUBLAYERSEGMENT = LAYER_SEGMENT__SUBLAYERSEGMENT;
 
 	/**
 	 * The number of structural features of the '<em>Util</em>' class.
@@ -3688,6 +3688,34 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int UTIL_OPERATION_COUNT = LAYER_SEGMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link UnifiedMetamodel_.impl.SubLayerSegmentImpl <em>Sub Layer Segment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see UnifiedMetamodel_.impl.SubLayerSegmentImpl
+	 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getSubLayerSegment()
+	 * @generated
+	 */
+	int SUB_LAYER_SEGMENT = 78;
+
+	/**
+	 * The number of structural features of the '<em>Sub Layer Segment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_LAYER_SEGMENT_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Sub Layer Segment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_LAYER_SEGMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link UnifiedMetamodel_.impl.ReducersImpl <em>Reducers</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3698,31 +3726,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int REDUCERS = 71;
 
 	/**
-	 * The feature id for the '<em><b>Allow To Use</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REDUCERS__ALLOW_TO_USE = LAYER_SEGMENT__ALLOW_TO_USE;
-
-	/**
-	 * The feature id for the '<em><b>Layersegment</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REDUCERS__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
-
-	/**
 	 * The number of structural features of the '<em>Reducers</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REDUCERS_FEATURE_COUNT = LAYER_SEGMENT_FEATURE_COUNT + 0;
+	int REDUCERS_FEATURE_COUNT = SUB_LAYER_SEGMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Reducers</em>' class.
@@ -3731,7 +3741,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REDUCERS_OPERATION_COUNT = LAYER_SEGMENT_OPERATION_COUNT + 0;
+	int REDUCERS_OPERATION_COUNT = SUB_LAYER_SEGMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link UnifiedMetamodel_.impl.ActionsImpl <em>Actions</em>}' class.
@@ -3744,31 +3754,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int ACTIONS = 72;
 
 	/**
-	 * The feature id for the '<em><b>Allow To Use</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIONS__ALLOW_TO_USE = LAYER_SEGMENT__ALLOW_TO_USE;
-
-	/**
-	 * The feature id for the '<em><b>Layersegment</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIONS__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
-
-	/**
 	 * The number of structural features of the '<em>Actions</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIONS_FEATURE_COUNT = LAYER_SEGMENT_FEATURE_COUNT + 0;
+	int ACTIONS_FEATURE_COUNT = SUB_LAYER_SEGMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Actions</em>' class.
@@ -3777,7 +3769,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIONS_OPERATION_COUNT = LAYER_SEGMENT_OPERATION_COUNT + 0;
+	int ACTIONS_OPERATION_COUNT = SUB_LAYER_SEGMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link UnifiedMetamodel_.impl.BackImpl <em>Back</em>}' class.
@@ -4052,15 +4044,15 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EReference getLayerSegment_AllowToUse();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.LayerSegment#getLayersegment <em>Layersegment</em>}'.
+	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.LayerSegment#getSublayersegment <em>Sublayersegment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Layersegment</em>'.
-	 * @see UnifiedMetamodel_.LayerSegment#getLayersegment()
+	 * @return the meta object for the containment reference list '<em>Sublayersegment</em>'.
+	 * @see UnifiedMetamodel_.LayerSegment#getSublayersegment()
 	 * @see #getLayerSegment()
 	 * @generated
 	 */
-	EReference getLayerSegment_Layersegment();
+	EReference getLayerSegment_Sublayersegment();
 
 	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.Dto <em>Dto</em>}'.
@@ -6000,6 +5992,16 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EClass getReact();
 
 	/**
+	 * Returns the meta object for class '{@link UnifiedMetamodel_.SubLayerSegment <em>Sub Layer Segment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Sub Layer Segment</em>'.
+	 * @see UnifiedMetamodel_.SubLayerSegment
+	 * @generated
+	 */
+	EClass getSubLayerSegment();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6048,12 +6050,12 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EReference LAYER_SEGMENT__ALLOW_TO_USE = eINSTANCE.getLayerSegment_AllowToUse();
 		/**
-		 * The meta object literal for the '<em><b>Layersegment</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Sublayersegment</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LAYER_SEGMENT__LAYERSEGMENT = eINSTANCE.getLayerSegment_Layersegment();
+		EReference LAYER_SEGMENT__SUBLAYERSEGMENT = eINSTANCE.getLayerSegment_Sublayersegment();
 		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.DtoImpl <em>Dto</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -7487,6 +7489,15 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 * @generated
 		 */
 		EClass REACT = eINSTANCE.getReact();
+		/**
+		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.SubLayerSegmentImpl <em>Sub Layer Segment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see UnifiedMetamodel_.impl.SubLayerSegmentImpl
+		 * @see UnifiedMetamodel_.impl.UnifiedMetamodel_PackageImpl#getSubLayerSegment()
+		 * @generated
+		 */
+		EClass SUB_LAYER_SEGMENT = eINSTANCE.getSubLayerSegment();
 
 	}
 

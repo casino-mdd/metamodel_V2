@@ -70,6 +70,7 @@ import UnifiedMetamodel_.ServicesFront;
 import UnifiedMetamodel_.SpecialEntity;
 import UnifiedMetamodel_.State;
 import UnifiedMetamodel_.Store;
+import UnifiedMetamodel_.SubLayerSegment;
 import UnifiedMetamodel_.Submodule;
 import UnifiedMetamodel_.Subproject;
 import UnifiedMetamodel_.TechnologyMetamodel;
@@ -454,6 +455,10 @@ public class UnifiedMetamodel_AdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseReact(React object) {
 				return createReactAdapter();
+			}
+			@Override
+			public Adapter caseSubLayerSegment(SubLayerSegment object) {
+				return createSubLayerSegmentAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -1564,6 +1569,20 @@ public class UnifiedMetamodel_AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createReactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link UnifiedMetamodel_.SubLayerSegment <em>Sub Layer Segment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see UnifiedMetamodel_.SubLayerSegment
+	 * @generated
+	 */
+	public Adapter createSubLayerSegmentAdapter() {
 		return null;
 	}
 

@@ -5,8 +5,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="LayerSegment">
     <eStructuralFeatures xsi:type="ecore:EReference" name="allowToUse" upperBound="-1"
         eType="#//LayerSegment"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="layersegment" upperBound="-1"
-        eType="#//LayerSegment" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sublayersegment" upperBound="-1"
+        eType="#//SubLayerSegment" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Dto" eSuperTypes="#//LayerSegment"/>
   <eClassifiers xsi:type="ecore:EClass" name="Store" eSuperTypes="#//LayerSegment"/>
@@ -279,8 +279,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JavaScript" eSuperTypes="#//Layer"/>
   <eClassifiers xsi:type="ecore:EClass" name="Util" eSuperTypes="#//LayerSegment"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Reducers" eSuperTypes="#//LayerSegment"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Actions" eSuperTypes="#//LayerSegment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Reducers" eSuperTypes="#//SubLayerSegment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Actions" eSuperTypes="#//SubLayerSegment"/>
   <eClassifiers xsi:type="ecore:EClass" name="Back" eSuperTypes="#//Component"/>
   <eClassifiers xsi:type="ecore:EClass" name="Front" eSuperTypes="#//Component"/>
   <eClassifiers xsi:type="ecore:EClass" name="Property">
@@ -294,4 +294,5 @@
         eType="#//EClass"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="React" eSuperTypes="#//ModuleFront"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SubLayerSegment"/>
 </ecore:EPackage>
