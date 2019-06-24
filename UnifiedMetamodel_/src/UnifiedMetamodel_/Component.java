@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link UnifiedMetamodel_.Component#getLayers <em>Layers</em>}</li>
- *   <li>{@link UnifiedMetamodel_.Component#getRelations <em>Relations</em>}</li>
  *   <li>{@link UnifiedMetamodel_.Component#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -36,18 +35,6 @@ public interface Component extends EObject {
 	 * @generated
 	 */
 	EList<Layer> getLayers();
-
-	/**
-	 * Returns the value of the '<em><b>Relations</b></em>' containment reference list.
-	 * The list contents are of type {@link UnifiedMetamodel_.RelationArch}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Relations</em>' containment reference list.
-	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getComponent_Relations()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	EList<RelationArch> getRelations();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

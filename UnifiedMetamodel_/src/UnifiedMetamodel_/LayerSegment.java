@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link UnifiedMetamodel_.LayerSegment#getAllowToUse <em>Allow To Use</em>}</li>
  *   <li>{@link UnifiedMetamodel_.LayerSegment#getLayersegment <em>Layersegment</em>}</li>
- *   <li>{@link UnifiedMetamodel_.LayerSegment#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getLayerSegment()
@@ -48,27 +47,5 @@ public interface LayerSegment extends EObject {
 	 * @generated
 	 */
 	EList<LayerSegment> getLayersegment();
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see UnifiedMetamodel_.UnifiedMetamodel_Package#getLayerSegment_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link UnifiedMetamodel_.LayerSegment#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
 
 } // LayerSegment

@@ -177,22 +177,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int LAYER_SEGMENT__LAYERSEGMENT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_SEGMENT__NAME = 2;
-
-	/**
 	 * The number of structural features of the '<em>Layer Segment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAYER_SEGMENT_FEATURE_COUNT = 3;
+	int LAYER_SEGMENT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Layer Segment</em>' class.
@@ -230,15 +221,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @ordered
 	 */
 	int DTO__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DTO__NAME = LAYER_SEGMENT__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Dto</em>' class.
@@ -287,15 +269,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int STORE__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STORE__NAME = LAYER_SEGMENT__NAME;
-
-	/**
 	 * The number of structural features of the '<em>Store</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -340,15 +313,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @ordered
 	 */
 	int UI__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UI__NAME = LAYER_SEGMENT__NAME;
 
 	/**
 	 * The number of structural features of the '<em>UI</em>' class.
@@ -397,15 +361,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int REST_ENTITY__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_ENTITY__NAME = LAYER_SEGMENT__NAME;
-
-	/**
 	 * The number of structural features of the '<em>Rest Entity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -450,15 +405,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @ordered
 	 */
 	int FACADE__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACADE__NAME = LAYER_SEGMENT__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -544,22 +490,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int COMPONENT__LAYERS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Relations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPONENT__RELATIONS = 1;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__NAME = 2;
+	int COMPONENT__NAME = 1;
 
 	/**
 	 * The number of structural features of the '<em>Component</em>' class.
@@ -568,7 +505,7 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = 3;
+	int COMPONENT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Component</em>' class.
@@ -654,13 +591,22 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int ARQUITECTURE_METAMODEL__COMPONENTS = 0;
 
 	/**
+	 * The feature id for the '<em><b>Relations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARQUITECTURE_METAMODEL__RELATIONS = 1;
+
+	/**
 	 * The number of structural features of the '<em>Arquitecture Metamodel</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARQUITECTURE_METAMODEL_FEATURE_COUNT = 1;
+	int ARQUITECTURE_METAMODEL_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Arquitecture Metamodel</em>' class.
@@ -698,15 +644,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @ordered
 	 */
 	int CONTAINERS__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINERS__NAME = LAYER_SEGMENT__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Containers</em>' class.
@@ -755,15 +692,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int POJO__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POJO__NAME = LAYER_SEGMENT__NAME;
-
-	/**
 	 * The number of structural features of the '<em>Pojo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -808,15 +736,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @ordered
 	 */
 	int SERVICES__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICES__NAME = LAYER_SEGMENT__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Services</em>' class.
@@ -3751,15 +3670,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int UTIL__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UTIL__NAME = LAYER_SEGMENT__NAME;
-
-	/**
 	 * The number of structural features of the '<em>Util</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3804,15 +3714,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @ordered
 	 */
 	int REDUCERS__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REDUCERS__NAME = LAYER_SEGMENT__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Reducers</em>' class.
@@ -3861,15 +3762,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	int ACTIONS__LAYERSEGMENT = LAYER_SEGMENT__LAYERSEGMENT;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIONS__NAME = LAYER_SEGMENT__NAME;
-
-	/**
 	 * The number of structural features of the '<em>Actions</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3905,15 +3797,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @ordered
 	 */
 	int BACK__LAYERS = COMPONENT__LAYERS;
-
-	/**
-	 * The feature id for the '<em><b>Relations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BACK__RELATIONS = COMPONENT__RELATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3960,15 +3843,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @ordered
 	 */
 	int FRONT__LAYERS = COMPONENT__LAYERS;
-
-	/**
-	 * The feature id for the '<em><b>Relations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FRONT__RELATIONS = COMPONENT__RELATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4189,17 +4063,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EReference getLayerSegment_Layersegment();
 
 	/**
-	 * Returns the meta object for the attribute '{@link UnifiedMetamodel_.LayerSegment#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see UnifiedMetamodel_.LayerSegment#getName()
-	 * @see #getLayerSegment()
-	 * @generated
-	 */
-	EAttribute getLayerSegment_Name();
-
-	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.Dto <em>Dto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4313,17 +4176,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	EReference getComponent_Layers();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.Component#getRelations <em>Relations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Relations</em>'.
-	 * @see UnifiedMetamodel_.Component#getRelations()
-	 * @see #getComponent()
-	 * @generated
-	 */
-	EReference getComponent_Relations();
-
-	/**
 	 * Returns the meta object for the attribute '{@link UnifiedMetamodel_.Component#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4397,6 +4249,17 @@ public interface UnifiedMetamodel_Package extends EPackage {
 	 * @generated
 	 */
 	EReference getArquitectureMetamodel_Components();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link UnifiedMetamodel_.ArquitectureMetamodel#getRelations <em>Relations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Relations</em>'.
+	 * @see UnifiedMetamodel_.ArquitectureMetamodel#getRelations()
+	 * @see #getArquitectureMetamodel()
+	 * @generated
+	 */
+	EReference getArquitectureMetamodel_Relations();
 
 	/**
 	 * Returns the meta object for class '{@link UnifiedMetamodel_.Containers <em>Containers</em>}'.
@@ -6192,13 +6055,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EReference LAYER_SEGMENT__LAYERSEGMENT = eINSTANCE.getLayerSegment_Layersegment();
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LAYER_SEGMENT__NAME = eINSTANCE.getLayerSegment_Name();
-		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.DtoImpl <em>Dto</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6292,13 +6148,6 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 */
 		EReference COMPONENT__LAYERS = eINSTANCE.getComponent_Layers();
 		/**
-		 * The meta object literal for the '<em><b>Relations</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPONENT__RELATIONS = eINSTANCE.getComponent_Relations();
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6351,6 +6200,13 @@ public interface UnifiedMetamodel_Package extends EPackage {
 		 * @generated
 		 */
 		EReference ARQUITECTURE_METAMODEL__COMPONENTS = eINSTANCE.getArquitectureMetamodel_Components();
+		/**
+		 * The meta object literal for the '<em><b>Relations</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARQUITECTURE_METAMODEL__RELATIONS = eINSTANCE.getArquitectureMetamodel_Relations();
 		/**
 		 * The meta object literal for the '{@link UnifiedMetamodel_.impl.ContainersImpl <em>Containers</em>}' class.
 		 * <!-- begin-user-doc -->

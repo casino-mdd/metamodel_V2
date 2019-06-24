@@ -10,7 +10,6 @@
     <genClasses ecoreClass="unified.ecore#//LayerSegment">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//LayerSegment/allowToUse"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//LayerSegment/layersegment"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//LayerSegment/name"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//Dto"/>
     <genClasses ecoreClass="unified.ecore#//Store"/>
@@ -24,7 +23,6 @@
     <genClasses ecoreClass="unified.ecore#//War"/>
     <genClasses ecoreClass="unified.ecore#//Component">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Component/layers"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Component/relations"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Component/name"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//RelationArch">
@@ -34,6 +32,7 @@
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//ArquitectureMetamodel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//ArquitectureMetamodel/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//ArquitectureMetamodel/relations"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//Containers"/>
     <genClasses ecoreClass="unified.ecore#//Pojo"/>

@@ -669,16 +669,6 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLayerSegment_Name() {
-		return (EAttribute)layerSegmentEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getDto() {
 		return dtoEClass;
 	}
@@ -789,18 +779,8 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	 * @generated
 	 */
 	@Override
-	public EReference getComponent_Relations() {
-		return (EReference)componentEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getComponent_Name() {
-		return (EAttribute)componentEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)componentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -861,6 +841,16 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 	@Override
 	public EReference getArquitectureMetamodel_Components() {
 		return (EReference)arquitectureMetamodelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getArquitectureMetamodel_Relations() {
+		return (EReference)arquitectureMetamodelEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2537,7 +2527,6 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		layerSegmentEClass = createEClass(LAYER_SEGMENT);
 		createEReference(layerSegmentEClass, LAYER_SEGMENT__ALLOW_TO_USE);
 		createEReference(layerSegmentEClass, LAYER_SEGMENT__LAYERSEGMENT);
-		createEAttribute(layerSegmentEClass, LAYER_SEGMENT__NAME);
 
 		dtoEClass = createEClass(DTO);
 
@@ -2557,7 +2546,6 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 
 		componentEClass = createEClass(COMPONENT);
 		createEReference(componentEClass, COMPONENT__LAYERS);
-		createEReference(componentEClass, COMPONENT__RELATIONS);
 		createEAttribute(componentEClass, COMPONENT__NAME);
 
 		relationArchEClass = createEClass(RELATION_ARCH);
@@ -2567,6 +2555,7 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 
 		arquitectureMetamodelEClass = createEClass(ARQUITECTURE_METAMODEL);
 		createEReference(arquitectureMetamodelEClass, ARQUITECTURE_METAMODEL__COMPONENTS);
+		createEReference(arquitectureMetamodelEClass, ARQUITECTURE_METAMODEL__RELATIONS);
 
 		containersEClass = createEClass(CONTAINERS);
 
@@ -2874,7 +2863,6 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 		initEClass(layerSegmentEClass, LayerSegment.class, "LayerSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLayerSegment_AllowToUse(), this.getLayerSegment(), null, "allowToUse", null, 0, -1, LayerSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLayerSegment_Layersegment(), this.getLayerSegment(), null, "layersegment", null, 0, -1, LayerSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLayerSegment_Name(), ecorePackage.getEString(), "name", null, 0, 1, LayerSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dtoEClass, Dto.class, "Dto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2894,7 +2882,6 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComponent_Layers(), this.getLayer(), null, "layers", null, 1, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComponent_Relations(), this.getRelationArch(), null, "relations", null, 1, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComponent_Name(), ecorePackage.getEString(), "name", null, 0, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(relationArchEClass, RelationArch.class, "RelationArch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2904,6 +2891,7 @@ public class UnifiedMetamodel_PackageImpl extends EPackageImpl implements Unifie
 
 		initEClass(arquitectureMetamodelEClass, ArquitectureMetamodel.class, "ArquitectureMetamodel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArquitectureMetamodel_Components(), this.getComponent(), null, "components", null, 1, -1, ArquitectureMetamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArquitectureMetamodel_Relations(), this.getRelationArch(), null, "relations", null, 1, -1, ArquitectureMetamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(containersEClass, Containers.class, "Containers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

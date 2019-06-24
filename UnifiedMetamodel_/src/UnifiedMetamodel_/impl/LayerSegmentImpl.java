@@ -6,15 +6,12 @@ import UnifiedMetamodel_.LayerSegment;
 import UnifiedMetamodel_.UnifiedMetamodel_Package;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -31,7 +28,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link UnifiedMetamodel_.impl.LayerSegmentImpl#getAllowToUse <em>Allow To Use</em>}</li>
  *   <li>{@link UnifiedMetamodel_.impl.LayerSegmentImpl#getLayersegment <em>Layersegment</em>}</li>
- *   <li>{@link UnifiedMetamodel_.impl.LayerSegmentImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,26 +52,6 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 	 * @ordered
 	 */
 	protected EList<LayerSegment> layersegment;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -128,29 +104,6 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 	 * @generated
 	 */
 	@Override
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UnifiedMetamodel_Package.LAYER_SEGMENT__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case UnifiedMetamodel_Package.LAYER_SEGMENT__LAYERSEGMENT:
@@ -171,8 +124,6 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 				return getAllowToUse();
 			case UnifiedMetamodel_Package.LAYER_SEGMENT__LAYERSEGMENT:
 				return getLayersegment();
-			case UnifiedMetamodel_Package.LAYER_SEGMENT__NAME:
-				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -194,9 +145,6 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 				getLayersegment().clear();
 				getLayersegment().addAll((Collection<? extends LayerSegment>)newValue);
 				return;
-			case UnifiedMetamodel_Package.LAYER_SEGMENT__NAME:
-				setName((String)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -215,9 +163,6 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 			case UnifiedMetamodel_Package.LAYER_SEGMENT__LAYERSEGMENT:
 				getLayersegment().clear();
 				return;
-			case UnifiedMetamodel_Package.LAYER_SEGMENT__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -234,26 +179,8 @@ public class LayerSegmentImpl extends MinimalEObjectImpl.Container implements La
 				return allowToUse != null && !allowToUse.isEmpty();
 			case UnifiedMetamodel_Package.LAYER_SEGMENT__LAYERSEGMENT:
 				return layersegment != null && !layersegment.isEmpty();
-			case UnifiedMetamodel_Package.LAYER_SEGMENT__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //LayerSegmentImpl

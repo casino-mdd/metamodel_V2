@@ -4,6 +4,7 @@ package UnifiedMetamodel_.impl;
 
 import UnifiedMetamodel_.ArquitectureMetamodel;
 import UnifiedMetamodel_.Component;
+import UnifiedMetamodel_.RelationArch;
 import UnifiedMetamodel_.UnifiedMetamodel_Package;
 
 import java.util.Collection;
@@ -29,6 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link UnifiedMetamodel_.impl.ArquitectureMetamodelImpl#getComponents <em>Components</em>}</li>
+ *   <li>{@link UnifiedMetamodel_.impl.ArquitectureMetamodelImpl#getRelations <em>Relations</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,6 +45,16 @@ public class ArquitectureMetamodelImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected EList<Component> components;
+
+	/**
+	 * The cached value of the '{@link #getRelations() <em>Relations</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRelations()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<RelationArch> relations;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -82,10 +94,25 @@ public class ArquitectureMetamodelImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 */
 	@Override
+	public EList<RelationArch> getRelations() {
+		if (relations == null) {
+			relations = new EObjectContainmentEList<RelationArch>(RelationArch.class, this, UnifiedMetamodel_Package.ARQUITECTURE_METAMODEL__RELATIONS);
+		}
+		return relations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case UnifiedMetamodel_Package.ARQUITECTURE_METAMODEL__COMPONENTS:
 				return ((InternalEList<?>)getComponents()).basicRemove(otherEnd, msgs);
+			case UnifiedMetamodel_Package.ARQUITECTURE_METAMODEL__RELATIONS:
+				return ((InternalEList<?>)getRelations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -100,6 +127,8 @@ public class ArquitectureMetamodelImpl extends MinimalEObjectImpl.Container impl
 		switch (featureID) {
 			case UnifiedMetamodel_Package.ARQUITECTURE_METAMODEL__COMPONENTS:
 				return getComponents();
+			case UnifiedMetamodel_Package.ARQUITECTURE_METAMODEL__RELATIONS:
+				return getRelations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -117,6 +146,10 @@ public class ArquitectureMetamodelImpl extends MinimalEObjectImpl.Container impl
 				getComponents().clear();
 				getComponents().addAll((Collection<? extends Component>)newValue);
 				return;
+			case UnifiedMetamodel_Package.ARQUITECTURE_METAMODEL__RELATIONS:
+				getRelations().clear();
+				getRelations().addAll((Collection<? extends RelationArch>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -132,6 +165,9 @@ public class ArquitectureMetamodelImpl extends MinimalEObjectImpl.Container impl
 			case UnifiedMetamodel_Package.ARQUITECTURE_METAMODEL__COMPONENTS:
 				getComponents().clear();
 				return;
+			case UnifiedMetamodel_Package.ARQUITECTURE_METAMODEL__RELATIONS:
+				getRelations().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -146,6 +182,8 @@ public class ArquitectureMetamodelImpl extends MinimalEObjectImpl.Container impl
 		switch (featureID) {
 			case UnifiedMetamodel_Package.ARQUITECTURE_METAMODEL__COMPONENTS:
 				return components != null && !components.isEmpty();
+			case UnifiedMetamodel_Package.ARQUITECTURE_METAMODEL__RELATIONS:
+				return relations != null && !relations.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

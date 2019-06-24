@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <UnifiedMetamodel_:Metamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UnifiedMetamodel_="http://UnifiedMetamodel_" name="Casino">
+  <arquitecturemetamodel>
+    <components xsi:type="UnifiedMetamodel_:Front">
+      <layers xsi:type="UnifiedMetamodel_:JavaScript">
+        <layerSegments xsi:type="UnifiedMetamodel_:Containers" allowToUse="//@arquitecturemetamodel/@components.0/@layers.0/@layerSegments.2"/>
+        <layerSegments xsi:type="UnifiedMetamodel_:UI" allowToUse="//@arquitecturemetamodel/@components.0/@layers.0/@layerSegments.0"/>
+        <layerSegments xsi:type="UnifiedMetamodel_:Store" allowToUse="//@arquitecturemetamodel/@components.0/@layers.0/@layerSegments.3">
+          <layersegment xsi:type="UnifiedMetamodel_:Reducers"/>
+          <layersegment xsi:type="UnifiedMetamodel_:Actions"/>
+        </layerSegments>
+        <layerSegments xsi:type="UnifiedMetamodel_:Services" allowToUse="//@arquitecturemetamodel/@components.1/@layers.0/@layerSegments.0"/>
+      </layers>
+    </components>
+    <components xsi:type="UnifiedMetamodel_:Back">
+      <layers xsi:type="UnifiedMetamodel_:War">
+        <layerSegments xsi:type="UnifiedMetamodel_:RestEntity"/>
+      </layers>
+      <layers xsi:type="UnifiedMetamodel_:Ejb">
+        <layerSegments xsi:type="UnifiedMetamodel_:Facade" allowToUse="//@arquitecturemetamodel/@components.1/@layers.1/@layerSegments.1 //@arquitecturemetamodel/@components.1/@layers.1/@layerSegments.2 //@arquitecturemetamodel/@components.1/@layers.1/@layerSegments.3"/>
+        <layerSegments xsi:type="UnifiedMetamodel_:Dto"/>
+        <layerSegments xsi:type="UnifiedMetamodel_:Pojo"/>
+        <layerSegments xsi:type="UnifiedMetamodel_:Util"/>
+      </layers>
+    </components>
+    <relations source="//@arquitecturemetamodel/@components.0/@layers.0" target="//@arquitecturemetamodel/@components.1/@layers.0" name="FrontBack"/>
+    <relations source="//@arquitecturemetamodel/@components.1/@layers.0" target="//@arquitecturemetamodel/@components.1/@layers.1" name="RestBussines"/>
+  </arquitecturemetamodel>
   <domainmetamodel>
     <module name="Authentication">
       <submodule name="User">

@@ -4,7 +4,6 @@ package UnifiedMetamodel_.impl;
 
 import UnifiedMetamodel_.Component;
 import UnifiedMetamodel_.Layer;
-import UnifiedMetamodel_.RelationArch;
 import UnifiedMetamodel_.UnifiedMetamodel_Package;
 
 import java.util.Collection;
@@ -32,7 +31,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link UnifiedMetamodel_.impl.ComponentImpl#getLayers <em>Layers</em>}</li>
- *   <li>{@link UnifiedMetamodel_.impl.ComponentImpl#getRelations <em>Relations</em>}</li>
  *   <li>{@link UnifiedMetamodel_.impl.ComponentImpl#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -48,16 +46,6 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 	 * @ordered
 	 */
 	protected EList<Layer> layers;
-
-	/**
-	 * The cached value of the '{@link #getRelations() <em>Relations</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRelations()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<RelationArch> relations;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -117,19 +105,6 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 	 * @generated
 	 */
 	@Override
-	public EList<RelationArch> getRelations() {
-		if (relations == null) {
-			relations = new EObjectContainmentEList<RelationArch>(RelationArch.class, this, UnifiedMetamodel_Package.COMPONENT__RELATIONS);
-		}
-		return relations;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -157,8 +132,6 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 		switch (featureID) {
 			case UnifiedMetamodel_Package.COMPONENT__LAYERS:
 				return ((InternalEList<?>)getLayers()).basicRemove(otherEnd, msgs);
-			case UnifiedMetamodel_Package.COMPONENT__RELATIONS:
-				return ((InternalEList<?>)getRelations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -173,8 +146,6 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 		switch (featureID) {
 			case UnifiedMetamodel_Package.COMPONENT__LAYERS:
 				return getLayers();
-			case UnifiedMetamodel_Package.COMPONENT__RELATIONS:
-				return getRelations();
 			case UnifiedMetamodel_Package.COMPONENT__NAME:
 				return getName();
 		}
@@ -194,10 +165,6 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 				getLayers().clear();
 				getLayers().addAll((Collection<? extends Layer>)newValue);
 				return;
-			case UnifiedMetamodel_Package.COMPONENT__RELATIONS:
-				getRelations().clear();
-				getRelations().addAll((Collection<? extends RelationArch>)newValue);
-				return;
 			case UnifiedMetamodel_Package.COMPONENT__NAME:
 				setName((String)newValue);
 				return;
@@ -216,9 +183,6 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 			case UnifiedMetamodel_Package.COMPONENT__LAYERS:
 				getLayers().clear();
 				return;
-			case UnifiedMetamodel_Package.COMPONENT__RELATIONS:
-				getRelations().clear();
-				return;
 			case UnifiedMetamodel_Package.COMPONENT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -236,8 +200,6 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 		switch (featureID) {
 			case UnifiedMetamodel_Package.COMPONENT__LAYERS:
 				return layers != null && !layers.isEmpty();
-			case UnifiedMetamodel_Package.COMPONENT__RELATIONS:
-				return relations != null && !relations.isEmpty();
 			case UnifiedMetamodel_Package.COMPONENT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}

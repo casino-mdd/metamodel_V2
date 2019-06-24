@@ -7,7 +7,6 @@
         eType="#//LayerSegment"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="layersegment" upperBound="-1"
         eType="#//LayerSegment" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Dto" eSuperTypes="#//LayerSegment"/>
   <eClassifiers xsi:type="ecore:EClass" name="Store" eSuperTypes="#//LayerSegment"/>
@@ -23,8 +22,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Component">
     <eStructuralFeatures xsi:type="ecore:EReference" name="layers" lowerBound="1"
         upperBound="-1" eType="#//Layer" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relations" lowerBound="1"
-        upperBound="-1" eType="#//RelationArch" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RelationArch">
@@ -37,6 +34,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="ArquitectureMetamodel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="components" lowerBound="1"
         upperBound="-1" eType="#//Component" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relations" lowerBound="1"
+        upperBound="-1" eType="#//RelationArch" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Containers" eSuperTypes="#//LayerSegment"/>
   <eClassifiers xsi:type="ecore:EClass" name="Pojo" eSuperTypes="#//LayerSegment"/>
