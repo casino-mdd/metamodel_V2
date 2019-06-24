@@ -128,6 +128,38 @@
     <relationdom xsi:type="UnifiedMetamodel_:Composition" source="//@domainmetamodel/@module.3/@submodule.0/@entity.0" target="//@domainmetamodel/@module.0/@submodule.0/@entity.0"/>
   </domainmetamodel>
   <technologymetamodel>
+    <techback>
+      <jee_project>
+        <subproject name="EJB">
+          <descriptor name="persistence.xml"/>
+          <package name="facade">
+            <class xsi:type="UnifiedMetamodel_:AbstractClass" name="AbstractFacade" annotation="//@technologymetamodel/@techback/@jee_project.0/@subproject.0/@library.1/@annotation.0">
+              <method name="getEntityManager"/>
+            </class>
+          </package>
+          <package name="util">
+            <class xsi:type="UnifiedMetamodel_:GenericClass" name="BeanUtil"/>
+            <class xsi:type="UnifiedMetamodel_:GenericClass" name="JaxbUtil"/>
+            <class xsi:type="UnifiedMetamodel_:GenericClass" name="JsonUtil"/>
+          </package>
+          <package name="dto"/>
+          <package name="pojo"/>
+          <library name=" JDK 8" isNative="true"/>
+          <library name="HibernateJPA">
+            <annotation name="@PersistenUnit"/>
+          </library>
+          <library name="Gson"/>
+        </subproject>
+        <subproject name="war">
+          <descriptor name="web.xml"/>
+          <package name="rest">
+            <class xsi:type="UnifiedMetamodel_:AbstractClass" name="AbstractRest"/>
+          </package>
+          <library name="JDK 8"/>
+          <library name="JAX-WS"/>
+        </subproject>
+      </jee_project>
+    </techback>
     <techfront>
       <functionalities name="Main">
         <components xsi:type="UnifiedMetamodel_:Visualizer" name="Main"/>
